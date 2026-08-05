@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img"
+     aria-label="Platzhalter: Sportsbar, Abend mit Gästen">
+  <rect width="900" height="600" fill="#16221C"/>
+  <g fill="none" stroke="#F2F3EF" stroke-width="2" opacity=".12">
+    <rect x="70" y="50" width="760" height="500"/>
+    <rect x="70" y="115" width="760" height="370"/>
+    <path d="M70 300h760M450 115v370M260 115v370M640 115v370"/>
+  </g>
+  <path d="M450 236 L466 252 L450 268 L434 252 Z" fill="#C9603E"/>
+  <text x="450" y="330" text-anchor="middle" fill="#F2F3EF"
+        font-family="Georgia, 'Times New Roman', serif" font-size="46" letter-spacing="2">SPORTSBAR</text>
+  <text x="450" y="372" text-anchor="middle" fill="#35B27C"
+        font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700"
+        letter-spacing="6">ABEND MIT GÄSTEN</text>
+  <text x="450" y="418" text-anchor="middle" fill="#F2F3EF" opacity=".55"
+        font-family="Helvetica, Arial, sans-serif" font-size="15" letter-spacing="1">FOTO FOLGT</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120"
+     role="img" aria-label="Platzhalter: Deutscher Padel Verband">
+  <rect x="1.5" y="1.5" width="297" height="117" rx="4" fill="#FFFFFF"
+        stroke="#C9CFC8" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="150" y="52" text-anchor="middle" fill="#3B4740"
+        font-family="Georgia, 'Times New Roman', serif" font-size="21">Deutscher</text>
+  <text x="150" y="78" text-anchor="middle" fill="#3B4740"
+        font-family="Georgia, 'Times New Roman', serif" font-size="21">Padel Verband</text>
+  <text x="150" y="103" text-anchor="middle" fill="#C0562F"
+        font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700"
+        letter-spacing="4">LOGO FOLGT</text>
+</svg>

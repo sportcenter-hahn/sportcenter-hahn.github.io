@@ -1,0 +1,20 @@
+# Alte WordPress-URLs auf die neuen Dateien umleiten.
+# Ohne diese Zeilen verliert die Seite ihre bestehenden Google-Rankings.
+/about-us              /ueber-uns.html               301
+/about-us/*            /ueber-uns.html               301
+/trainer               /trainer.html                 301
+/trainer/*             /trainer.html                 301
+/mitglied              /mitglied.html                301
+/mitglied/*            /mitglied.html                301
+/bavaro-liga           /liga.html                    301
+/bavaro-liga/*         /liga.html                    301
+/kontakt               /kontakt.html                 301
+/kontakt/*             /kontakt.html                 301
+/booking-ger           /buchen-geretsried.html       301
+/booking-ger/*         /buchen-geretsried.html       301
+/book-wolfratshausen   /buchen-wolfratshausen.html   301
+/book-wolfratshausen/* /buchen-wolfratshausen.html   301
+/privacy-policy        /datenschutz.html             301
+/privacy-policy/*      /datenschutz.html             301
+/wp-content/*          /404.html                     404
+/wp-admin/*            /404.html                     404
