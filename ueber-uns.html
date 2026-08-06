@@ -12,6 +12,10 @@
 <link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/demo/ueber-uns.html">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#0C1310">
+<script>/* Setzt das Thema vor dem ersten Rendern — sonst blitzt kurz die falsche Fassung auf. */
+(function(){try{var t=localStorage.getItem("theme");
+if(t!=="dark"&&t!=="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";}
+document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="STC Oberland &amp; Sportcenter Hahn">
@@ -24,7 +28,7 @@
 <link rel="apple-touch-icon" href="assets/img/logo.png">
 <link rel="preload" href="assets/fonts/archivo-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/bigshoulders-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=42ba8dbb">
+<link rel="stylesheet" href="assets/css/style.css?v=4b024929">
 <!--HREFLANG-->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsActivityLocation","@id":"https://sportcenter-hahn.de/#organisation","name":"STC Oberland & Sportcenter Hahn","alternateName":"Sportcenter Hahn GmbH","url":"https://sportcenter-hahn.de/","logo":"https://sportcenter-hahn.de/assets/img/logo.png","image":"https://sportcenter-hahn.de/assets/img/hero.jpg","telephone":"+49817151110","email":"mail@sportcenter-hahn.de","priceRange":"€€","sameAs":["https://www.instagram.com/sportcenterhahn/"],"address":{"@type":"PostalAddress","streetAddress":"Königsdorfer Weg 7","postalCode":"82538","addressLocality":"Geretsried","addressRegion":"Bayern","addressCountry":"DE"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"23:00"}],"areaServed":["Geretsried","Wolfratshausen","Bad Tölz-Wolfratshausen","Oberland"],"sport":["Tennis","Padel","Pickleball","Fußball","Golf"],"department":[{"@type":"SportsActivityLocation","name":"Sportcenter Hahn Geretsried","telephone":"+49817151110","sport":["Tennis","Padel","Pickleball","Fußball","Golf"],"address":{"@type":"PostalAddress","streetAddress":"Königsdorfer Weg 7","postalCode":"82538","addressLocality":"Geretsried","addressCountry":"DE"}},{"@type":"SportsActivityLocation","name":"Tenniscenter Wolfratshausen","telephone":"+49817151110","sport":["Tennis"],"address":{"@type":"PostalAddress","streetAddress":"Geltinger Straße 12","postalCode":"82515","addressLocality":"Wolfratshausen","addressCountry":"DE"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://sportcenter-hahn.de/"},{"@type":"ListItem","position":2,"name":"Über uns","item":"https://sportcenter-hahn.de/ueber-uns.html"}]}</script>
@@ -36,19 +40,22 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="brand" href="index.html" aria-label="STC Oberland und Sportcenter Hahn – zur Startseite">
-      <img src="assets/img/logo.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" fetchpriority="high">
+      <img class="brand__hell" src="assets/img/logo.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" fetchpriority="high">
+      <img class="brand__dunkel" src="assets/img/logo-white.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" loading="lazy">
     </a>
-    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html" aria-current="page">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></nav>
+    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html" aria-current="page">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="proshop.html">Pro Shop</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></nav>
     <!--LANGS-->
     <div class="langswitch"><span class="langswitch__cur" aria-current="true">DE</span><a href="en/ueber-uns.html" hreflang="en" lang="en" title="English">EN</a><a href="es/ueber-uns.html" hreflang="es" lang="es" title="Español">ES</a></div>
+    <button class="theme" type="button" data-theme-toggle aria-label="Zwischen hellem und dunklem Modus wechseln"><svg class="theme__sonne" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg><svg class="theme__mond" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg></button>
     <a class="btn btn--clay btn--sm head-cta" href="buchen.html">Platz buchen</a>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mobnav" aria-label="Menü öffnen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
   <div class="mobnav" id="mobnav">
-    <ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html" aria-current="page">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+    <ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html" aria-current="page">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="proshop.html">Pro Shop</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
     <div class="btnrow wrap" style="padding-inline:0">
       <a class="btn btn--clay btn--full" href="buchen.html">Platz buchen</a>
       <div class="langswitch langswitch--mob"><span class="langswitch__cur" aria-current="true">DE</span><a href="en/ueber-uns.html" hreflang="en" lang="en" title="English">EN</a><a href="es/ueber-uns.html" hreflang="es" lang="es" title="Español">ES</a></div>
+      <button class="theme theme--mob" type="button" data-theme-toggle aria-label="Zwischen hellem und dunklem Modus wechseln"><svg class="theme__sonne" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg><svg class="theme__mond" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg><span>Ansicht wechseln</span></button>
     </div>
   </div>
 </header>
@@ -94,80 +101,6 @@
       <li class="rv"><b>2013</b><h3>STC startet</h3><p>Der STC Geretsried e.&thinsp;V. wird gegründet. Die Anlage in Geretsried führt das Sportcenter Hahn bereits seit 2010.</p></li>
       <li class="rv"><b>2020</b><h3>Fusion</h3><p>Beide Vereine beschließen den Zusammenschluss. Seit 2021 tragen wir gemeinsam den Namen STC Oberland — für ein stärkeres Wir und ein attraktiveres Angebot vom Hobbyspieler bis zur Mannschaft.</p></li>
     </ol>
-  </div>
-</section>
-
-<section class="sect" id="sportarten">
-  <div class="wrap">
-    <p class="eyebrow rv">Unsere Anlagen</p>
-    <h2 class="rv" style="max-width:20ch">Zwei Standorte, fünf Sportarten</h2>
-    <ul class="locs"><li class="loc rv" data-sport="tennis">
-      <div class="loc__media"><a href="tennis.html"><img src="assets/img/wolfratshausen.jpg" alt="Tennisplätze im Tenniscenter Wolfratshausen" width="640" height="480" loading="lazy" decoding="async"></a>
-        <span class="loc__tag">9 Plätze</span></div>
-      <div class="loc__body">
-        <h3><a href="tennis.html">Tenniscenter Wolfratshausen</a></h3>
-        <address class="loc__addr">Geltinger Straße 12, 82515 Wolfratshausen</address>
-        <div class="loc__links">
-          <a class="btn btn--line btn--sm" href="buchen-wolfratshausen.html">Platz buchen</a>
-          <a class="txtlink" href="tennis.html">Alles zur Sportart</a>
-        </div>
-      </div>
-    </li><li class="loc rv" data-sport="tennis">
-      <div class="loc__media"><a href="tennis.html"><img src="assets/img/ger-tennis.jpg" alt="Tennisplatz der Anlage in Geretsried" width="640" height="480" loading="lazy" decoding="async"></a>
-        <span class="loc__tag">5 Plätze</span></div>
-      <div class="loc__body">
-        <h3><a href="tennis.html">Tennis Geretsried</a></h3>
-        <address class="loc__addr">Königsdorfer Weg 7, 82538 Geretsried</address>
-        <div class="loc__links">
-          <a class="btn btn--line btn--sm" href="buchen-geretsried.html">Platz buchen</a>
-          <a class="txtlink" href="tennis.html">Alles zur Sportart</a>
-        </div>
-      </div>
-    </li><li class="loc rv" data-sport="padel">
-      <div class="loc__media"><a href="padel.html"><img src="assets/img/ger-padel.jpg" alt="Padel-Courts in Geretsried" width="640" height="480" loading="lazy" decoding="async"></a>
-        <span class="loc__tag">6 Courts</span></div>
-      <div class="loc__body">
-        <h3><a href="padel.html">Padel Geretsried</a></h3>
-        <address class="loc__addr">Königsdorfer Weg 7, 82538 Geretsried</address>
-        <div class="loc__links">
-          <a class="btn btn--line btn--sm" href="buchen-geretsried.html">Platz buchen</a>
-          <a class="txtlink" href="padel.html">Alles zur Sportart</a>
-        </div>
-      </div>
-    </li><li class="loc rv" data-sport="padel">
-      <div class="loc__media"><a href="pickleball.html"><img src="assets/img/ger-pickleball.jpg" alt="Pickleball-Feld in Geretsried" width="640" height="480" loading="lazy" decoding="async"></a>
-        <span class="loc__tag">Neu</span></div>
-      <div class="loc__body">
-        <h3><a href="pickleball.html">Pickleball Geretsried</a></h3>
-        <address class="loc__addr">Königsdorfer Weg 7, 82538 Geretsried</address>
-        <div class="loc__links">
-          <a class="btn btn--line btn--sm" href="buchen-geretsried.html">Platz buchen</a>
-          <a class="txtlink" href="pickleball.html">Alles zur Sportart</a>
-        </div>
-      </div>
-    </li><li class="loc rv" data-sport="padel">
-      <div class="loc__media"><a href="soccer-five.html"><img src="assets/img/ger-soccer.jpg" alt="Indoor-Soccer-Five-Feld in Geretsried" width="640" height="480" loading="lazy" decoding="async"></a>
-        <span class="loc__tag">Halle</span></div>
-      <div class="loc__body">
-        <h3><a href="soccer-five.html">Indoor Soccer Five</a></h3>
-        <address class="loc__addr">Königsdorfer Weg 7, 82538 Geretsried</address>
-        <div class="loc__links">
-          <a class="btn btn--line btn--sm" href="buchen-geretsried.html">Platz buchen</a>
-          <a class="txtlink" href="soccer-five.html">Alles zur Sportart</a>
-        </div>
-      </div>
-    </li><li class="loc rv" data-sport="kombi">
-      <div class="loc__media"><a href="golf-simulator.html"><img src="assets/img/ger-golf.jpg" alt="Golf-Simulator in Geretsried" width="640" height="480" loading="lazy" decoding="async"></a>
-        <span class="loc__tag">Ganzjährig</span></div>
-      <div class="loc__body">
-        <h3><a href="golf-simulator.html">Golf-Simulator</a></h3>
-        <address class="loc__addr">Königsdorfer Weg 7, 82538 Geretsried</address>
-        <div class="loc__links">
-          <a class="btn btn--line btn--sm" href="buchen-geretsried.html">Platz buchen</a>
-          <a class="txtlink" href="golf-simulator.html">Alles zur Sportart</a>
-        </div>
-      </div>
-    </li></ul>
   </div>
 </section>
 
@@ -237,6 +170,10 @@
         <li><a href="mitglied.html">Mitglied werden</a></li>
         <li><a href="trainer.html">Training &amp; Trainer</a></li>
         <li><a href="sportsbar.html">Sportsbar</a></li>
+        <li><a href="proshop.html">Pro Shop</a></li>
+        <li><a href="partner.html">Mitspieler finden</a></li>
+        <li><a href="termine.html">Saison-Termine</a></li>
+        <li><a href="regeln.html">Regeln lernen</a></li>
         <li><a href="wandtraining.html">Wall Rally spielen</a></li>
       </ul>
     </div>
@@ -270,6 +207,6 @@
   <a href="buchen.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Platz buchen</a>
   <a href="trainer.html#trainer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="11" cy="9" rx="6" ry="7"/><path d="M11 16v5.5"/><path d="M5.2 9h11.6M11 2.2v13.6"/></svg> Trainieren</a>
 </div>
-<script src="assets/js/main.js?v=42ba8dbb" defer></script>
+<script src="assets/js/main.js?v=4b024929" defer></script>
 </body>
 </html>

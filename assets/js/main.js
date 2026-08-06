@@ -275,3 +275,150 @@
     document.body.appendChild(s);
   }, { once: true });
 })();
+
+/* ============================================================================
+   Buchungsfenster als Overlay.
+
+   Jeder Knopf mit data-book öffnet das Eversports-Widget in einem <dialog>.
+   Der iframe entsteht erst beim Öffnen und wird beim Schließen wieder entfernt
+   — vor dem Klick geht kein Request an Eversports, danach läuft nichts weiter.
+
+   <dialog> bringt Fokusfalle und Escape von Haus aus mit. Browser ohne
+   showModal() bekommen einen neuen Tab.
+   ========================================================================== */
+(function () {
+  'use strict';
+  var knoepfe = document.querySelectorAll('[data-book]');
+  if (!knoepfe.length) return;
+
+  var dlg = null, ausloeser = null;
+
+  function bauen() {
+    dlg = document.createElement('dialog');
+    dlg.className = 'bookdlg';
+    dlg.setAttribute('aria-label', 'Platzbuchung');
+    dlg.innerHTML =
+      '<div class="bookdlg__bar">' +
+        '<span class="bookdlg__title"></span>' +
+        '<button type="button" class="bookdlg__close" aria-label="Buchungsfenster schließen">' +
+          '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+          'stroke-width="2.2" stroke-linecap="round" aria-hidden="true">' +
+          '<path d="M6 6l12 12M18 6L6 18"/></svg>' +
+        '</button>' +
+      '</div><div class="bookdlg__body"></div>';
+    document.body.appendChild(dlg);
+    dlg.querySelector('.bookdlg__close').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('close', function () {
+      dlg.querySelector('.bookdlg__body').innerHTML = '';   // iframe abräumen
+      if (ausloeser) ausloeser.focus();
+    });
+  }
+
+  Array.prototype.forEach.call(knoepfe, function (b) {
+    b.addEventListener('click', function () {
+      var url = b.getAttribute('data-book');
+      var titel = b.getAttribute('data-book-title') || 'Platz buchen';
+      if (typeof HTMLDialogElement === 'undefined' ||
+          typeof document.createElement('dialog').showModal !== 'function') {
+        window.open(url, '_blank', 'noopener');
+        return;
+      }
+      if (!dlg) bauen();
+      ausloeser = b;
+      dlg.querySelector('.bookdlg__title').textContent = titel;
+      var f = document.createElement('iframe');
+      f.src = url;
+      f.title = titel;
+      f.setAttribute('allow', 'payment; fullscreen; clipboard-write');
+      f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      dlg.querySelector('.bookdlg__body').appendChild(f);
+      dlg.showModal();
+    });
+  });
+})();
+
+/* ============================================================================
+   Instagram-Feed (Behold) — Nachladen erst auf Klick.
+
+   Behold liefert ein Modulskript von w.behold.so. Bis zum Klick verlässt kein
+   Request die Seite; danach wird das Skript einmalig eingehängt und rüstet das
+   <behold-widget>-Element nach.
+
+   Soll der Feed sofort laden, in build.py INSTA_FEED_SOFORT auf True setzen —
+   dann entsteht dieses Markup gar nicht erst.
+   ========================================================================== */
+(function () {
+  'use strict';
+  var box = document.querySelector('[data-insta]');
+  if (!box) return;
+  var start = box.querySelector('[data-insta-start]');
+  if (!start) return;
+
+  start.addEventListener('click', function () {
+    var feed = box.getAttribute('data-insta');
+    if (!/^[A-Za-z0-9_-]+$/.test(feed)) return;      // nur erwartbare Kennungen
+    start.disabled = true;
+    start.textContent = 'Lädt …';
+
+    var widget = document.createElement('behold-widget');
+    widget.setAttribute('feed-id', feed);
+    box.classList.remove('instafeed--gate');
+    box.innerHTML = '';
+    box.appendChild(widget);
+
+    if (!window.__bhldScript) {
+      window.__bhldScript = true;
+      var s = document.createElement('script');
+      s.type = 'module';
+      s.src = 'https://w.behold.so/widget.js';
+      document.head.appendChild(s);
+    }
+  }, { once: true });
+})();
+
+/* ============================================================================
+   Hell/Dunkel umschalten.
+
+   Das Thema selbst setzt schon das Inline-Skript im <head>, bevor gerendert
+   wird. Hier hängt nur die Bedienung dran: Klick wechselt, die Wahl bleibt im
+   localStorage. Wer noch nie geklickt hat, folgt weiterhin der Systemeinstellung.
+   ========================================================================== */
+(function () {
+  'use strict';
+  var knoepfe = document.querySelectorAll('[data-theme-toggle]');
+  if (!knoepfe.length) return;
+  var wurzel = document.documentElement;
+
+  function melden() {
+    var dunkel = wurzel.getAttribute('data-theme') === 'dark';
+    Array.prototype.forEach.call(knoepfe, function (b) {
+      b.setAttribute('aria-pressed', dunkel ? 'true' : 'false');
+    });
+  }
+
+  Array.prototype.forEach.call(knoepfe, function (b) {
+    b.addEventListener('click', function () {
+      var neu = wurzel.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      wurzel.setAttribute('data-theme', neu);
+      try { window.localStorage.setItem('theme', neu); } catch (e) { /* Privatmodus */ }
+      melden();
+    });
+  });
+
+  // Systemwechsel weiterreichen, solange niemand selbst gewählt hat.
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    var reagieren = function (e) {
+      var gewaehlt = null;
+      try { gewaehlt = window.localStorage.getItem('theme'); } catch (err) {}
+      if (gewaehlt === 'dark' || gewaehlt === 'light') return;
+      wurzel.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      melden();
+    };
+    if (mq.addEventListener) mq.addEventListener('change', reagieren);
+    else if (mq.addListener) mq.addListener(reagieren);
+  }
+
+  melden();
+})();

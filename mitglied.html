@@ -12,6 +12,10 @@
 <link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/demo/mitglied.html">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#0C1310">
+<script>/* Setzt das Thema vor dem ersten Rendern — sonst blitzt kurz die falsche Fassung auf. */
+(function(){try{var t=localStorage.getItem("theme");
+if(t!=="dark"&&t!=="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";}
+document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="STC Oberland &amp; Sportcenter Hahn">
@@ -24,7 +28,7 @@
 <link rel="apple-touch-icon" href="assets/img/logo.png">
 <link rel="preload" href="assets/fonts/archivo-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/bigshoulders-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=42ba8dbb">
+<link rel="stylesheet" href="assets/css/style.css?v=4b024929">
 <!--HREFLANG-->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsActivityLocation","@id":"https://sportcenter-hahn.de/#organisation","name":"STC Oberland & Sportcenter Hahn","alternateName":"Sportcenter Hahn GmbH","url":"https://sportcenter-hahn.de/","logo":"https://sportcenter-hahn.de/assets/img/logo.png","image":"https://sportcenter-hahn.de/assets/img/hero.jpg","telephone":"+49817151110","email":"mail@sportcenter-hahn.de","priceRange":"€€","sameAs":["https://www.instagram.com/sportcenterhahn/"],"address":{"@type":"PostalAddress","streetAddress":"Königsdorfer Weg 7","postalCode":"82538","addressLocality":"Geretsried","addressRegion":"Bayern","addressCountry":"DE"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"23:00"}],"areaServed":["Geretsried","Wolfratshausen","Bad Tölz-Wolfratshausen","Oberland"],"sport":["Tennis","Padel","Pickleball","Fußball","Golf"],"department":[{"@type":"SportsActivityLocation","name":"Sportcenter Hahn Geretsried","telephone":"+49817151110","sport":["Tennis","Padel","Pickleball","Fußball","Golf"],"address":{"@type":"PostalAddress","streetAddress":"Königsdorfer Weg 7","postalCode":"82538","addressLocality":"Geretsried","addressCountry":"DE"}},{"@type":"SportsActivityLocation","name":"Tenniscenter Wolfratshausen","telephone":"+49817151110","sport":["Tennis"],"address":{"@type":"PostalAddress","streetAddress":"Geltinger Straße 12","postalCode":"82515","addressLocality":"Wolfratshausen","addressCountry":"DE"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://sportcenter-hahn.de/"},{"@type":"ListItem","position":2,"name":"Mitglied werden","item":"https://sportcenter-hahn.de/mitglied.html"}]}</script>
@@ -37,19 +41,22 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="brand" href="index.html" aria-label="STC Oberland und Sportcenter Hahn – zur Startseite">
-      <img src="assets/img/logo.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" fetchpriority="high">
+      <img class="brand__hell" src="assets/img/logo.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" fetchpriority="high">
+      <img class="brand__dunkel" src="assets/img/logo-white.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" loading="lazy">
     </a>
-    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html" aria-current="page">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></nav>
+    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html" aria-current="page">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="proshop.html">Pro Shop</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></nav>
     <!--LANGS-->
     <div class="langswitch"><span class="langswitch__cur" aria-current="true">DE</span><a href="en/mitglied.html" hreflang="en" lang="en" title="English">EN</a><a href="es/mitglied.html" hreflang="es" lang="es" title="Español">ES</a></div>
+    <button class="theme" type="button" data-theme-toggle aria-label="Zwischen hellem und dunklem Modus wechseln"><svg class="theme__sonne" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg><svg class="theme__mond" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg></button>
     <a class="btn btn--clay btn--sm head-cta" href="buchen.html">Platz buchen</a>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mobnav" aria-label="Menü öffnen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
   <div class="mobnav" id="mobnav">
-    <ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html" aria-current="page">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+    <ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html" aria-current="page">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="proshop.html">Pro Shop</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
     <div class="btnrow wrap" style="padding-inline:0">
       <a class="btn btn--clay btn--full" href="buchen.html">Platz buchen</a>
       <div class="langswitch langswitch--mob"><span class="langswitch__cur" aria-current="true">DE</span><a href="en/mitglied.html" hreflang="en" lang="en" title="English">EN</a><a href="es/mitglied.html" hreflang="es" lang="es" title="Español">ES</a></div>
+      <button class="theme theme--mob" type="button" data-theme-toggle aria-label="Zwischen hellem und dunklem Modus wechseln"><svg class="theme__sonne" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg><svg class="theme__mond" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg><span>Ansicht wechseln</span></button>
     </div>
   </div>
 </header>
@@ -67,11 +74,30 @@
   <div class="wrap">
     <p class="eyebrow rv">Deine Vorteile</p>
     <h2 class="rv" style="max-width:22ch">Was die Mitgliedschaft konkret bringt</h2>
+    <div class="perk rv" data-sport="padel">
+      <div>
+        <p class="perk__flag">Der wichtigste Vorteil</p>
+        <h3>Täglich zwei Stunden kostenlos spielen</h3>
+        <p>Das ist die Sommer-Flat — und der stärkste Grund für eine Mitgliedschaft. Outdoor
+          buchst du jeden Tag bis zu zwei Stunden. Nicht vergünstigt, nicht gestaffelt: ohne
+          Platzgebühr.</p>
+      </div>
+      <div>
+        <ul class="ticks">
+          <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Jeden Tag bis zu zwei Stunden outdoor</span></li>
+          <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Tennis, Padel oder beides — je nach Mitgliedschaft</span></li>
+          <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Bei Regen kostenfreie Hallen-Alternative</span></li>
+          <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Padel zusätzlich mit Flutlicht buchbar</span></li>
+        </ul>
+        <a class="btn btn--turf" href="#antrag">Mitglied werden</a>
+      </div>
+    </div>
+
     <ul class="grid grid--3">
       <li class="tile rv" data-sport="tennis"><div class="tile__body">
         <h3>Früher buchen</h3>
-        <p>Mitglieder reservieren bis 21 Tage im Voraus, alle anderen 10 Tage. Dazu täglich bis zu
-          zwei Stunden Sommer-Flat outdoor — ohne Platzgebühr.</p>
+        <p>Mitglieder reservieren bis 21 Tage im Voraus, alle anderen 10 Tage. Bei begehrten
+          Abendterminen entscheidet genau das.</p>
         <a class="btn btn--line btn--sm" href="#antrag">Antrag stellen</a></div></li>
       <li class="tile rv" data-sport="padel"><div class="tile__body">
         <h3>10 % günstiger indoor</h3>
@@ -80,8 +106,8 @@
         <a class="btn btn--line btn--sm" href="#antrag">Antrag stellen</a></div></li>
       <li class="tile rv" data-sport="kombi"><div class="tile__body">
         <h3>Community statt Wartebank</h3>
-        <p>Match- und Spielerbörse, Mitglieder-Events, WhatsApp-Gruppe und Bavaro Padel League.
-          Du findest fast immer jemanden zum Spielen.</p>
+        <p>Mitglieder-Events, WhatsApp-Gruppe und Bavaro Padel League. Und die
+          <a href="partner.html">Mitspielerbörse</a>, in der du fast immer jemanden findest.</p>
         <a class="btn btn--line btn--sm" href="#antrag">Antrag stellen</a></div></li>
     </ul>
   </div>
@@ -144,44 +170,142 @@
       <li class="fact"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.94.53 3.75 1.45 5.3L2 22l4.98-1.6a9.8 9.8 0 0 0 5.06 1.4c5.43 0 9.84-4.4 9.84-9.84S17.47 2 12.04 2Zm5.7 13.9c-.24.68-1.4 1.3-1.94 1.35-.5.05-.98.23-3.3-.7-2.78-1.1-4.55-3.95-4.69-4.13-.14-.19-1.13-1.5-1.13-2.87 0-1.36.71-2.03.97-2.31.25-.28.55-.35.73-.35l.53.01c.17 0 .4-.06.62.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.3-.28.47l-.42.48c-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.19-.28.37-.23.63-.14.25.09 1.65.78 1.93.92.28.14.47.21.54.33.07.11.07.66-.17 1.31Z"/></svg><div><b><a href="https://wa.me/4917630365102" rel="noopener">WhatsApp</a></b><span>Für kurze Fragen der schnellste Weg.</span></div></li>
     </ul>
     </div>
-    <form id="antragsformular" action="[[ FORMULAR-ENDPUNKT ]]" method="post" class="rv">
-      <div class="field-row">
-        <div class="field"><label for="m-vorname">Vorname</label>
-          <input id="m-vorname" name="vorname" type="text" autocomplete="given-name" required></div>
-        <div class="field"><label for="m-nachname">Nachname</label>
-          <input id="m-nachname" name="nachname" type="text" autocomplete="family-name" required></div>
-      </div>
-      <div class="field-row">
-        <div class="field"><label for="m-mail">E-Mail</label>
+    <form id="antragsformular" action="[[ FORMULAR-ENDPUNKT ]]" method="post" class="rv antrag" novalidate>
+
+      <fieldset>
+        <legend>1 · Mitgliedschaft</legend>
+        <div class="field-row">
+          <div class="field"><label for="m-plan">Gewünschte Mitgliedschaft <abbr title="Pflichtfeld">*</abbr></label>
+            <select id="m-plan" name="mitgliedschaft" required>
+              <option value="">Bitte wählen</option>
+              <option value="tennis">Tennis — 250 € / Jahr</option>
+              <option value="padel">Padel — 285 € / Jahr</option>
+              <option value="kombi">Tennis + Padel — 410 € / Jahr</option>
+            </select></div>
+          <div class="field"><label for="m-tarif">Tarif <abbr title="Pflichtfeld">*</abbr></label>
+            <select id="m-tarif" name="tarif" required>
+              <option value="erwachsene">Erwachsene</option>
+              <option value="schueler">Schüler</option>
+              <option value="studenten">Studenten</option>
+              <option value="u11">Kind unter 11 Jahren</option>
+            </select>
+            <p class="field__hilfe">Bei Schülern und Studenten legst du beim ersten Besuch bitte
+              einen Nachweis vor.</p></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="m-start">Gewünschter Beginn</label>
+            <input id="m-start" name="beginn" type="date">
+            <p class="field__hilfe">Leer lassen für den nächstmöglichen Termin.</p></div>
+          <div class="field"><label for="m-standort">Hauptsächlich am Standort</label>
+            <select id="m-standort" name="standort">
+              <option>Geretsried</option><option>Wolfratshausen</option><option>Beide</option>
+            </select></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2 · Deine Daten</legend>
+        <div class="field-row">
+          <div class="field"><label for="m-vorname">Vorname <abbr title="Pflichtfeld">*</abbr></label>
+            <input id="m-vorname" name="vorname" type="text" autocomplete="given-name" required></div>
+          <div class="field"><label for="m-nachname">Nachname <abbr title="Pflichtfeld">*</abbr></label>
+            <input id="m-nachname" name="nachname" type="text" autocomplete="family-name" required></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="m-geb">Geburtsdatum <abbr title="Pflichtfeld">*</abbr></label>
+            <input id="m-geb" name="geburtsdatum" type="date" autocomplete="bday" required>
+            <p class="field__hilfe">Wir brauchen es für Tarif und Mannschaftsmeldung.</p></div>
+          <div class="field"><label for="m-tel">Telefon <abbr title="Pflichtfeld">*</abbr></label>
+            <input id="m-tel" name="telefon" type="tel" autocomplete="tel" required></div>
+        </div>
+        <div class="field"><label for="m-mail">E-Mail <abbr title="Pflichtfeld">*</abbr></label>
           <input id="m-mail" name="email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="m-tel">Telefon</label>
-          <input id="m-tel" name="telefon" type="tel" autocomplete="tel"></div>
-      </div>
-      <div class="field-row">
-        <div class="field"><label for="m-plan">Gewünschte Mitgliedschaft</label>
-          <select id="m-plan" name="mitgliedschaft" required>
-            <option value="tennis">Tennis — 250 € / Jahr</option>
-            <option value="padel">Padel — 285 € / Jahr</option>
-            <option value="kombi" selected>Tennis + Padel — 410 € / Jahr</option>
-          </select></div>
-        <div class="field"><label for="m-tarif">Tarif</label>
-          <select id="m-tarif" name="tarif">
-            <option>Erwachsene</option><option>Schüler / Studenten</option><option>Kinder U11</option>
-          </select></div>
-      </div>
-      <div class="field"><label for="m-text">Anmerkungen (optional)</label>
-        <textarea id="m-text" name="nachricht" placeholder="Zum Beispiel: Ich spiele seit zwei Jahren Padel und suche Anschluss an eine Mannschaft."></textarea></div>
+        <div class="field"><label for="m-strasse">Straße und Hausnummer <abbr title="Pflichtfeld">*</abbr></label>
+          <input id="m-strasse" name="strasse" type="text" autocomplete="street-address" required></div>
+        <div class="field-row">
+          <div class="field"><label for="m-plz">PLZ <abbr title="Pflichtfeld">*</abbr></label>
+            <input id="m-plz" name="plz" type="text" inputmode="numeric" autocomplete="postal-code"
+                   pattern="[0-9]{5}" maxlength="5" required></div>
+          <div class="field"><label for="m-ort">Ort <abbr title="Pflichtfeld">*</abbr></label>
+            <input id="m-ort" name="ort" type="text" autocomplete="address-level2" required></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3 · Bei Minderjährigen</legend>
+        <p class="fieldset__hilfe">Nur ausfüllen, wenn das Mitglied unter 18 Jahre alt ist. Der
+          Antrag und das SEPA-Mandat werden dann von der gesetzlichen Vertretung erteilt.</p>
+        <div class="field-row">
+          <div class="field"><label for="m-vname">Name der gesetzlichen Vertretung</label>
+            <input id="m-vname" name="vertretung_name" type="text"></div>
+          <div class="field"><label for="m-vtel">Telefon der gesetzlichen Vertretung</label>
+            <input id="m-vtel" name="vertretung_telefon" type="tel"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="sepa">
+        <legend>4 · SEPA-Lastschriftmandat</legend>
+        <p class="fieldset__hilfe">Der Jahresbeitrag wird per Lastschrift eingezogen. Deine
+          Bankdaten werden ausschließlich dafür verwendet.</p>
+        <div class="field"><label for="m-inhaber">Kontoinhaber <abbr title="Pflichtfeld">*</abbr></label>
+          <input id="m-inhaber" name="kontoinhaber" type="text" autocomplete="name" required>
+          <p class="field__hilfe">Nur ausfüllen, falls abweichend vom Mitglied — sonst denselben
+            Namen eintragen.</p></div>
+        <div class="field-row">
+          <div class="field"><label for="m-iban">IBAN <abbr title="Pflichtfeld">*</abbr></label>
+            <input id="m-iban" name="iban" type="text" inputmode="text" autocomplete="off"
+                   spellcheck="false" placeholder="DE00 0000 0000 0000 0000 00"
+                   pattern="[A-Za-z]{2}[0-9]{2}[ ]?([A-Za-z0-9][ ]?){12,30}" maxlength="42" required></div>
+          <div class="field"><label for="m-bank">Kreditinstitut</label>
+            <input id="m-bank" name="bank" type="text" autocomplete="off"></div>
+        </div>
+
+        <div class="mandat">
+          <p><b>Gläubiger:</b> <span class="ph">[[ EINZIEHENDE STELLE: Sportcenter Hahn GmbH ODER STC Oberland e. V. ]]</span><br>
+             <b>Gläubiger-Identifikationsnummer:</b> <span class="ph">[[ DE00ZZZ00000000000 ]]</span><br>
+             <b>Mandatsreferenz:</b> wird dir mit der Bestätigung mitgeteilt</p>
+          <p>Ich ermächtige den oben genannten Gläubiger, wiederkehrende Zahlungen von meinem Konto
+             mittels Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die auf
+             mein Konto gezogenen Lastschriften einzulösen.</p>
+          <p><b>Hinweis:</b> Ich kann innerhalb von acht Wochen ab Belastungsdatum die Erstattung
+             des belasteten Betrages verlangen. Es gelten dabei die mit meinem Kreditinstitut
+             vereinbarten Bedingungen. Die Vorabankündigung des Einzugs erfolgt mindestens
+             <span class="ph">[[ 5 ]]</span> Tage vor Belastung per E-Mail.</p>
+        </div>
+
+        <label class="consent" for="m-sepa">
+          <input id="m-sepa" name="sepa_mandat" type="checkbox" required>
+          <span>Ich erteile das SEPA-Lastschriftmandat zu den oben genannten Bedingungen.
+          <abbr title="Pflichtfeld">*</abbr></span></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>5 · Zustimmung</legend>
+        <label class="consent" for="m-satzung">
+          <input id="m-satzung" name="satzung" type="checkbox" required>
+          <span>Ich erkenne Satzung und Beitragsordnung an und nehme die Mindestlaufzeit sowie die
+          Kündigungsfrist zur Kenntnis.
+          <span class="ph">[[ LINK ZU SATZUNG UND BEITRAGSORDNUNG ]]</span>
+          <abbr title="Pflichtfeld">*</abbr></span></label>
+        <label class="consent" for="m-consent">
+          <input id="m-consent" name="consent" type="checkbox" required>
+          <span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung des Antrags und zur
+          Mitgliederverwaltung gespeichert werden. Näheres in der
+          <a href="datenschutz.html">Datenschutzerklärung</a>.
+          <abbr title="Pflichtfeld">*</abbr></span></label>
+        <label class="consent" for="m-whatsapp">
+          <input id="m-whatsapp" name="whatsapp" type="checkbox">
+          <span>Optional: Nehmt mich in die Mitglieder-WhatsApp-Gruppe für Match- und
+          Spielerbörse auf.</span></label>
+      </fieldset>
+
       <div class="hp" aria-hidden="true">
         <label for="m-web">Bitte leer lassen</label>
         <input id="m-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-      <label class="consent" for="m-consent">
-        <input id="m-consent" name="consent" type="checkbox" required>
-        <span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung des Antrags gespeichert
-        werden. Die Einwilligung kann jederzeit widerrufen werden. Näheres in der
-        <a href="datenschutz.html">Datenschutzerklärung</a>.</span></label>
-      <button class="btn btn--clay" type="submit">Antrag absenden</button>
-      <p class="form-note">Der Antrag ist unverbindlich — die Mitgliedschaft entsteht erst mit
-        unserer Bestätigung.</p>
+
+      <button class="btn btn--clay" type="submit">Antrag verbindlich absenden</button>
+      <p class="form-note">Felder mit <abbr title="Pflichtfeld">*</abbr> sind Pflicht. Die
+        Mitgliedschaft entsteht erst mit unserer schriftlichen Bestätigung.</p>
     </form>
   </div>
 </section>
@@ -223,6 +347,10 @@
         <li><a href="mitglied.html">Mitglied werden</a></li>
         <li><a href="trainer.html">Training &amp; Trainer</a></li>
         <li><a href="sportsbar.html">Sportsbar</a></li>
+        <li><a href="proshop.html">Pro Shop</a></li>
+        <li><a href="partner.html">Mitspieler finden</a></li>
+        <li><a href="termine.html">Saison-Termine</a></li>
+        <li><a href="regeln.html">Regeln lernen</a></li>
         <li><a href="wandtraining.html">Wall Rally spielen</a></li>
       </ul>
     </div>
@@ -256,6 +384,6 @@
   <a href="buchen.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Platz buchen</a>
   <a href="trainer.html#trainer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="11" cy="9" rx="6" ry="7"/><path d="M11 16v5.5"/><path d="M5.2 9h11.6M11 2.2v13.6"/></svg> Trainieren</a>
 </div>
-<script src="assets/js/main.js?v=42ba8dbb" defer></script>
+<script src="assets/js/main.js?v=4b024929" defer></script>
 </body>
 </html>

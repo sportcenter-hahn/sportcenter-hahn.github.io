@@ -12,6 +12,10 @@
 <link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/demo/buchen-geretsried.html">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#0C1310">
+<script>/* Setzt das Thema vor dem ersten Rendern — sonst blitzt kurz die falsche Fassung auf. */
+(function(){try{var t=localStorage.getItem("theme");
+if(t!=="dark"&&t!=="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";}
+document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="STC Oberland &amp; Sportcenter Hahn">
@@ -24,7 +28,7 @@
 <link rel="apple-touch-icon" href="assets/img/logo.png">
 <link rel="preload" href="assets/fonts/archivo-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/bigshoulders-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=42ba8dbb">
+<link rel="stylesheet" href="assets/css/style.css?v=4b024929">
 <!--HREFLANG-->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsActivityLocation","@id":"https://sportcenter-hahn.de/#organisation","name":"STC Oberland & Sportcenter Hahn","alternateName":"Sportcenter Hahn GmbH","url":"https://sportcenter-hahn.de/","logo":"https://sportcenter-hahn.de/assets/img/logo.png","image":"https://sportcenter-hahn.de/assets/img/hero.jpg","telephone":"+49817151110","email":"mail@sportcenter-hahn.de","priceRange":"€€","sameAs":["https://www.instagram.com/sportcenterhahn/"],"address":{"@type":"PostalAddress","streetAddress":"Königsdorfer Weg 7","postalCode":"82538","addressLocality":"Geretsried","addressRegion":"Bayern","addressCountry":"DE"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"23:00"}],"areaServed":["Geretsried","Wolfratshausen","Bad Tölz-Wolfratshausen","Oberland"],"sport":["Tennis","Padel","Pickleball","Fußball","Golf"],"department":[{"@type":"SportsActivityLocation","name":"Sportcenter Hahn Geretsried","telephone":"+49817151110","sport":["Tennis","Padel","Pickleball","Fußball","Golf"],"address":{"@type":"PostalAddress","streetAddress":"Königsdorfer Weg 7","postalCode":"82538","addressLocality":"Geretsried","addressCountry":"DE"}},{"@type":"SportsActivityLocation","name":"Tenniscenter Wolfratshausen","telephone":"+49817151110","sport":["Tennis"],"address":{"@type":"PostalAddress","streetAddress":"Geltinger Straße 12","postalCode":"82515","addressLocality":"Wolfratshausen","addressCountry":"DE"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://sportcenter-hahn.de/"},{"@type":"ListItem","position":2,"name":"Platz buchen Geretsried","item":"https://sportcenter-hahn.de/buchen-geretsried.html"}]}</script>
@@ -36,19 +40,22 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="brand" href="index.html" aria-label="STC Oberland und Sportcenter Hahn – zur Startseite">
-      <img src="assets/img/logo.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" fetchpriority="high">
+      <img class="brand__hell" src="assets/img/logo.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" fetchpriority="high">
+      <img class="brand__dunkel" src="assets/img/logo-white.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" loading="lazy">
     </a>
-    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></nav>
+    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="proshop.html">Pro Shop</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></nav>
     <!--LANGS-->
     <div class="langswitch"><span class="langswitch__cur" aria-current="true">DE</span><a href="en/buchen-geretsried.html" hreflang="en" lang="en" title="English">EN</a><a href="es/buchen-geretsried.html" hreflang="es" lang="es" title="Español">ES</a></div>
+    <button class="theme" type="button" data-theme-toggle aria-label="Zwischen hellem und dunklem Modus wechseln"><svg class="theme__sonne" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg><svg class="theme__mond" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg></button>
     <a class="btn btn--clay btn--sm head-cta" href="buchen.html">Platz buchen</a>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mobnav" aria-label="Menü öffnen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
   <div class="mobnav" id="mobnav">
-    <ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+    <ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="proshop.html">Pro Shop</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
     <div class="btnrow wrap" style="padding-inline:0">
       <a class="btn btn--clay btn--full" href="buchen.html">Platz buchen</a>
       <div class="langswitch langswitch--mob"><span class="langswitch__cur" aria-current="true">DE</span><a href="en/buchen-geretsried.html" hreflang="en" lang="en" title="English">EN</a><a href="es/buchen-geretsried.html" hreflang="es" lang="es" title="Español">ES</a></div>
+      <button class="theme theme--mob" type="button" data-theme-toggle aria-label="Zwischen hellem und dunklem Modus wechseln"><svg class="theme__sonne" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg><svg class="theme__mond" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg><span>Ansicht wechseln</span></button>
     </div>
   </div>
 </header>
@@ -64,20 +71,55 @@
 
 <section class="sect sect--tight">
   <div class="wrap">
-    <div class="embed embed--tall">
-    <iframe src="https://widget.eversports.com/w/0bedks" title="Online-Platzbuchung Geretsried"
-      allow="payment; fullscreen; clipboard-write"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-    <p class="src-note rv">Das Buchungssystem wird von Eversports betrieben und lädt mit dieser
-      Seite; dabei werden Daten an Eversports übertragen — Details in der
-      <a href="datenschutz.html">Datenschutzerklärung</a>. Falls das Fenster leer bleibt:
-      <a href="https://widget.eversports.com/w/0bedks" rel="noopener">direkt bei Eversports öffnen</a>.</p>
-    <div class="btnrow rv" style="margin-top:1.5rem">
+    <div class="bookcard rv" data-sport="padel">
+      <div>
+        <p class="eyebrow">Online-Reservierung</p>
+        <h2>Freie Plätze ansehen und buchen</h2>
+        <p class="lead" style="margin-top:.75rem">Belegung in Echtzeit, Buchung in unter einer
+          Minute. Täglich von 7 bis 23 Uhr.</p>
+        <ul class="ticks" style="margin-top:1.25rem">
+          <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Mitglieder bis 21 Tage im Voraus, alle anderen 10 Tage</span></li>
+          <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Bezahlung direkt bei der Buchung</span></li>
+          <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Online-Stornierung bis 72 Stunden vorher kostenfrei</span></li>
+        </ul>
+      </div>
+      <div class="bookcard__cta">
+        <button class="btn btn--clay btn--xl" type="button"
+                data-book="https://widget.eversports.com/w/0bedks" data-book-title="Platzbuchung Geretsried">Buchungsfenster öffnen</button>
+        <p class="src-note">Das Buchungssystem von Eversports öffnet sich in einem eigenen Fenster.
+          Erst mit dem Klick werden Daten an Eversports übertragen —
+          <a href="datenschutz.html">Details</a>.</p>
+        <a class="txtlink" href="https://widget.eversports.com/w/0bedks" rel="noopener">Lieber in einem neuen Tab öffnen</a>
+      </div>
+    </div>
+    <div class="btnrow rv" style="margin-top:1.75rem">
       <a class="btn btn--line" href="buchen-wolfratshausen.html">Stattdessen Wolfratshausen</a>
+      <a class="btn btn--line" href="partner.html">Kein Mitspieler? Zur Börse</a>
       <a class="btn btn--line" href="mitglied.html">Mitglied werden und früher buchen</a>
     </div>
   </div>
+</section>
+
+<section class="sect sect--tight" id="wetter">
+  <div class="wrap"><div class="wx rv" data-wetter data-lat="47.86" data-lon="11.48" data-sport="padel">
+      <div class="wx__kopf">
+        <div>
+          <p class="eyebrow">Wetter am Platz</p>
+          <h2>Draußen oder in die Halle?</h2>
+        </div>
+        <p class="wx__ort"><b>Geretsried</b><span class="wx__stand"></span></p>
+      </div>
+      <p class="wx__laden">Wetterdaten werden geladen …</p>
+      <p class="wx__fehler" hidden></p>
+      <div class="wx__body" hidden>
+        <div class="wx__now"></div>
+        <ul class="wx__sun"></ul>
+        <ol class="wx__days"></ol>
+      </div>
+      
+      <p class="wx__quelle">Vorhersage von <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a>,
+        alle 45 Minuten aktualisiert.</p>
+    </div></div>
 </section>
 
 <section class="sect sect--white" id="preise">
@@ -139,7 +181,7 @@
 <section class="sect sect--dark sect--tight">
   <div class="wrap">
     <h2 class="rv" style="max-width:22ch">Gut zu wissen</h2>
-    <ul class="grid grid--3">
+    <ul class="grid grid--4">
       <li class="tile rv" data-sport="padel"><div class="tile__body"><h3>Buchungsfenster</h3>
         <p>Mitglieder reservieren bis 21 Tage im Voraus, alle anderen bis 10 Tage. Padel-Outdoor ist
            auch für Nicht-Mitglieder online buchbar.</p></div></li>
@@ -149,6 +191,9 @@
       <li class="tile rv" data-sport="padel"><div class="tile__body"><h3>Nur online</h3>
         <p>Reservierungen laufen ausschließlich über Eversports — im Browser oder in der App. Die
            Bezahlung erfolgt direkt bei der Buchung, Mitglieder sehen ihre Rabatte automatisch.</p></div></li>
+      <li class="tile rv" data-sport="padel"><div class="tile__body"><h3>Ausrüstung vergessen?</h3>
+        <p>Schläger und Bälle leihst du im <a href="proshop.html">Pro Shop</a> an der Anlage.
+           Dort wird auch bespannt und verkauft.</p></div></li>
     </ul>
   </div>
 </section>
@@ -182,6 +227,10 @@
         <li><a href="mitglied.html">Mitglied werden</a></li>
         <li><a href="trainer.html">Training &amp; Trainer</a></li>
         <li><a href="sportsbar.html">Sportsbar</a></li>
+        <li><a href="proshop.html">Pro Shop</a></li>
+        <li><a href="partner.html">Mitspieler finden</a></li>
+        <li><a href="termine.html">Saison-Termine</a></li>
+        <li><a href="regeln.html">Regeln lernen</a></li>
         <li><a href="wandtraining.html">Wall Rally spielen</a></li>
       </ul>
     </div>
@@ -215,6 +264,7 @@
   <a href="buchen.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Platz buchen</a>
   <a href="trainer.html#trainer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="11" cy="9" rx="6" ry="7"/><path d="M11 16v5.5"/><path d="M5.2 9h11.6M11 2.2v13.6"/></svg> Trainieren</a>
 </div>
-<script src="assets/js/main.js?v=42ba8dbb" defer></script>
+<script src="assets/js/main.js?v=4b024929" defer></script>
+<script src="assets/js/wetter.js?v=4b024929" defer></script>
 </body>
 </html>

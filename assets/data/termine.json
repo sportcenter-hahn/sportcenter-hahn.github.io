@@ -1,0 +1,25 @@
+{
+  "_hinweis": "BEISPIELDATEN. Bitte durch echte Termine ersetzen. Format je Eintrag: von/bis als JJJJ-MM-TT, sport = tennis|padel|pickleball|alle, kategorie = turnier|liga|event|jugend|senioren|special, ort = geretsried|wolfratshausen|beide. titel und notiz koennen entweder ein Text sein (gilt fuer alle Sprachen) oder ein Objekt {de, en, es}.",
+  "termine": [
+    { "von": "2026-04-11", "titel": "Saisoneröffnung Freiplätze", "sport": "alle",
+      "kategorie": "event", "ort": "beide", "notiz": "Alle Außenplätze sind ab diesem Tag bespielbar." },
+    { "von": "2026-04-18", "titel": "STC Series GP250 · Herren", "sport": "padel",
+      "kategorie": "turnier", "ort": "geretsried", "notiz": "Tagesturnier, Anmeldung über Eversports." },
+    { "von": "2026-05-02", "bis": "2026-09-19", "titel": "Bavaro Padel League · Sommerzyklus", "sport": "padel",
+      "kategorie": "liga", "ort": "geretsried", "notiz": "Für Padel-Mitglieder ohne Ligagebühr." },
+    { "von": "2026-05-09", "bis": "2026-07-25", "titel": "Medenrunde · Punktspiele", "sport": "tennis",
+      "kategorie": "liga", "ort": "beide", "notiz": "Spielpläne beim Bayerischen Tennis-Verband." },
+    { "von": "2026-05-23", "titel": "Jugendturnier · U12 bis U18", "sport": "tennis",
+      "kategorie": "jugend", "ort": "wolfratshausen" },
+    { "von": "2026-06-13", "titel": "Pickleball-Schnuppertag", "sport": "pickleball",
+      "kategorie": "special", "ort": "geretsried", "notiz": "Paddles werden gestellt, keine Vorkenntnisse nötig." },
+    { "von": "2026-06-27", "bis": "2026-06-28", "titel": "STC Gaudi", "sport": "alle",
+      "kategorie": "turnier", "ort": "geretsried", "notiz": "Turnierwochenende mit Sportsbar und Siegerehrung." },
+    { "von": "2026-07-11", "titel": "Senioren-Doppel 55+", "sport": "tennis",
+      "kategorie": "senioren", "ort": "wolfratshausen" },
+    { "von": "2026-09-12", "titel": "STC Series GP500 · Mixed", "sport": "padel",
+      "kategorie": "turnier", "ort": "geretsried" },
+    { "von": "2026-10-04", "titel": "Hallensaison beginnt", "sport": "alle",
+      "kategorie": "event", "ort": "beide", "notiz": "Ab jetzt gelten die Winterpreise für Hallenplätze." }
+  ]
+}

@@ -10,6 +10,10 @@
 <link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/demo/datenschutz.html">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#0C1310">
+<script>/* Setzt das Thema vor dem ersten Rendern — sonst blitzt kurz die falsche Fassung auf. */
+(function(){try{var t=localStorage.getItem("theme");
+if(t!=="dark"&&t!=="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";}
+document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="STC Oberland &amp; Sportcenter Hahn">
@@ -22,7 +26,7 @@
 <link rel="apple-touch-icon" href="assets/img/logo.png">
 <link rel="preload" href="assets/fonts/archivo-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/bigshoulders-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=42ba8dbb">
+<link rel="stylesheet" href="assets/css/style.css?v=4b024929">
 <!--HREFLANG-->
 
 </head>
@@ -33,19 +37,22 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="brand" href="index.html" aria-label="STC Oberland und Sportcenter Hahn – zur Startseite">
-      <img src="assets/img/logo.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" fetchpriority="high">
+      <img class="brand__hell" src="assets/img/logo.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" fetchpriority="high">
+      <img class="brand__dunkel" src="assets/img/logo-white.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" loading="lazy">
     </a>
-    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></nav>
+    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="proshop.html">Pro Shop</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></nav>
     <!--LANGS-->
     <div class="langswitch"><span class="langswitch__cur" aria-current="true">DE</span><a href="datenschutz.html" hreflang="en" lang="en" title="English">EN</a><a href="datenschutz.html" hreflang="es" lang="es" title="Español">ES</a></div>
+    <button class="theme" type="button" data-theme-toggle aria-label="Zwischen hellem und dunklem Modus wechseln"><svg class="theme__sonne" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg><svg class="theme__mond" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg></button>
     <a class="btn btn--clay btn--sm head-cta" href="buchen.html">Platz buchen</a>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mobnav" aria-label="Menü öffnen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
   <div class="mobnav" id="mobnav">
-    <ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+    <ul><li><a href="index.html#sportarten">Sportarten</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="trainer.html">Training</a></li><li><a href="mitglied.html">Mitglied</a></li><li><a href="liga.html">Liga</a></li><li><a href="sportsbar.html">Sportsbar</a></li><li><a href="proshop.html">Pro Shop</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
     <div class="btnrow wrap" style="padding-inline:0">
       <a class="btn btn--clay btn--full" href="buchen.html">Platz buchen</a>
       <div class="langswitch langswitch--mob"><span class="langswitch__cur" aria-current="true">DE</span><a href="datenschutz.html" hreflang="en" lang="en" title="English">EN</a><a href="datenschutz.html" hreflang="es" lang="es" title="Español">ES</a></div>
+      <button class="theme theme--mob" type="button" data-theme-toggle aria-label="Zwischen hellem und dunklem Modus wechseln"><svg class="theme__sonne" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg><svg class="theme__mond" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg><span>Ansicht wechseln</span></button>
     </div>
   </div>
 </header>
@@ -81,18 +88,15 @@
 
   <h2>4. Buchungssystem (Eversports)</h2>
   <p>Platzreservierungen sind ausschließlich online über die Eversports GmbH möglich. Auf den
-     Buchungsseiten (<em>Platz buchen Geretsried</em> und <em>Platz buchen Wolfratshausen</em>) wird
-     das Reservierungssystem deshalb <b>direkt beim Seitenaufruf</b> geladen. Dabei werden unter
-     anderem deine IP-Adresse und Browserdaten an Eversports übertragen, und Eversports kann für
-     den Betrieb des Buchungsvorgangs erforderliche Cookies setzen.</p>
-  <p>Rechtsgrundlage: Das Buchungssystem ist der Dienst, den du mit dem Aufruf dieser Seite
-     ausdrücklich angefordert hast; die Einbindung ist dafür unbedingt erforderlich
-     (§ 25 Abs. 2 Nr. 2 TDDDG) und dient der Anbahnung bzw. Erfüllung des Vertrags
-     (Art. 6 Abs. 1 lit. b DSGVO). Alle übrigen Seiten dieser Website lassen sich ohne jede
-     Datenübertragung an Eversports nutzen. Für die Verarbeitung innerhalb des Buchungssystems und
-     der Eversports-App ist Eversports eigenständig verantwortlich.
-     <span class="ph">[[ LINK ZUR EVERSPORTS-DATENSCHUTZERKLÄRUNG ERGÄNZEN ]]</span>
-     <span class="ph">[[ RECHTSGRUNDLAGE ANWALTLICH BESTÄTIGEN LASSEN ]]</span></p>
+     Buchungsseiten öffnet sich das Reservierungssystem <b>erst nach deinem Klick</b> auf
+     „Buchungsfenster öffnen“ in einem eigenen Fenster. Vorher wird keine Verbindung zu Eversports
+     aufgebaut.</p>
+  <p>Nach dem Klick werden unter anderem deine IP-Adresse und Browserdaten an Eversports
+     übertragen, und Eversports kann die für den Buchungsvorgang erforderlichen Cookies setzen.
+     Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sowie die Anbahnung bzw.
+     Erfüllung des Vertrags (Art. 6 Abs. 1 lit. b DSGVO). Für die Verarbeitung innerhalb des
+     Buchungssystems und der Eversports-App ist Eversports eigenständig verantwortlich.
+     <span class="ph">[[ LINK ZUR EVERSPORTS-DATENSCHUTZERKLÄRUNG ERGÄNZEN ]]</span></p>
 
   <h2>5. Videos (YouTube)</h2>
   <p>Videos werden über youtube-nocookie.com eingebunden und ebenfalls erst nach aktivem Klick
@@ -103,6 +107,45 @@
   <p>Die von dir eingegebenen Daten verarbeiten wir ausschließlich zur Bearbeitung deiner Anfrage
      bzw. deines Mitgliedsantrags. Rechtsgrundlage: Art. 6 Abs. 1 lit. a und lit. b DSGVO.
      <span class="ph">[[ FORMULARDIENSTLEISTER UND SPEICHERDAUER ERGÄNZEN ]]</span></p>
+  <p><b>Bankdaten aus dem Mitgliedsantrag</b> verarbeiten wir ausschließlich zur Einziehung des
+     Beitrags per SEPA-Lastschrift. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO. Die Übertragung
+     erfolgt verschlüsselt; die Daten werden nach Ende der Mitgliedschaft und Ablauf der
+     handels- und steuerrechtlichen Aufbewahrungsfristen gelöscht.
+     <span class="ph">[[ AUFBEWAHRUNGSFRIST UND VERARBEITENDE STELLE ERGÄNZEN ]]</span></p>
+
+  <h2>6b. Instagram-Feed (Behold)</h2>
+  <p>Auf der Startseite zeigen wir unsere Instagram-Beiträge über den Dienst Behold. Der Feed wird
+     <b>erst nach deinem Klick</b> auf „Beiträge laden“ geladen; vorher wird keine Verbindung
+     aufgebaut. Nach dem Klick werden ein Skript und die Bilder von <em>w.behold.so</em> abgerufen,
+     wobei deine IP-Adresse an den Anbieter übertragen wird. Rechtsgrundlage: Einwilligung,
+     Art. 6 Abs. 1 lit. a DSGVO.
+     <span class="ph">[[ ANBIETER, SERVERSTANDORT UND AUFTRAGSVERARBEITUNG PRÜFEN ]]</span></p>
+
+  <h2>6d. Mitspielerbörse (Supabase)</h2>
+  <p>Die Mitspielerbörse speichert die eingetragenen Anfragen bei der Supabase Inc. Verarbeitet
+     werden: Sportart, Anlage, Zeitfenster, Spielstärke, Anzahl gesuchter Mitspieler, dein
+     Vorname, eine optionale Notiz und die von dir angegebene Kontaktmöglichkeit. Wer bei einer
+     Anfrage zusagt, gibt ausschließlich einen Vornamen an.</p>
+  <p><b>Die Kontaktangabe des Erstellers ist für alle Besucher der Seite sichtbar.</b> Darauf
+     weist das Formular vor dem Absenden ausdrücklich hin; die Angabe erfolgt freiwillig.
+     Rechtsgrundlage: Einwilligung, Art. 6 Abs. 1 lit. a DSGVO. Einträge werden nach Ablauf des
+     Zeitfensters ausgeblendet und anschließend gelöscht; zurückziehen kannst du deinen Eintrag
+     jederzeit selbst.</p>
+  <p>Beim Aufruf der Seite <em>Mitspieler finden</em> wird eine Verbindung zu den Servern von
+     Supabase aufgebaut, dabei wird deine IP-Adresse übertragen.
+     <span class="ph">[[ REGION DES SUPABASE-PROJEKTS NENNEN — bitte Frankfurt (eu-central-1)
+     wählen ]]</span>
+     <span class="ph">[[ AUFTRAGSVERARBEITUNGSVERTRAG MIT SUPABASE ABSCHLIESSEN UND HIER
+     BENENNEN ]]</span></p>
+
+  <h2>6c. Wettervorhersage (Open-Meteo)</h2>
+  <p>Auf den Buchungsseiten zeigen wir die Vorhersage für den jeweiligen Standort. Die Daten
+     stammen von Open-Meteo und werden beim Scrollen zum Wetterbereich abgerufen. Dabei wird deine
+     IP-Adresse an den Anbieter übermittelt; es werden keine Cookies gesetzt und keine
+     Nutzungsprofile gebildet. Die Antwort wird 45 Minuten in deinem Browser zwischengespeichert,
+     damit nicht bei jedem Seitenaufruf erneut abgefragt wird. Rechtsgrundlage: berechtigtes
+     Interesse an einer funktionierenden Buchungsentscheidung, Art. 6 Abs. 1 lit. f DSGVO.
+     <span class="ph">[[ EINSCHÄTZUNG ANWALTLICH BESTÄTIGEN LASSEN ]]</span></p>
 
   <h2>7. Verlinkte Profile</h2>
   <p>Links zu Instagram und WhatsApp sind reine Verlinkungen. Eine Datenübertragung findet erst
@@ -157,6 +200,10 @@
         <li><a href="mitglied.html">Mitglied werden</a></li>
         <li><a href="trainer.html">Training &amp; Trainer</a></li>
         <li><a href="sportsbar.html">Sportsbar</a></li>
+        <li><a href="proshop.html">Pro Shop</a></li>
+        <li><a href="partner.html">Mitspieler finden</a></li>
+        <li><a href="termine.html">Saison-Termine</a></li>
+        <li><a href="regeln.html">Regeln lernen</a></li>
         <li><a href="wandtraining.html">Wall Rally spielen</a></li>
       </ul>
     </div>
@@ -190,6 +237,6 @@
   <a href="buchen.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Platz buchen</a>
   <a href="trainer.html#trainer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="11" cy="9" rx="6" ry="7"/><path d="M11 16v5.5"/><path d="M5.2 9h11.6M11 2.2v13.6"/></svg> Trainieren</a>
 </div>
-<script src="assets/js/main.js?v=42ba8dbb" defer></script>
+<script src="assets/js/main.js?v=4b024929" defer></script>
 </body>
 </html>

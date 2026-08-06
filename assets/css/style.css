@@ -50,12 +50,25 @@
   --sect:clamp(3.75rem,8.5vw,7rem);
   --r:4px;
 
+  /* Flächen, die in beiden Modi dunkel bleiben — getrennt von der Schriftfarbe,
+     weil --ink sonst gleichzeitig Text und Hintergrund wäre. */
+  --surface-dark:#0C1310;
+  --surface-dark-2:#16221C;
+  --surface-pine:#123D2C;
+  --on-dark:#F2F3EF;      /* Schrift auf diesen Flächen */
+
+  /* Akzente als Schrift brauchen mehr Helligkeit als als Fläche. */
+  --clay-text:#B04E28;
+  --turf-text:#1B7A54;
+  --pine-text:#123D2C;
+
   --sport:var(--clay);    /* wird pro Element überschrieben */
+  --sport-text:var(--clay-text);
 }
 
-[data-sport="tennis"]{--sport:var(--clay)}
-[data-sport="padel"]{--sport:var(--turf)}
-[data-sport="kombi"]{--sport:var(--pine)}
+[data-sport="tennis"]{--sport:var(--clay);--sport-text:var(--clay-text)}
+[data-sport="padel"]{--sport:var(--turf);--sport-text:var(--turf-text)}
+[data-sport="kombi"]{--sport:var(--surface-pine);--sport-text:var(--pine-text)}
 
 /* ---------- Reset ---------- */
 *,*::before,*::after{box-sizing:border-box}
@@ -81,11 +94,11 @@ h4{font-size:1.05rem}
 .wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
 .sect{padding-block:var(--sect);position:relative}
 .sect--tight{padding-block:clamp(2.75rem,6vw,4.5rem)}
-.sect--dark{background:var(--ink);color:var(--paper)}
-.sect--pine{background:var(--pine);color:var(--paper)}
+.sect--dark{background:var(--surface-dark);color:var(--on-dark)}
+.sect--pine{background:var(--surface-pine);color:var(--on-dark)}
 .sect--white{background:var(--white)}
 .sect--dark h1,.sect--dark h2,.sect--dark h3,.sect--dark h4,
-.sect--pine h1,.sect--pine h2,.sect--pine h3,.sect--pine h4{color:var(--paper)}
+.sect--pine h1,.sect--pine h2,.sect--pine h3,.sect--pine h4{color:var(--on-dark)}
 
 .lead{font-size:clamp(1.06rem,1rem + .45vw,1.28rem);max-width:60ch;color:var(--muted)}
 .sect--dark .lead,.sect--pine .lead{color:var(--muted-dark)}
@@ -100,7 +113,7 @@ h4{font-size:1.05rem}
 .eyebrow{
   display:flex;align-items:center;gap:.75rem;margin:0 0 1.15rem;
   font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--sport);font-family:var(--body);
+  color:var(--sport-text);font-family:var(--body);
 }
 .eyebrow::before{content:"";width:26px;height:2px;background:currentColor;flex:none}
 .eyebrow--center{justify-content:center}
@@ -118,16 +131,16 @@ h4{font-size:1.05rem}
 .btn--turf{background:var(--turf);color:#fff}
 .btn--turf:hover{background:#177049;transform:translateY(-2px)}
 .btn--line{border-color:currentColor;background:transparent}
-.btn--line:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);transform:translateY(-2px)}
+.btn--line:hover{background:var(--surface-dark);color:var(--on-dark);border-color:var(--surface-dark);transform:translateY(-2px)}
 .sect--dark .btn--line:hover,.sect--pine .btn--line:hover,.hero .btn--line:hover{
-  background:var(--paper);color:var(--ink);border-color:var(--paper)}
+  background:var(--on-dark);color:var(--surface-dark);border-color:var(--on-dark)}
 .btn--sm{min-height:44px;padding:.6rem 1.1rem;font-size:.82rem}
 .btn--full{width:100%}
 @media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
 .btnrow{display:flex;flex-wrap:wrap;gap:.8rem}
 
 /* ---------- Topbar ---------- */
-.topbar{background:var(--pine);color:var(--paper);font-size:.82rem;letter-spacing:.03em}
+.topbar{background:var(--surface-pine);color:var(--on-dark);font-size:.82rem;letter-spacing:.03em}
 .topbar a{display:flex;align-items:center;justify-content:center;gap:.6rem;
   min-height:40px;text-decoration:none;padding:.35rem 1rem;text-align:center}
 .topbar a:hover{text-decoration:underline;text-underline-offset:3px}
@@ -141,9 +154,9 @@ h4{font-size:1.05rem}
 .brand img{height:44px;width:auto;max-width:min(230px,50vw);background:none}
 .brand-fallback{font-family:var(--display);font-size:1.45rem;line-height:1;letter-spacing:.01em}
 .brand-fallback span{display:block;font-family:var(--body);font-size:.55rem;font-weight:700;
-  letter-spacing:.22em;color:var(--clay);margin-top:.2rem}
+  letter-spacing:.22em;color:var(--clay-text);margin-top:.2rem}
 .nav{display:none}
-.nav ul{display:flex;gap:1.6rem;list-style:none}
+.nav ul{display:flex;gap:1.25rem;list-style:none}
 .nav a{text-decoration:none;font-size:.88rem;font-weight:500;letter-spacing:.04em;
   text-transform:uppercase;padding:.4rem 0;border-bottom:2px solid transparent;display:block}
 .nav a:hover{border-bottom-color:var(--clay)}
@@ -152,7 +165,7 @@ h4{font-size:1.05rem}
 .burger{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;
   width:48px;height:48px;background:none;border:1px solid var(--line);border-radius:var(--r);cursor:pointer}
 .burger svg{width:22px;height:22px}
-@media(min-width:1100px){
+@media(min-width:1240px){
   .nav{display:block}
   .head-cta{display:inline-flex}
   .burger{display:none}
@@ -165,10 +178,10 @@ h4{font-size:1.05rem}
 .mobnav a{display:block;padding:.85rem var(--pad);text-decoration:none;font-weight:600;
   text-transform:uppercase;letter-spacing:.05em;font-size:.95rem;border-bottom:1px solid var(--line)}
 .mobnav .btnrow{padding:1.1rem var(--pad) 0;flex-direction:column}
-@media(min-width:1100px){.mobnav,.mobnav.open{display:none}}
+@media(min-width:1240px){.mobnav,.mobnav.open{display:none}}
 
 /* ---------- Hero ---------- */
-.hero{background:var(--ink);color:var(--paper);position:relative;overflow:hidden;isolation:isolate}
+.hero{background:var(--surface-dark);color:var(--on-dark);position:relative;overflow:hidden;isolation:isolate}
 .hero__court{position:absolute;inset:0;z-index:0;opacity:.16;pointer-events:none;
   width:100%;height:100%;object-fit:cover}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
@@ -183,7 +196,7 @@ h4{font-size:1.05rem}
 .hero__note{font-size:.85rem;color:rgba(242,243,239,.6);margin:0}
 
 /* Kompakter Seitenkopf für Unterseiten */
-.pagehead{background:var(--ink);color:var(--paper);position:relative;overflow:hidden;isolation:isolate}
+.pagehead{background:var(--surface-dark);color:var(--on-dark);position:relative;overflow:hidden;isolation:isolate}
 .pagehead__court{position:absolute;inset:0;z-index:0;opacity:.13;width:100%;height:100%;object-fit:cover}
 .pagehead::after{content:"";position:absolute;inset:0;z-index:1;
   background:radial-gradient(60% 70% at 88% 0%,rgba(30,140,95,.26),transparent 70%)}
@@ -208,12 +221,12 @@ h4{font-size:1.05rem}
   margin-top:2.6rem;padding-top:2rem;border-top:1px solid var(--line-dark)}
 @media(min-width:760px){.facts{grid-template-columns:repeat(4,1fr);gap:2rem}}
 .facts b{display:block;font-family:var(--display);font-size:clamp(2.4rem,1.8rem + 2.2vw,3.4rem);
-  line-height:.95;color:var(--paper)}
+  line-height:.95;color:var(--on-dark)}
 .facts span{display:block;font-size:.76rem;font-weight:700;letter-spacing:.16em;
   text-transform:uppercase;color:var(--turf-lt);margin-top:.45rem}
 .facts--light b{color:var(--ink)}
 .facts--light{border-color:var(--line)}
-.facts--light span{color:var(--clay)}
+.facts--light span{color:var(--clay-text)}
 
 /* ---------- Standorte ---------- */
 .locs{display:grid;gap:1.5rem;margin-top:2.75rem;list-style:none}
@@ -256,7 +269,7 @@ h4{font-size:1.05rem}
 
 .tile{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
   overflow:hidden;display:flex;flex-direction:column}
-.sect--dark .tile,.sect--pine .tile{background:var(--ink-2);border-color:var(--line-dark)}
+.sect--dark .tile,.sect--pine .tile{background:var(--surface-dark-2);border-color:var(--line-dark)}
 .tile__media{aspect-ratio:3/2;overflow:hidden;background:var(--haze)}
 .tile__media img{width:100%;height:100%;object-fit:cover}
 .tile__body{padding:1.2rem 1.3rem 1.5rem;display:flex;flex-direction:column;flex:1}
@@ -265,7 +278,7 @@ h4{font-size:1.05rem}
 .sect--dark .tile__body p{color:var(--muted-dark)}
 .ticks{list-style:none;display:flex;flex-direction:column;gap:.45rem;margin:.4rem 0 1.3rem;font-size:.92rem}
 .ticks li{display:flex;gap:.6rem;align-items:flex-start}
-.ticks svg{width:15px;height:15px;flex:none;margin-top:.34rem;color:var(--sport)}
+.ticks svg{width:15px;height:15px;flex:none;margin-top:.34rem;color:var(--sport-text)}
 .tile__body .btn{margin-top:auto;align-self:flex-start}
 
 /* ---------- Mitgliedschaft ---------- */
@@ -273,12 +286,12 @@ h4{font-size:1.05rem}
 @media(min-width:980px){.plans{grid-template-columns:repeat(3,1fr)}}
 .plan{background:var(--white);border:1px solid var(--line);border-top:5px solid var(--sport);
   border-radius:var(--r);padding:2rem 1.6rem;display:flex;flex-direction:column;position:relative}
-.plan--feat{background:var(--ink);color:var(--paper);border-color:var(--ink);border-top-color:var(--turf)}
+.plan--feat{background:var(--surface-dark);color:var(--on-dark);border-color:var(--surface-dark);border-top-color:var(--turf)}
 @media(min-width:980px){.plan--feat{transform:translateY(-16px);padding-block:2.6rem}}
 .plan__flag{position:absolute;top:0;right:1.3rem;transform:translateY(-50%);
   background:var(--turf);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.16em;
   text-transform:uppercase;padding:.35rem .8rem;border-radius:2px}
-.plan h3{font-size:1.7rem;color:var(--sport)}
+.plan h3{font-size:1.7rem;color:var(--sport-text)}
 .plan--feat h3{color:var(--turf-lt)}
 .plan__who{font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
   color:var(--muted);margin:.5rem 0 1.2rem}
@@ -291,7 +304,7 @@ h4{font-size:1.05rem}
   border-bottom:1px solid var(--line)}
 .plan--feat .plan__rates{color:var(--muted-dark);border-color:var(--line-dark)}
 .plan h4{font-size:.72rem;font-family:var(--body);font-weight:700;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--sport);margin:1.1rem 0 .6rem}
+  text-transform:uppercase;color:var(--sport-text);margin:1.1rem 0 .6rem}
 .plan--feat h4{color:var(--turf-lt)}
 .plan h4:first-of-type{margin-top:0}
 .plan .ticks{margin-bottom:.4rem}
@@ -316,17 +329,17 @@ h4{font-size:1.05rem}
 @media(min-width:560px){.people{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:920px){.people{grid-template-columns:repeat(3,1fr)}}
 .person{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.sect--dark .person{background:var(--ink-2);border-color:var(--line-dark)}
+.sect--dark .person{background:var(--surface-dark-2);border-color:var(--line-dark)}
 .person__media{aspect-ratio:1/1;overflow:hidden;background:var(--haze)}
 .person__media img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
 .person__body{padding:1.15rem 1.25rem 1.4rem}
 .person__body h3{font-size:1.35rem}
 .person__role{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--sport);margin:.4rem 0 .7rem}
+  color:var(--sport-text);margin:.4rem 0 .7rem}
 .person__body p{font-size:.92rem;color:var(--muted);margin-bottom:1rem}
 .sect--dark .person__body p{color:var(--muted-dark)}
 .wa{display:inline-flex;align-items:center;gap:.5rem;font-size:.88rem;font-weight:700;
-  text-decoration:none;color:var(--turf);min-height:44px}
+  text-decoration:none;color:var(--turf-text);min-height:44px}
 .sect--dark .wa{color:var(--turf-lt)}
 .wa:hover{text-decoration:underline;text-underline-offset:3px}
 .wa svg{width:17px;height:17px;flex:none}
@@ -337,7 +350,7 @@ h4{font-size:1.05rem}
 @media(min-width:1060px){.reviews{grid-template-columns:repeat(3,1fr)}}
 .review{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
   padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:.9rem}
-.stars{display:flex;gap:.15rem;color:var(--clay)}
+.stars{display:flex;gap:.15rem;color:var(--clay-text)}
 .stars svg{width:16px;height:16px}
 .review blockquote{margin:0;font-size:1rem;line-height:1.55}
 .review figcaption{margin-top:auto;font-size:.85rem;color:var(--muted)}
@@ -346,7 +359,7 @@ h4{font-size:1.05rem}
 
 /* ---------- Video / Buchung: Klick-zum-Laden (keine Drittanbieter vorab) ---------- */
 .embed{position:relative;border:1px solid var(--line-dark);border-radius:var(--r);
-  overflow:hidden;background:var(--ink-2)}
+  overflow:hidden;background:var(--surface-dark-2)}
 .embed--16x9{aspect-ratio:16/9}
 /* Buchungs-Widget. WICHTIG: hier NICHT den dunklen .embed-Hintergrund erben.
    Eversports übermalt den iframe nicht flächendeckend deckend, deshalb würde
@@ -356,7 +369,7 @@ h4{font-size:1.05rem}
 .embed iframe{width:100%;height:100%;border:0;display:block}
 .embed__gate{position:absolute;inset:0;display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:.9rem;text-align:center;
-  padding:1.75rem;background:var(--ink);color:var(--paper)}
+  padding:1.75rem;background:var(--surface-dark);color:var(--on-dark)}
 .embed__gate img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;z-index:0}
 .embed__gate > *{position:relative;z-index:1}
 .embed__gate p{max-width:46ch;font-size:.9rem;color:rgba(242,243,239,.78);margin:0}
@@ -382,7 +395,7 @@ h4{font-size:1.05rem}
 @media(min-width:960px){.contact-grid{grid-template-columns:1fr 1.1fr;gap:4rem}}
 .facts-list{list-style:none;display:flex;flex-direction:column;gap:1.35rem;margin-top:2rem}
 .fact{display:flex;gap:.9rem;align-items:flex-start}
-.fact > svg{width:20px;height:20px;flex:none;margin-top:.25rem;color:var(--clay)}
+.fact > svg{width:20px;height:20px;flex:none;margin-top:.25rem;color:var(--clay-text)}
 .fact b{display:block;font-size:1.02rem}
 .fact a{text-decoration:none}
 .fact a:hover{text-decoration:underline;text-underline-offset:3px}
@@ -412,15 +425,15 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 .mapcard span::after{content:" →"}
 
 /* ---------- Footer ---------- */
-.site-foot{background:var(--ink);color:rgba(242,243,239,.72);padding-block:3.5rem 6.5rem;font-size:.9rem}
+.site-foot{background:var(--surface-dark);color:rgba(242,243,239,.72);padding-block:3.5rem 6.5rem;font-size:.9rem}
 @media(min-width:760px){.site-foot{padding-bottom:3.5rem}}
 .foot-in{display:grid;gap:2.25rem}
 @media(min-width:760px){.foot-in{grid-template-columns:1.4fr 1fr 1fr 1fr}}
 .foot-in h3{font-size:.7rem;font-family:var(--body);letter-spacing:.2em;text-transform:uppercase;
-  color:var(--paper);margin:0 0 .9rem}
+  color:var(--on-dark);margin:0 0 .9rem}
 .foot-in ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
 .foot-in a{text-decoration:none}
-.foot-in a:hover{color:var(--paper);text-decoration:underline;text-underline-offset:3px}
+.foot-in a:hover{color:var(--on-dark);text-decoration:underline;text-underline-offset:3px}
 .foot-brand img{height:52px;width:auto;margin-bottom:1rem;background:none}
 .social{display:flex;gap:.6rem;margin-top:1.1rem}
 .social a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;
@@ -432,9 +445,9 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 
 /* ---------- Mobile Aktionsleiste ---------- */
 .callbar{position:fixed;left:0;right:0;bottom:0;z-index:120;display:flex;
-  background:var(--ink);border-top:1px solid var(--line-dark)}
+  background:var(--surface-dark);border-top:1px solid var(--line-dark)}
 .callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:.5rem;
-  min-height:58px;text-decoration:none;color:var(--paper);font-weight:700;font-size:.9rem;
+  min-height:58px;text-decoration:none;color:var(--on-dark);font-weight:700;font-size:.9rem;
   letter-spacing:.04em;text-transform:uppercase}
 .callbar a+a{background:var(--clay);color:#fff}
 .callbar svg{width:17px;height:17px;flex:none}
@@ -456,14 +469,14 @@ form{display:flex;flex-direction:column;gap:1.05rem}
   padding:1.1rem 1.25rem;background:var(--white);border:1px solid var(--line);
   border-left:4px solid var(--sport);border-radius:var(--r);text-decoration:none;font-weight:600}
 .linklist a:hover{background:var(--haze)}
-.linklist svg{width:18px;height:18px;flex:none;color:var(--sport)}
+.linklist svg{width:18px;height:18px;flex:none;color:var(--sport-text)}
 .legal{max-width:75ch}
 .legal h2{font-size:clamp(1.5rem,1.2rem + 1.4vw,2.1rem);margin:2.5rem 0 .9rem}
 .legal h3{font-size:1.15rem;margin:1.75rem 0 .6rem}
 .legal ul{padding-left:1.2rem;margin-bottom:1rem}
 .legal li{margin-bottom:.35rem}
 .ph{background:rgba(192,86,47,.12);border-bottom:2px dotted var(--clay);
-  padding:0 .25rem;font-weight:700;color:var(--clay)}
+  padding:0 .25rem;font-weight:700;color:var(--clay-text)}
 
 /* ---------- Helle Karten in dunklen Abschnitten ----------
    .sect--dark und .sect--pine färben allen erbenden Text hell. Karten mit
@@ -479,15 +492,15 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 .sect--dark .review h3,.sect--pine .review h3{color:var(--ink)}
 
 /* Die hervorgehobene Tarifkarte hat selbst dunklen Grund und bleibt hell. */
-.sect--dark .plan--feat,.sect--pine .plan--feat{color:var(--paper)}
+.sect--dark .plan--feat,.sect--pine .plan--feat{color:var(--on-dark)}
 
 /* Umriss-Buttons in hellen Karten: dunkle Kontur statt weißer. */
 .sect--dark .plan .btn--line:hover,.sect--pine .plan .btn--line:hover,
 .sect--dark .loc .btn--line:hover,.sect--pine .loc .btn--line:hover,
 .sect--dark .review .btn--line:hover,.sect--pine .review .btn--line:hover{
-  background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  background:var(--surface-dark);color:var(--on-dark);border-color:var(--surface-dark)}
 .sect--dark .plan--feat .btn--line:hover,.sect--pine .plan--feat .btn--line:hover{
-  background:var(--paper);color:var(--ink);border-color:var(--paper)}
+  background:var(--on-dark);color:var(--surface-dark);border-color:var(--on-dark)}
 
 
 /* ---------- Eversports-App ---------- */
@@ -502,10 +515,10 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 .appbtns{display:flex;flex-wrap:wrap;gap:.75rem}
 .storebtn{
   display:inline-flex;align-items:center;gap:.75rem;min-height:58px;padding:.55rem 1.3rem;
-  background:var(--ink);color:var(--paper);border-radius:var(--r);text-decoration:none;
+  background:var(--surface-dark);color:var(--on-dark);border-radius:var(--r);text-decoration:none;
   transition:background-color .18s ease,transform .18s ease;
 }
-.storebtn:hover{background:var(--pine);transform:translateY(-2px)}
+.storebtn:hover{background:var(--surface-pine);transform:translateY(-2px)}
 @media (prefers-reduced-motion:reduce){.storebtn:hover{transform:none}}
 .storebtn svg{width:23px;height:23px;flex:none}
 .storebtn span{display:flex;flex-direction:column;line-height:1.05}
@@ -537,7 +550,7 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 .ptable caption{
   caption-side:top;text-align:left;padding:1rem 1.15rem .35rem;
   font-family:var(--display);font-weight:800;text-transform:uppercase;
-  font-size:1.3rem;line-height:1.1;color:var(--sport);
+  font-size:1.3rem;line-height:1.1;color:var(--sport-text);
 }
 .ptable thead th{
   text-align:left;padding:.5rem 1.15rem;font-size:.66rem;font-weight:700;
@@ -557,14 +570,14 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 
 /* ---------- Standortkarte: Titel verlinkt, zweiter Textlink ---------- */
 .loc__body h3 a{text-decoration:none}
-.loc__body h3 a:hover{color:var(--sport)}
+.loc__body h3 a:hover{color:var(--sport-text)}
 .loc__media a{display:block;height:100%}
 .loc__links{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;margin-top:1rem}
-.txtlink{font-size:.85rem;font-weight:600;color:var(--sport);text-decoration:none;
+.txtlink{font-size:.85rem;font-weight:600;color:var(--sport-text);text-decoration:none;
   border-bottom:1px solid currentColor;padding-bottom:1px}
 .txtlink:hover{border-bottom-width:2px}
 .tile__meta{margin:auto 0 0;padding-top:.75rem;font-size:.74rem;font-weight:700;
-  letter-spacing:.12em;text-transform:uppercase;color:var(--sport)}
+  letter-spacing:.12em;text-transform:uppercase;color:var(--sport-text)}
 
 /* ---------- Footer mit fünf Spalten ---------- */
 @media(min-width:620px){.foot-in{grid-template-columns:repeat(2,1fr)}}
@@ -593,7 +606,7 @@ form{display:flex;flex-direction:column;gap:1.05rem}
   text-decoration:none;color:var(--muted);border-radius:var(--r);
 }
 .langs a:hover{color:var(--ink);background:rgba(12,19,16,.06)}
-.langs a[aria-current]{color:var(--clay);background:rgba(192,86,47,.1)}
+.langs a[aria-current]{color:var(--clay-text);background:rgba(192,86,47,.1)}
 .mobnav .langs{padding:.9rem var(--pad) 0;margin:0;gap:.4rem}
 .mobnav .langs a{border:1px solid var(--line);min-width:56px}
 
@@ -630,7 +643,7 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 @media (prefers-reduced-motion:reduce){.rating:hover{transform:none}}
 .rating__val{font-family:var(--display);font-size:2.5rem;line-height:.85;flex:none}
 .rating__body{display:flex;flex-direction:column;gap:.25rem;min-width:0}
-.rating__src{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sport)}
+.rating__src{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sport-text)}
 .rating__cnt{font-size:.84rem;color:var(--muted)}
 .rating .stars svg{width:14px;height:14px}
 
@@ -660,7 +673,7 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 .langswitch--mob a,.langswitch--mob .langswitch__cur{
   min-width:60px;min-height:48px;border:1px solid var(--line);font-size:.85rem}
 .langswitch--mob .langswitch__cur{border-color:var(--clay)}
-@media(max-width:1099px){.site-head .langswitch{margin-left:auto;margin-right:.35rem}}
+@media(max-width:1239px){.site-head .langswitch{margin-left:auto;margin-right:.35rem}}
 
 /* ---------- Wall Rally ----------
    Eigener Namensraum .wr__*, damit nichts mit .btn, .brand oder .label der
@@ -671,12 +684,12 @@ form{display:flex;flex-direction:column;gap:1.05rem}
   display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;
   margin-bottom:.75rem;color:var(--ink);
 }
-.sect--dark .wr__hud,.sect--pine .wr__hud{color:var(--paper)}
+.sect--dark .wr__hud,.sect--pine .wr__hud{color:var(--on-dark)}
 .wr__brand{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
   color:var(--muted);flex:1;min-width:0}
 .sect--dark .wr__brand{color:var(--muted-dark)}
 .wr__rally{display:flex;flex-direction:column;align-items:center;line-height:1}
-.wr__rally b{font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--clay)}
+.wr__rally b{font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--clay-text)}
 .sect--dark .wr__rally b{color:var(--clay-lt)}
 .wr__rally span{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
   color:var(--muted);margin-top:.25rem}
@@ -687,7 +700,7 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 
 .wr__frame{
   position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;
-  border-radius:var(--r);background:var(--pine);
+  border-radius:var(--r);background:var(--surface-pine);
   box-shadow:0 18px 40px -20px rgba(12,19,16,.65);
 }
 .wr__frame canvas{display:block;width:100%;height:100%;touch-action:none}
@@ -704,10 +717,10 @@ form{display:flex;flex-direction:column;gap:1.05rem}
   position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:.7rem;text-align:center;
   padding:1.6rem;background:rgba(11,42,29,.88);backdrop-filter:blur(2px);
-  color:var(--paper);
+  color:var(--on-dark);
 }
 .wr__overlay.hidden{display:none}
-.wr__overlay h3{color:var(--paper);font-size:clamp(1.7rem,1.3rem + 2vw,2.6rem)}
+.wr__overlay h3{color:var(--on-dark);font-size:clamp(1.7rem,1.3rem + 2vw,2.6rem)}
 .wr__overlay p{margin:0;max-width:30ch;font-size:.92rem;color:rgba(242,243,239,.82)}
 .wr__hint{font-size:.8rem !important;color:rgba(242,243,239,.6) !important}
 .wr__overlay .btn{margin-top:.5rem}
@@ -723,3 +736,356 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 .wr__links a{color:#C8D95B;text-decoration:none;font-weight:700}
 .wr__links a:hover{text-decoration:underline;text-underline-offset:3px}
 @media (prefers-reduced-motion:reduce){.wr__toast{transition:none}}
+
+/* ---------- Hervorgehobener Mitgliedsvorteil ---------- */
+.perk{
+  background:var(--surface-dark);color:var(--on-dark);border-radius:var(--r);
+  border-top:5px solid var(--sport);padding:clamp(1.6rem,4vw,2.75rem);
+  margin-top:2.75rem;display:grid;gap:1.5rem;
+}
+@media(min-width:900px){.perk{grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}}
+.perk__flag{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--turf-lt);margin:0 0 .8rem}
+.perk h3{color:var(--on-dark);font-size:clamp(1.75rem,1.3rem + 2.2vw,2.9rem);margin-bottom:.9rem}
+.perk p{color:var(--muted-dark);margin:0}
+.perk .ticks{margin:0 0 .4rem;font-size:.95rem}
+.perk .ticks svg{color:var(--turf-lt)}
+.perk .btn{margin-top:1.3rem}
+
+/* ---------- Buchungskarte ---------- */
+.bookcard{
+  display:grid;gap:2rem;background:var(--white);border:1px solid var(--line);
+  border-left:5px solid var(--sport);border-radius:var(--r);
+  padding:clamp(1.6rem,4vw,2.75rem);color:var(--ink);
+}
+@media(min-width:900px){.bookcard{grid-template-columns:1.15fr .85fr;gap:3.5rem;align-items:center}}
+.bookcard h2{font-size:clamp(1.7rem,1.3rem + 2vw,2.6rem)}
+.bookcard__cta{display:flex;flex-direction:column;align-items:flex-start;gap:.9rem}
+.bookcard__cta .btn{width:100%}
+.bookcard__cta .src-note{margin:0}
+.btn--xl{min-height:66px;font-size:1.05rem;padding:1rem 2rem}
+
+/* ---------- Buchungsfenster (dialog) ---------- */
+.bookdlg{
+  width:min(1100px,96vw);max-width:none;height:min(92vh,1040px);max-height:none;
+  padding:0;border:0;border-radius:var(--r);overflow:hidden;background:var(--white);color:var(--ink);
+}
+.bookdlg::backdrop{background:rgba(12,19,16,.74)}
+.bookdlg__bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.6rem .6rem .6rem 1.15rem;background:var(--surface-dark);color:var(--on-dark);height:58px}
+.bookdlg__title{font-family:var(--display);font-weight:800;text-transform:uppercase;
+  font-size:1.1rem;letter-spacing:.01em}
+.bookdlg__close{display:inline-flex;align-items:center;justify-content:center;
+  width:46px;height:46px;flex:none;border:0;border-radius:var(--r);
+  background:transparent;color:var(--on-dark);cursor:pointer;transition:background-color .16s ease}
+.bookdlg__close:hover{background:var(--clay);color:#fff}
+.bookdlg__body{height:calc(100% - 58px)}
+.bookdlg__body iframe{width:100%;height:100%;border:0;display:block;background:var(--white)}
+
+/* ---------- Antragsformular ---------- */
+.antrag fieldset{border:0;border-top:2px solid var(--line);padding:1.5rem 0 0;margin:0 0 1.75rem}
+.antrag fieldset:first-of-type{border-top:0;padding-top:0}
+.antrag legend{
+  font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:1.3rem;
+  color:var(--sport-text);padding:0 .6rem 0 0;
+}
+.antrag .fieldset__hilfe{font-size:.87rem;color:var(--muted);margin:.5rem 0 1.1rem;max-width:60ch}
+.field__hilfe{font-size:.79rem;color:var(--muted);margin:.4rem 0 0}
+.antrag abbr[title]{color:var(--clay-text);text-decoration:none;font-weight:700;cursor:help}
+.antrag .field,.antrag .field-row{margin-bottom:1.05rem}
+.antrag .consent{margin-bottom:.9rem}
+.sepa{background:var(--paper);border-radius:var(--r);padding:1.5rem !important;
+  border-top:0 !important;margin-top:.5rem}
+.sect--white .sepa{background:var(--haze)}
+.mandat{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.1rem 1.25rem;margin:1rem 0 1.1rem;font-size:.85rem;color:var(--muted);line-height:1.55}
+.mandat p{margin:0 0 .8rem}
+.mandat p:last-child{margin:0}
+.mandat b{color:var(--ink)}
+
+/* ---------- Instagram-Feed ---------- */
+.instafeed{margin-top:1.75rem;min-height:220px}
+.instafeed--gate{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.85rem;text-align:center;padding:2.5rem 1.5rem;
+  background:var(--surface-dark);color:var(--on-dark);border-radius:var(--r);
+}
+.instafeed__icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:52px;height:52px;border-radius:var(--r);background:var(--turf);color:#fff;
+}
+.instafeed__icon svg{width:27px;height:27px}
+.instafeed--gate h3{color:var(--on-dark);font-size:1.5rem}
+.instafeed--gate p{margin:0;max-width:44ch;font-size:.9rem;color:rgba(242,243,239,.75)}
+.instafeed--gate a{color:var(--turf-lt)}
+.sect--white .instafeed--gate{background:var(--surface-dark)}
+
+/* ---------- Wetter am Platz ---------- */
+.wx{
+  background:var(--white);border:1px solid var(--line);border-left:5px solid var(--sport);
+  border-radius:var(--r);padding:clamp(1.35rem,3.5vw,2.1rem);color:var(--ink);
+}
+.sect--white .wx{background:var(--paper)}
+.wx__kopf{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;
+  gap:.75rem 1.5rem}
+.wx__kopf h2{font-size:clamp(1.4rem,1.2rem + 1.1vw,2rem)}
+.wx__ort{margin:0;text-align:right;line-height:1.35;flex:none}
+.wx__ort b{display:block;font-size:.95rem}
+.wx__stand{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.04em}
+.wx__laden,.wx__fehler{margin:1.25rem 0 0;font-size:.9rem;color:var(--muted)}
+.wx__hinweis{margin:1rem 0 0;font-size:.83rem;color:var(--muted);max-width:60ch}
+.wx__quelle{margin:1.15rem 0 0;font-size:.76rem;color:var(--muted)}
+.wx__quelle a{color:var(--sport-text)}
+
+/* Aktuelle Lage */
+.wx__now{
+  display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1.25rem;
+  margin-top:1.4rem;padding-bottom:1.25rem;border-bottom:1px solid var(--line);
+}
+.wx__icon{display:inline-flex;align-items:center;justify-content:center;
+  width:60px;height:60px;flex:none;border-radius:var(--r);background:var(--sport);color:#fff}
+.wx__icon svg{width:34px;height:34px}
+.wx__temp{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,2rem + 2.4vw,3.6rem);
+  line-height:.85}
+.wx__lage{font-size:1rem;font-weight:600}
+.wx__zahlen{display:flex;gap:1.5rem;margin-left:auto;text-align:right}
+.wx__zahlen b{display:block;font-size:1.05rem;font-weight:700;white-space:nowrap}
+.wx__zahlen small{display:block;font-size:.68rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);margin-top:.15rem}
+@media(max-width:520px){.wx__zahlen{margin-left:0;width:100%;text-align:left;justify-content:space-between}}
+
+/* Sonnenzeiten */
+.wx__sun{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem 2rem;
+  margin:1rem 0 0;padding-bottom:1.25rem;border-bottom:1px solid var(--line);font-size:.86rem}
+.wx__sun li{display:flex;align-items:baseline;gap:.75rem}
+.wx__sunday{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--sport-text);min-width:5.5em}
+
+/* Sieben Tage */
+.wx__days{list-style:none;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
+  gap:.3rem;margin:1.25rem 0 0;padding:0}
+.wx__day{display:flex;flex-direction:column;align-items:center;gap:.3rem;
+  padding:.6rem .15rem;border-radius:var(--r);text-align:center;background:rgba(12,19,16,.035)}
+.sect--white .wx__day{background:rgba(12,19,16,.05)}
+.wx__dayname{font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted)}
+.wx__dayicon{width:22px;height:22px;color:var(--sport-text)}
+.wx__daymax{font-family:var(--display);font-weight:800;font-size:1.15rem;line-height:1}
+.wx__daymin{font-size:.76rem;color:var(--muted);line-height:1}
+.wx__dayrain{font-size:.68rem;font-weight:700;color:var(--turf-text)}
+@media(min-width:720px){
+  .wx__days{gap:.6rem}
+  .wx__day{padding:.9rem .3rem;gap:.45rem}
+  .wx__dayicon{width:26px;height:26px}
+  .wx__daymax{font-size:1.35rem}
+}
+
+/* ---------- Mitspielerbörse ---------- */
+.pf__leiste{display:grid;gap:1rem;align-items:end;margin-bottom:1.5rem}
+@media(min-width:720px){.pf__leiste{grid-template-columns:1fr 1fr auto}}
+.pf__leiste .field{margin:0}
+.pf__status{margin:0 0 1.25rem;padding:.85rem 1.1rem;border-radius:var(--r);
+  font-size:.9rem;background:var(--haze);color:var(--muted)}
+.pf__status--ok{background:rgba(30,140,95,.12);color:var(--pine-text);font-weight:600}
+.pf__status--fehler{background:rgba(192,86,47,.12);color:var(--clay-text);font-weight:600}
+
+.pf__list{list-style:none;display:grid;gap:1rem;margin:0;padding:0}
+@media(min-width:760px){.pf__list{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1140px){.pf__list{grid-template-columns:repeat(3,1fr)}}
+.pf__leer{grid-column:1/-1;padding:2.5rem 1.5rem;text-align:center;color:var(--muted);
+  background:var(--white);border:1px dashed var(--line);border-radius:var(--r)}
+.sect--white .pf__leer{background:var(--paper)}
+
+.pf__karte{
+  display:flex;flex-direction:column;gap:.5rem;background:var(--white);color:var(--ink);
+  border:1px solid var(--line);border-left:5px solid var(--sport);border-radius:var(--r);
+  padding:1.15rem 1.25rem 1.25rem;
+}
+.sect--white .pf__karte{background:var(--paper)}
+.pf__karte--voll{opacity:.62}
+.pf__kopf{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.4rem 1rem}
+.pf__sport{font-family:var(--display);font-weight:800;text-transform:uppercase;
+  font-size:1.3rem;color:var(--sport-text)}
+.pf__wann{font-size:.88rem;text-align:right}
+.pf__wann b{display:block;font-size:.7rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted)}
+.pf__meta{margin:0;font-size:.8rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted)}
+.pf__notiz{margin:.2rem 0 0;font-size:.92rem;font-style:italic;color:var(--muted)}
+.pf__wer{margin:.35rem 0 0;font-size:.95rem}
+.pf__zusagen{margin:0;font-size:.84rem;color:var(--muted)}
+.pf__kontakt{margin:.35rem 0 0;padding:.6rem .8rem;border-radius:var(--r);
+  background:rgba(30,140,95,.12);font-size:.9rem;font-weight:600;word-break:break-word}
+.pf__kontakt a{color:var(--pine-text)}
+.pf__aktion{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;margin-top:auto;padding-top:.75rem}
+.pf__weg{font-size:.8rem;color:var(--muted);border-bottom-color:var(--line)}
+
+/* Dialoge der Börse */
+.pfdlg{width:min(560px,94vw);max-width:none;padding:0;border:0;border-radius:var(--r);
+  background:var(--white);color:var(--ink);overflow:hidden}
+.pfdlg--klein{width:min(420px,94vw)}
+.pfdlg::backdrop{background:rgba(12,19,16,.74)}
+.pfdlg__bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.6rem .6rem .6rem 1.15rem;background:var(--surface-dark);color:var(--on-dark)}
+.pfdlg__title{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:1.1rem}
+.pfdlg__close{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;
+  flex:none;border:0;border-radius:var(--r);background:transparent;color:var(--on-dark);cursor:pointer}
+.pfdlg__close:hover{background:var(--clay);color:#fff}
+.pfdlg__body{padding:1.35rem;max-height:min(76vh,760px);overflow-y:auto;
+  display:flex;flex-direction:column;gap:1rem}
+.pfdlg__body .field{margin:0}
+
+/* ============================================================================
+   Dunkler Modus.
+
+   Möglich wurde er erst durch die Trennung oben: --ink ist ausschließlich
+   Schrift, --surface-dark ausschließlich Fläche. Vorher war beides dasselbe
+   Token, und ein Umschalten hätte dunkle Abschnitte hell gemacht.
+
+   Gesetzt wird data-theme auf <html>, noch vor dem ersten Rendern (siehe das
+   kleine Inline-Skript im <head>), damit nichts aufblitzt.
+   ========================================================================== */
+[data-theme="dark"]{
+  --paper:#0F1512;          /* Seitengrund */
+  --white:#171F1B;          /* Karten liegen eine Stufe heller darauf */
+  --haze:#212B26;
+  --ink:#E7EDE9;            /* Schrift */
+  --muted:#9BA9A1;
+  --line:rgba(231,237,233,.15);
+  --line-dark:rgba(231,237,233,.15);
+  --muted-dark:rgba(231,237,233,.72);
+
+  --surface-dark:#080C0A;   /* dunkle Abschnitte bleiben dunkler als die Seite */
+  --surface-dark-2:#121A16;
+  --surface-pine:#0E2E22;
+
+  --clay-text:#E68A5F;      /* Akzente hellen auf, sonst kippt der Kontrast */
+  --turf-text:#45C48D;
+  --pine-text:#5FCE9B;
+}
+[data-theme="dark"] .site-head{background:rgba(15,21,18,.95)}
+[data-theme="dark"] .pf__status{background:var(--haze)}
+[data-theme="dark"] .pf__status--ok{background:rgba(69,196,141,.14)}
+[data-theme="dark"] .pf__status--fehler{background:rgba(230,138,95,.14)}
+[data-theme="dark"] .pf__kontakt{background:rgba(69,196,141,.14)}
+[data-theme="dark"] .wx__day{background:rgba(231,237,233,.05)}
+[data-theme="dark"] .sect--white .wx__day{background:rgba(231,237,233,.07)}
+/* Fotos wirken auf dunklem Grund sonst grell. */
+[data-theme="dark"] .loc__media img,[data-theme="dark"] .tile__media img,
+[data-theme="dark"] .split--media img,[data-theme="dark"] .person__media img,
+[data-theme="dark"] .mapcard img{filter:brightness(.87)}
+
+/* ---------- Umschalter Hell/Dunkel ---------- */
+.theme{display:inline-flex;align-items:center;justify-content:center;flex:none;
+  width:42px;height:42px;padding:0;border:1px solid var(--line);border-radius:var(--r);
+  background:transparent;color:var(--ink);cursor:pointer;
+  transition:background-color .16s ease,color .16s ease}
+.theme:hover{background:var(--haze)}
+.theme svg{width:20px;height:20px}
+.theme .theme__mond{display:none}
+[data-theme="dark"] .theme .theme__sonne{display:none}
+[data-theme="dark"] .theme .theme__mond{display:block}
+.theme--mob{width:auto;min-height:48px;padding:0 1.1rem;gap:.6rem;
+  font-size:.85rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+@media(max-width:1239px){.site-head .theme{margin-left:auto;margin-right:.3rem}}
+
+/* Das dunkle Logo verschwindet auf dunklem Grund — also beide mitliefern. */
+.brand__dunkel{display:none}
+[data-theme="dark"] .brand__hell{display:none}
+[data-theme="dark"] .brand__dunkel{display:block}
+
+/* ---------- Saison-Kalender ---------- */
+.tm__filter{display:grid;gap:1rem;margin-bottom:1.75rem}
+@media(min-width:760px){.tm__filter{grid-template-columns:repeat(3,1fr)}}
+.tm__filter .field{margin:0}
+.tm__status{margin:0 0 1rem;font-size:.9rem;color:var(--muted)}
+.tm__liste{list-style:none;margin:0;padding:0}
+.tm__monat{font-family:var(--display);font-weight:800;text-transform:uppercase;
+  font-size:1.5rem;color:var(--sport-text);margin:2rem 0 .75rem;padding-bottom:.4rem;
+  border-bottom:2px solid var(--line)}
+.tm__monat:first-child{margin-top:0}
+.tm__eintrag{display:grid;gap:.25rem 1.25rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+@media(min-width:620px){.tm__eintrag{grid-template-columns:8.5rem 1fr}}
+.tm__datum{font-family:var(--display);font-weight:800;font-size:1.35rem;
+  color:var(--ink);line-height:1.1;border-left:4px solid var(--sport);padding-left:.7rem}
+.tm__datum small{display:block;font-family:var(--body);font-size:.72rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:.15rem}
+.tm__inhalt{display:flex;flex-direction:column;gap:.2rem}
+.tm__kat{font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--sport-text)}
+.tm__titel{font-size:1.08rem}
+.tm__meta{font-size:.82rem;color:var(--muted)}
+.tm__notiz{font-size:.9rem;color:var(--muted);margin-top:.2rem}
+.tm__leer{padding:2.5rem 1.5rem;text-align:center;color:var(--muted);
+  border:1px dashed var(--line);border-radius:var(--r)}
+
+/* ---------- Schläger-Finder ---------- */
+.fd__form{display:flex;flex-direction:column;gap:1.5rem}
+.fd__form fieldset{border:0;padding:0;margin:0}
+.fd__form legend{font-family:var(--display);font-weight:800;text-transform:uppercase;
+  font-size:1.2rem;color:var(--sport-text);margin-bottom:.75rem;padding:0}
+.fd__wahl{display:flex;flex-wrap:wrap;gap:.6rem}
+.fd__wahl label{position:relative;display:inline-flex}
+.fd__wahl input{position:absolute;opacity:0;width:0;height:0}
+.fd__wahl span{display:inline-flex;align-items:center;justify-content:center;
+  min-height:52px;padding:.7rem 1.4rem;border:2px solid var(--line);border-radius:var(--r);
+  background:var(--white);font-weight:600;cursor:pointer;
+  transition:background-color .16s ease,border-color .16s ease,color .16s ease}
+.sect--white .fd__wahl span{background:var(--paper)}
+.fd__wahl span:hover{border-color:var(--sport)}
+.fd__wahl input:checked + span{background:var(--sport);border-color:var(--sport);color:#fff}
+.fd__wahl input:focus-visible + span{outline:3px solid var(--turf-lt);outline-offset:3px}
+.fd__ergebnis{margin-top:2.25rem}
+.fd__hut{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--sport-text);margin-bottom:1rem}
+.fd__liste{list-style:none;display:grid;gap:1.25rem;margin:0;padding:0}
+@media(min-width:820px){.fd__liste{grid-template-columns:repeat(3,1fr)}}
+.fd__karte{display:flex;flex-direction:column;background:var(--white);
+  border:1px solid var(--line);border-top:4px solid var(--sport);border-radius:var(--r);overflow:hidden}
+.sect--white .fd__karte{background:var(--paper)}
+.fd__bild{aspect-ratio:1/1;background:var(--haze);overflow:hidden}
+.fd__bild img{width:100%;height:100%;object-fit:cover}
+.fd__bild--leer{display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-weight:800;text-transform:uppercase;
+  font-size:clamp(1.6rem,1.2rem + 1.6vw,2.2rem);color:var(--sport-text);
+  background:var(--haze);letter-spacing:.02em;text-align:center;padding:1rem}
+.fd__text{padding:1.15rem 1.25rem 1.4rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.fd__kurz{margin:0;font-size:.8rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--sport-text)}
+.fd__grund{margin:0;font-size:.93rem;color:var(--muted)}
+.fd__preis{margin:auto 0 0;font-weight:700}
+.fd__neu{margin-top:1.5rem}
+
+/* ---------- Regel-Quiz ---------- */
+.qz__tabs{display:flex;gap:.5rem;margin-bottom:1.75rem}
+.qz__tab{flex:1;min-height:54px;border:2px solid var(--line);border-radius:var(--r);
+  background:var(--white);color:var(--ink);font:inherit;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;cursor:pointer;transition:background-color .16s ease,color .16s ease}
+.qz__tab[aria-pressed="true"]{background:var(--clay);border-color:var(--clay);color:#fff}
+.qz__bereich{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(1.35rem,4vw,2.25rem);min-height:340px}
+.qz__zaehler{margin:0 0 .6rem;font-size:.68rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted)}
+.qz__balken{height:4px;background:var(--haze);border-radius:100px;overflow:hidden;margin-bottom:1.4rem}
+.qz__balken span{display:block;height:100%;background:var(--clay);transition:width .3s ease}
+.qz__frage{font-size:clamp(1.25rem,1.1rem + .9vw,1.7rem);margin-bottom:1.35rem}
+.qz__antworten{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin:0;padding:0}
+.qz__antwort{width:100%;text-align:left;min-height:56px;padding:.85rem 1.1rem;
+  border:2px solid var(--line);border-radius:var(--r);background:transparent;color:var(--ink);
+  font:inherit;cursor:pointer;transition:border-color .16s ease,background-color .16s ease}
+.qz__antwort:hover:enabled{border-color:var(--clay);background:var(--haze)}
+.qz__antwort:disabled{cursor:default;opacity:.75}
+.qz__antwort--richtig{border-color:var(--turf);background:rgba(30,140,95,.14);opacity:1}
+.qz__antwort--falsch{border-color:var(--clay);background:rgba(192,86,47,.14);opacity:1}
+.qz__feedback{margin-top:1.35rem;padding:1.1rem 1.25rem;border-radius:var(--r);
+  border-left:4px solid var(--turf)}
+.qz__feedback--ok{background:rgba(30,140,95,.12)}
+.qz__feedback--weg{background:rgba(192,86,47,.12);border-left-color:var(--clay)}
+.qz__feedback b{display:block;font-family:var(--display);font-weight:800;text-transform:uppercase;
+  font-size:1.2rem;margin-bottom:.35rem}
+.qz__feedback p{margin:0 0 1rem;font-size:.94rem}
+.qz__ergebnis{font-family:var(--display);font-weight:800;line-height:.85;
+  font-size:clamp(3.5rem,2.5rem + 5vw,6rem);color:var(--clay-text);margin:.5rem 0}
+.qz__ergebnis small{font-size:.35em;color:var(--muted)}
+.qz__bilanz{font-size:1.1rem;margin:0 0 .3rem}
+.qz__lob{color:var(--muted);margin-bottom:1.5rem}

@@ -12,6 +12,10 @@
 <link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/demo/buchen-wolfratshausen.html">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#0C1310">
+<script>/* Setzt das Thema vor dem ersten Rendern — sonst blitzt kurz die falsche Fassung auf. */
+(function(){try{var t=localStorage.getItem("theme");
+if(t!=="dark"&&t!=="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";}
+document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="STC Oberland &amp; Sportcenter Hahn">
@@ -24,7 +28,7 @@
 <link rel="apple-touch-icon" href="../assets/img/logo.png">
 <link rel="preload" href="../assets/fonts/archivo-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/bigshoulders-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/css/style.css?v=42ba8dbb">
+<link rel="stylesheet" href="../assets/css/style.css?v=4b024929">
 <!--HREFLANG-->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsActivityLocation","@id":"https://sportcenter-hahn.de/#organisation","name":"STC Oberland & Sportcenter Hahn","alternateName":"Sportcenter Hahn GmbH","url":"https://sportcenter-hahn.de/","logo":"https://sportcenter-hahn.de/assets/img/logo.png","image":"https://sportcenter-hahn.de/assets/img/hero.jpg","telephone":"+49817151110","email":"mail@sportcenter-hahn.de","priceRange":"€€","sameAs":["https://www.instagram.com/sportcenterhahn/"],"address":{"@type":"PostalAddress","streetAddress":"Königsdorfer Weg 7","postalCode":"82538","addressLocality":"Geretsried","addressRegion":"Bayern","addressCountry":"DE"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"23:00"}],"areaServed":["Geretsried","Wolfratshausen","Bad Tölz-Wolfratshausen","Oberland"],"sport":["Tennis","Padel","Pickleball","Fußball","Golf"],"department":[{"@type":"SportsActivityLocation","name":"Sportcenter Hahn Geretsried","telephone":"+49817151110","sport":["Tennis","Padel","Pickleball","Fußball","Golf"],"address":{"@type":"PostalAddress","streetAddress":"Königsdorfer Weg 7","postalCode":"82538","addressLocality":"Geretsried","addressCountry":"DE"}},{"@type":"SportsActivityLocation","name":"Wolfratshausen Tennis Centre","telephone":"+49817151110","sport":["Tennis"],"address":{"@type":"PostalAddress","streetAddress":"Geltinger Straße 12","postalCode":"82515","addressLocality":"Wolfratshausen","addressCountry":"DE"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sportcenter-hahn.de/"},{"@type":"ListItem","position":2,"name":"Book a court in Wolfratshausen","item":"https://sportcenter-hahn.de/buchen-wolfratshausen.html"}]}</script>
@@ -36,19 +40,22 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="brand" href="index.html" aria-label="STC Oberland and Sportcenter Hahn – to the home page">
-      <img src="../assets/img/logo.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" fetchpriority="high">
+      <img class="brand__hell" src="../assets/img/logo.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" fetchpriority="high">
+      <img class="brand__dunkel" src="../assets/img/logo-white.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" loading="lazy">
     </a>
-    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html#sportarten">Sports</a></li><li><a href="ueber-uns.html">About us</a></li><li><a href="trainer.html">Coaching</a></li><li><a href="mitglied.html">Membership</a></li><li><a href="liga.html">Leagues</a></li><li><a href="sportsbar.html">Sports bar</a></li><li><a href="kontakt.html">Contact</a></li></ul></nav>
+    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html#sportarten">Sports</a></li><li><a href="ueber-uns.html">About us</a></li><li><a href="trainer.html">Coaching</a></li><li><a href="mitglied.html">Membership</a></li><li><a href="liga.html">Leagues</a></li><li><a href="sportsbar.html">Sports bar</a></li><li><a href="proshop.html">Pro shop</a></li><li><a href="kontakt.html">Contact</a></li></ul></nav>
     <!--LANGS-->
     <div class="langswitch"><a href="../buchen-wolfratshausen.html" hreflang="de" lang="de" title="Deutsch">DE</a><span class="langswitch__cur" aria-current="true">EN</span><a href="../es/buchen-wolfratshausen.html" hreflang="es" lang="es" title="Español">ES</a></div>
+    <button class="theme" type="button" data-theme-toggle aria-label="Switch between light and dark mode"><svg class="theme__sonne" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg><svg class="theme__mond" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg></button>
     <a class="btn btn--clay btn--sm head-cta" href="buchen.html">Book a court</a>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mobnav" aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
   <div class="mobnav" id="mobnav">
-    <ul><li><a href="index.html#sportarten">Sports</a></li><li><a href="ueber-uns.html">About us</a></li><li><a href="trainer.html">Coaching</a></li><li><a href="mitglied.html">Membership</a></li><li><a href="liga.html">Leagues</a></li><li><a href="sportsbar.html">Sports bar</a></li><li><a href="kontakt.html">Contact</a></li></ul>
+    <ul><li><a href="index.html#sportarten">Sports</a></li><li><a href="ueber-uns.html">About us</a></li><li><a href="trainer.html">Coaching</a></li><li><a href="mitglied.html">Membership</a></li><li><a href="liga.html">Leagues</a></li><li><a href="sportsbar.html">Sports bar</a></li><li><a href="proshop.html">Pro shop</a></li><li><a href="kontakt.html">Contact</a></li></ul>
     <div class="btnrow wrap" style="padding-inline:0">
       <a class="btn btn--clay btn--full" href="buchen.html">Book a court</a>
       <div class="langswitch langswitch--mob"><a href="../buchen-wolfratshausen.html" hreflang="de" lang="de" title="Deutsch">DE</a><span class="langswitch__cur" aria-current="true">EN</span><a href="../es/buchen-wolfratshausen.html" hreflang="es" lang="es" title="Español">ES</a></div>
+      <button class="theme theme--mob" type="button" data-theme-toggle aria-label="Switch between light and dark mode"><svg class="theme__sonne" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg><svg class="theme__mond" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg><span>Switch appearance</span></button>
     </div>
   </div>
 </header>
@@ -64,19 +71,52 @@
 
 <section class="sect sect--tight">
   <div class="wrap">
-    <div class="embed embed--tall">
-    <iframe src="https://widget.eversports.com/w/2t6gpv" title="Online-Platzbuchung Wolfratshausen"
-      allow="payment; fullscreen; clipboard-write"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-    <p class="src-note rv">The booking system is operated by Eversports and loads together with this page; doing so transfers data to Eversports — details in the
-      <a href="../datenschutz.html">privacy policy</a>. If the window stays blank:
-      <a href="https://widget.eversports.com/w/2t6gpv" rel="noopener">open it directly at Eversports</a>.</p>
-    <div class="btnrow rv" style="margin-top:1.5rem">
+    <div class="bookcard rv" data-sport="tennis">
+      <div>
+        <p class="eyebrow">Online booking</p>
+        <h2>See what is free and book</h2>
+        <p class="lead" style="margin-top:.75rem">Live availability, booked in under a minute. Open daily from 7 am to 11 pm.</p>
+        <ul class="ticks" style="margin-top:1.25rem">
+          <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Members 21 days ahead, everyone else 10</span></li>
+          <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Payment at the time of booking</span></li>
+          <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Free online cancellation up to 72 hours before</span></li>
+        </ul>
+      </div>
+      <div class="bookcard__cta">
+        <button class="btn btn--clay btn--xl" type="button"
+                data-book="https://widget.eversports.com/w/2t6gpv" data-book-title="Court booking Wolfratshausen">Open the booking window</button>
+        <p class="src-note">The Eversports booking system opens in its own window. Data is sent to Eversports only once you click —
+          <a href="../datenschutz.html">details</a>.</p>
+        <a class="txtlink" href="https://widget.eversports.com/w/2t6gpv" rel="noopener">Rather open in a new tab</a>
+      </div>
+    </div>
+    <div class="btnrow rv" style="margin-top:1.75rem">
       <a class="btn btn--line" href="buchen-geretsried.html">Geretsried instead</a>
+      <a class="btn btn--line" href="partner.html">No partner? Try the board</a>
       <a class="btn btn--line" href="mitglied.html">Become a member and book earlier</a>
     </div>
   </div>
+</section>
+
+<section class="sect sect--tight" id="wetter">
+  <div class="wrap"><div class="wx rv" data-wetter data-lat="47.91" data-lon="11.42" data-sport="tennis">
+      <div class="wx__kopf">
+        <div>
+          <p class="eyebrow">Weather at the courts</p>
+          <h2>Outdoors or indoors?</h2>
+        </div>
+        <p class="wx__ort"><b>Wolfratshausen</b><span class="wx__stand"></span></p>
+      </div>
+      <p class="wx__laden">Loading weather data …</p>
+      <p class="wx__fehler" hidden></p>
+      <div class="wx__body" hidden>
+        <div class="wx__now"></div>
+        <ul class="wx__sun"></ul>
+        <ol class="wx__days"></ol>
+      </div>
+      
+      <p class="wx__quelle">Forecast by <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a>, updated every 45 minutes.</p>
+    </div></div>
 </section>
 
 <section class="sect sect--white" id="preise">
@@ -116,13 +156,15 @@
 <section class="sect sect--dark sect--tight">
   <div class="wrap">
     <h2 class="rv" style="max-width:22ch">Worth knowing</h2>
-    <ul class="grid grid--3">
+    <ul class="grid grid--4">
       <li class="tile rv" data-sport="tennis"><div class="tile__body"><h3>Booking window</h3>
         <p>Members book up to 21 days ahead, everyone else up to 10 days. Padel outdoor can also be booked online by non-members.</p></div></li>
       <li class="tile rv" data-sport="tennis"><div class="tile__body"><h3>Cancellation</h3>
         <p>Free online up to 72 hours in advance. Up to 48 hours in advance for 6 €, by e-mail only to <a href="mailto:mail@sportcenter-hahn.de">mail@sportcenter-hahn.de</a>. After that the regular court fee applies.</p></div></li>
       <li class="tile rv" data-sport="tennis"><div class="tile__body"><h3>Online only</h3>
         <p>Reservations run exclusively through Eversports — in the browser or in the app. Payment is taken during booking, and members see their discounts automatically.</p></div></li>
+      <li class="tile rv" data-sport="tennis"><div class="tile__body"><h3>Forgotten your kit?</h3>
+        <p>Hire rackets and balls from the <a href="proshop.html">Pro shop</a> at the club, where we also string and sell.</p></div></li>
     </ul>
   </div>
 </section>
@@ -155,6 +197,10 @@
         <li><a href="mitglied.html">Become a member</a></li>
         <li><a href="trainer.html">Coaching &amp; coaches</a></li>
         <li><a href="sportsbar.html">Sports bar</a></li>
+        <li><a href="proshop.html">Pro shop</a></li>
+        <li><a href="partner.html">Find a partner</a></li>
+        <li><a href="termine.html">Season calendar</a></li>
+        <li><a href="regeln.html">Learn the rules</a></li>
         <li><a href="wandtraining.html">Play Wall Rally</a></li>
       </ul>
     </div>
@@ -188,6 +234,7 @@
   <a href="buchen.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Book a court</a>
   <a href="trainer.html#trainer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="11" cy="9" rx="6" ry="7"/><path d="M11 16v5.5"/><path d="M5.2 9h11.6M11 2.2v13.6"/></svg> Coaching</a>
 </div>
-<script src="../assets/js/main.js?v=42ba8dbb" defer></script>
+<script src="../assets/js/main.js?v=4b024929" defer></script>
+<script src="../assets/js/wetter.js?v=4b024929" defer></script>
 </body>
 </html>

@@ -12,6 +12,10 @@
 <link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/demo/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#0C1310">
+<script>/* Setzt das Thema vor dem ersten Rendern — sonst blitzt kurz die falsche Fassung auf. */
+(function(){try{var t=localStorage.getItem("theme");
+if(t!=="dark"&&t!=="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";}
+document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="STC Oberland &amp; Sportcenter Hahn">
@@ -24,7 +28,7 @@
 <link rel="apple-touch-icon" href="../assets/img/logo.png">
 <link rel="preload" href="../assets/fonts/archivo-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/bigshoulders-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/css/style.css?v=42ba8dbb">
+<link rel="stylesheet" href="../assets/css/style.css?v=4b024929">
 <!--HREFLANG-->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsActivityLocation","@id":"https://sportcenter-hahn.de/#organisation","name":"STC Oberland & Sportcenter Hahn","alternateName":"Sportcenter Hahn GmbH","url":"https://sportcenter-hahn.de/","logo":"https://sportcenter-hahn.de/assets/img/logo.png","image":"https://sportcenter-hahn.de/assets/img/hero.jpg","telephone":"+49817151110","email":"mail@sportcenter-hahn.de","priceRange":"€€","sameAs":["https://www.instagram.com/sportcenterhahn/"],"address":{"@type":"PostalAddress","streetAddress":"Königsdorfer Weg 7","postalCode":"82538","addressLocality":"Geretsried","addressRegion":"Bayern","addressCountry":"DE"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"23:00"}],"areaServed":["Geretsried","Wolfratshausen","Bad Tölz-Wolfratshausen","Oberland"],"sport":["Tennis","Padel","Pickleball","Fußball","Golf"],"department":[{"@type":"SportsActivityLocation","name":"Sportcenter Hahn Geretsried","telephone":"+49817151110","sport":["Tennis","Padel","Pickleball","Fußball","Golf"],"address":{"@type":"PostalAddress","streetAddress":"Königsdorfer Weg 7","postalCode":"82538","addressLocality":"Geretsried","addressCountry":"DE"}},{"@type":"SportsActivityLocation","name":"Wolfratshausen Tennis Centre","telephone":"+49817151110","sport":["Tennis"],"address":{"@type":"PostalAddress","streetAddress":"Geltinger Straße 12","postalCode":"82515","addressLocality":"Wolfratshausen","addressCountry":"DE"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I book a court?","acceptedAnswer":{"@type":"Answer","text":"Online only — via the booking page or the Eversports app: pick a venue, pick a date and time, done. You see live which courts are free. We do not take reservations by phone, so that everyone sees the same availability."}},{"@type":"Question","name":"Can I play without being a member?","acceptedAnswer":{"@type":"Answer","text":"Yes. Either book a court as a private visitor, or play as a member's guest and pay the guest fee. Both are straightforward."}},{"@type":"Question","name":"How do I become a member?","acceptedAnswer":{"@type":"Answer","text":"Through the application form on the membership page. We will then get in touch with the next steps."}},{"@type":"Question","name":"Can I play at both venues?","acceptedAnswer":{"@type":"Answer","text":"Yes. The combined membership covers both Geretsried and Wolfratshausen."}},{"@type":"Question","name":"Are there leagues and tournaments?","acceptedAnswer":{"@type":"Answer","text":"Regularly. In padel we run our own Bavaro Padel League, plus tournaments and team fixtures — you will find an overview on the leagues page."}},{"@type":"Question","name":"Can I bring friends?","acceptedAnswer":{"@type":"Answer","text":"Of course. Just register them as guests."}},{"@type":"Question","name":"Do I have to pay in advance?","acceptedAnswer":{"@type":"Answer","text":"Yes. The online booking system asks for payment at the time of booking."}},{"@type":"Question","name":"How do I reach a person?","acceptedAnswer":{"@type":"Answer","text":"By phone on 08171 51 110, by email to mail@sportcenter-hahn.de or via WhatsApp. All the options are listed on the contact page."}}]}</script>
@@ -36,19 +40,22 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="brand" href="index.html" aria-label="STC Oberland and Sportcenter Hahn – to the home page">
-      <img src="../assets/img/logo.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" fetchpriority="high">
+      <img class="brand__hell" src="../assets/img/logo.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" fetchpriority="high">
+      <img class="brand__dunkel" src="../assets/img/logo-white.png" alt="STC Oberland &amp; Sportcenter Hahn" width="180" height="44" loading="lazy">
     </a>
-    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html#sportarten">Sports</a></li><li><a href="ueber-uns.html">About us</a></li><li><a href="trainer.html">Coaching</a></li><li><a href="mitglied.html">Membership</a></li><li><a href="liga.html">Leagues</a></li><li><a href="sportsbar.html">Sports bar</a></li><li><a href="kontakt.html">Contact</a></li></ul></nav>
+    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html#sportarten">Sports</a></li><li><a href="ueber-uns.html">About us</a></li><li><a href="trainer.html">Coaching</a></li><li><a href="mitglied.html">Membership</a></li><li><a href="liga.html">Leagues</a></li><li><a href="sportsbar.html">Sports bar</a></li><li><a href="proshop.html">Pro shop</a></li><li><a href="kontakt.html">Contact</a></li></ul></nav>
     <!--LANGS-->
     <div class="langswitch"><a href="../index.html" hreflang="de" lang="de" title="Deutsch">DE</a><span class="langswitch__cur" aria-current="true">EN</span><a href="../es/index.html" hreflang="es" lang="es" title="Español">ES</a></div>
+    <button class="theme" type="button" data-theme-toggle aria-label="Switch between light and dark mode"><svg class="theme__sonne" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg><svg class="theme__mond" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg></button>
     <a class="btn btn--clay btn--sm head-cta" href="buchen.html">Book a court</a>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mobnav" aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
   <div class="mobnav" id="mobnav">
-    <ul><li><a href="index.html#sportarten">Sports</a></li><li><a href="ueber-uns.html">About us</a></li><li><a href="trainer.html">Coaching</a></li><li><a href="mitglied.html">Membership</a></li><li><a href="liga.html">Leagues</a></li><li><a href="sportsbar.html">Sports bar</a></li><li><a href="kontakt.html">Contact</a></li></ul>
+    <ul><li><a href="index.html#sportarten">Sports</a></li><li><a href="ueber-uns.html">About us</a></li><li><a href="trainer.html">Coaching</a></li><li><a href="mitglied.html">Membership</a></li><li><a href="liga.html">Leagues</a></li><li><a href="sportsbar.html">Sports bar</a></li><li><a href="proshop.html">Pro shop</a></li><li><a href="kontakt.html">Contact</a></li></ul>
     <div class="btnrow wrap" style="padding-inline:0">
       <a class="btn btn--clay btn--full" href="buchen.html">Book a court</a>
       <div class="langswitch langswitch--mob"><a href="../index.html" hreflang="de" lang="de" title="Deutsch">DE</a><span class="langswitch__cur" aria-current="true">EN</span><a href="../es/index.html" hreflang="es" lang="es" title="Español">ES</a></div>
+      <button class="theme theme--mob" type="button" data-theme-toggle aria-label="Switch between light and dark mode"><svg class="theme__sonne" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg><svg class="theme__mond" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg><span>Switch appearance</span></button>
     </div>
   </div>
 </header>
@@ -273,6 +280,40 @@
   </div>
 </section>
 
+<section class="sect sect--dark sect--tight">
+  <div class="wrap split" style="align-items:center">
+    <div class="prose rv" data-sport="padel">
+      <p class="eyebrow">Partner board</p>
+      <h2 style="font-size:clamp(1.6rem,1.3rem + 1.6vw,2.4rem)">Nobody around to play?</h2>
+      <p style="margin:1rem 0 0">Post when you are free — or say yes to an open request. No sign-up, half a minute.</p>
+    </div>
+    <div class="btnrow rv" style="justify-self:start">
+      <a class="btn btn--turf" href="partner.html">To the partner board</a>
+    </div>
+  </div>
+</section>
+
+<section class="sect">
+  <div class="wrap split">
+    <div class="prose rv" data-sport="tennis">
+      <p class="eyebrow">Pro shop</p>
+      <h2>Rackets, strings, balls — on site</h2>
+      <p>No shipping, no guessing from online photos: you hold the racket before you buy it, and you are advised by people who play themselves.</p>
+      <ul class="ticks" style="margin-top:1.4rem">
+        <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Rackets, balls, strings, grips and accessories at the best price</span></li>
+        <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Rackets and balls to hire — for a first session or a forgotten racket</span></li>
+        <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><span>Stringing service on site</span></li>
+      </ul>
+      <div class="btnrow" style="margin-top:1.6rem">
+        <a class="btn btn--clay" href="proshop.html">To the pro shop</a>
+      </div>
+    </div>
+    <div class="split--media rv">
+      <img src="../assets/img/ph-proshop-1.svg" alt="Pro shop at the Geretsried venue" width="900" height="675" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
 <section class="sect sect--white">
   <div class="wrap">
     <p class="eyebrow rv">What&#39;s on</p>
@@ -288,16 +329,26 @@
         <div class="tile__body"><h3>Bavaro Padel League</h3><p>Our own in-house league. For padel members the league fee is included in the membership.</p></div>
       </li>
       <li class="tile rv" data-sport="tennis">
-        <div class="tile__media"><img src="../assets/img/event-open.jpg" alt="Trophy presentation at the STC Open" width="600" height="400" loading="lazy" decoding="async"></div>
-        <div class="tile__body"><h3>STC Open</h3><p>The tournament weekend at the club — sports bar, spectators and atmosphere.</p></div>
+        <div class="tile__media"><img src="../assets/img/event-open.jpg" alt="Trophy presentation at the STC Gaudi" width="600" height="400" loading="lazy" decoding="async"></div>
+        <div class="tile__body"><h3>STC Gaudi</h3><p>The tournament weekend at the club — sports bar, spectators and atmosphere.</p></div>
       </li>
       <li class="tile rv" data-sport="kombi">
         <div class="tile__media"><img src="../assets/img/event-jugend.jpg" alt="Young players at the youth tournament" width="600" height="400" loading="lazy" decoding="async"></div>
         <div class="tile__body"><h3>Youth programme</h3><p>Children and teenagers up to 18 play free at set times from Monday to Thursday.</p></div>
       </li>
     </ul>
+    <p class="eyebrow rv" style="margin-top:3.5rem">From our Instagram</p>
+    <h3 class="rv" style="font-size:clamp(1.4rem,1.2rem + 1vw,1.9rem);max-width:24ch">
+      What happened this week</h3>
+    <div class="instafeed instafeed--gate rv" data-insta="hiXKvcGx1n5imrqGbgTv">
+      <span class="instafeed__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+      <h3>Latest posts</h3>
+      <p>The feed is loaded by Behold. Data is sent there only once you click — <a href="../datenschutz.html">details</a>.</p>
+      <button class="btn btn--clay btn--sm" type="button" data-insta-start>Load posts</button>
+    </div>
     <div class="btnrow rv" style="margin-top:2rem">
-      <a class="btn btn--line" href="https://www.instagram.com/sportcenterhahn/" rel="noopener">All events on Instagram</a>
+      <a class="btn btn--clay" href="termine.html">Full season calendar</a>
+      <a class="btn btn--line" href="https://www.instagram.com/sportcenterhahn/" rel="noopener">Open our Instagram profile</a>
     </div>
   </div>
 </section>
@@ -345,7 +396,7 @@
     <h2 class="rv" style="max-width:20ch">See where you will be playing</h2>
     <p class="lead rv" style="margin-top:1rem">The videos are hosted on YouTube. They load only when you click “Load now” — until then, no request leaves this page.</p>
     <div class="embeds">
-      <div class="rv"><div class="embed embed--16x9" data-embed="https://www.youtube-nocookie.com/embed/0Vz3buunvqo?rel=0" data-embed-title="Sportcenter Hahn – Anlagenvideo">
+      <div class="rv"><div class="embed embed--16x9" data-embed="https://www.youtube-nocookie.com/embed/0Vz3buunvqo?rel=0" data-embed-title="Sportcenter Hahn – venue video">
     <div class="embed__gate">
       <img src="../assets/img/video-1.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
       <h3>Geretsried venue</h3>
@@ -353,7 +404,7 @@
       <button class="btn btn--clay" type="button" data-embed-start><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:26px;height:26px"><path d="M8 5v14l11-7z"/></svg> Load now</button>
     </div>
   </div></div>
-      <div class="rv"><div class="embed embed--16x9" data-embed="https://www.youtube-nocookie.com/embed/VhBl3dHT5SY?rel=0" data-embed-title="Sportcenter Hahn – Impressionen">
+      <div class="rv"><div class="embed embed--16x9" data-embed="https://www.youtube-nocookie.com/embed/VhBl3dHT5SY?rel=0" data-embed-title="Sportcenter Hahn – impressions">
     <div class="embed__gate">
       <img src="../assets/img/video-2.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
       <h3>Impressions</h3>
@@ -458,6 +509,10 @@
         <li><a href="mitglied.html">Become a member</a></li>
         <li><a href="trainer.html">Coaching &amp; coaches</a></li>
         <li><a href="sportsbar.html">Sports bar</a></li>
+        <li><a href="proshop.html">Pro shop</a></li>
+        <li><a href="partner.html">Find a partner</a></li>
+        <li><a href="termine.html">Season calendar</a></li>
+        <li><a href="regeln.html">Learn the rules</a></li>
         <li><a href="wandtraining.html">Play Wall Rally</a></li>
       </ul>
     </div>
@@ -491,6 +546,6 @@
   <a href="buchen.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Book a court</a>
   <a href="trainer.html#trainer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="11" cy="9" rx="6" ry="7"/><path d="M11 16v5.5"/><path d="M5.2 9h11.6M11 2.2v13.6"/></svg> Coaching</a>
 </div>
-<script src="../assets/js/main.js?v=42ba8dbb" defer></script>
+<script src="../assets/js/main.js?v=4b024929" defer></script>
 </body>
 </html>
