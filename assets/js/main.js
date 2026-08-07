@@ -66,6 +66,14 @@
   /* ---- Jahr im Footer ---- */
   var y = document.getElementById('jahr');
   if (y) y.textContent = new Date().getFullYear();
+
+  /* ---- Support Board Chat (einmalig laden) ---- */
+  if (!document.getElementById('chat-init')) {
+    var sb = document.createElement('script');
+    sb.id = 'chat-init';
+    sb.src = 'https://cloud.board.support/account/js/init.js?id=1450432847';
+    document.body.appendChild(sb);
+  }
 })();
 
 /* ============================================================================
