@@ -417,6 +417,10 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 .consent{display:flex;gap:.7rem;align-items:flex-start;font-size:.86rem;color:var(--muted);line-height:1.5}
 .consent input{width:20px;height:20px;flex:none;margin-top:.15rem;accent-color:var(--turf)}
 .form-note{font-size:.8rem;color:var(--muted);margin:0}
+.form-status{margin:0;padding:.85rem 1.1rem;border-radius:var(--r);
+  font-size:.9rem;background:var(--haze);color:var(--muted)}
+.form-status--ok{background:rgba(30,140,95,.12);color:var(--pine-text);font-weight:600}
+.form-status--fehler{background:rgba(192,86,47,.12);color:var(--clay-text);font-weight:600}
 
 .mapcard{display:block;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
   text-decoration:none;background:var(--white)}
@@ -967,6 +971,9 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 [data-theme="dark"] .pf__status{background:var(--haze)}
 [data-theme="dark"] .pf__status--ok{background:rgba(69,196,141,.14)}
 [data-theme="dark"] .pf__status--fehler{background:rgba(230,138,95,.14)}
+[data-theme="dark"] .form-status{background:var(--haze)}
+[data-theme="dark"] .form-status--ok{background:rgba(69,196,141,.14)}
+[data-theme="dark"] .form-status--fehler{background:rgba(230,138,95,.14)}
 [data-theme="dark"] .pf__kontakt{background:rgba(69,196,141,.14)}
 [data-theme="dark"] .wx__day{background:rgba(231,237,233,.05)}
 [data-theme="dark"] .sect--white .wx__day{background:rgba(231,237,233,.07)}
@@ -1160,47 +1167,3 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 .pa__spieler li{display:flex;justify-content:space-between;gap:1rem}
 .pa__spieler span{color:var(--muted);word-break:break-word}
 .pa__keine{margin:.35rem 0 0;font-size:.86rem;color:var(--muted)}
-
-/* ---------- Roulette-Rad ---------- */
-.rad__monat{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-bottom:1.25rem}
-.rad__pfeil{display:inline-flex;align-items:center;justify-content:center;
-  width:44px;height:44px;flex:none;border:1px solid rgba(242,243,239,.28);border-radius:var(--r);
-  background:transparent;color:var(--on-dark);font-size:1.5rem;line-height:1;cursor:pointer;
-  transition:background-color .16s ease,border-color .16s ease}
-.rad__pfeil:hover{background:rgba(242,243,239,.12);border-color:var(--on-dark)}
-.rad__pfeil:disabled{opacity:.4;cursor:default}
-.rad__monatname{font-family:var(--display);font-weight:800;text-transform:uppercase;
-  font-size:clamp(1.1rem,1rem + .7vw,1.5rem);min-width:11ch;text-align:center;color:var(--on-dark)}
-
-.rad{width:min(100%,420px);margin:0 auto 1.5rem;aspect-ratio:1/1}
-.rad__svg{width:100%;height:100%;display:block;overflow:visible}
-
-.rad__rand{fill:none;stroke:rgba(242,243,239,.16);stroke-width:3}
-.rad__seg{fill:#12241C;stroke:rgba(242,243,239,.10);stroke-width:.6;transition:fill .25s ease}
-.rad__seg--b{fill:#0D1A14}
-.rad__seg--frei{fill:#17402F}
-.rad__seg--frei.rad__seg--b{fill:#123528}
-.rad__seg--treffer{fill:var(--clay)}
-.rad__zahl{fill:rgba(242,243,239,.42);font-family:var(--display);font-weight:800;
-  font-size:13px;letter-spacing:.02em;pointer-events:none}
-.rad__zahl--frei{fill:var(--on-dark)}
-.rad__punkt{fill:#C8D95B;pointer-events:none}
-.rad__bahn{fill:none;stroke:rgba(242,243,239,.14);stroke-width:1.5;stroke-dasharray:2 4}
-.rad__nabe{fill:var(--surface-pine);stroke:rgba(242,243,239,.18);stroke-width:2}
-.rad__marke{fill:rgba(242,243,239,.72);font-family:var(--display);font-weight:800;
-  font-size:17px;letter-spacing:.16em}
-.rad__marke--klein{font-size:10px;letter-spacing:.24em;fill:rgba(242,243,239,.45)}
-.rad__kugel{fill:#FFF;stroke:rgba(12,19,16,.5);stroke-width:1}
-.rad__zeiger{fill:var(--clay)}
-
-.rad__ansage{margin:1rem 0 0;font-size:.9rem;color:var(--muted-dark);min-height:1.4em}
-.pr__treffer{margin:0 0 1rem;font-family:var(--display);font-weight:800;text-transform:uppercase;
-  font-size:clamp(1.15rem,1rem + .9vw,1.6rem);color:var(--clay-lt);text-align:center}
-
-/* Auf schmalen Geräten weniger Ringfläche, dafür größere Zahlen */
-@media(max-width:560px){
-  .rad{width:min(100%,340px)}
-  .rad__zahl{font-size:15px}
-  .rad__marke{font-size:15px}
-}
-@media (prefers-reduced-motion:reduce){.rad__seg{transition:none}}
