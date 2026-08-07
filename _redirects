@@ -1,5 +1,16 @@
-# Alte WordPress-URLs auf die neuen Dateien umleiten.
-# Ohne diese Zeilen verliert die Seite ihre bestehenden Google-Rankings.
+# =============================================================================
+#  Cloudflare Pages — _redirects
+#
+#  Regeln: je eine Zeile, Format: <Quelle> <Ziel> <Status>
+#  Cloudflare akzeptiert nur 3xx-Codes (301, 302, 307, 308) und 200 (Rewrite).
+#  410 und 404 als Status sind NICHT möglich — für tote WP-Pfade einfach 301
+#  auf 404.html, Cloudflare liefert dann die korrekte 404-Seite.
+#
+#  Die 404.html im Wurzelverzeichnis greift automatisch für alle anderen
+#  Adressen, die nicht existieren — kein extra Eintrag nötig.
+# =============================================================================
+
+# --- Alte WordPress-URLs auf die neuen Dateien (301 Permanent) ---------------
 /about-us              /ueber-uns.html               301
 /about-us/*            /ueber-uns.html               301
 /trainer               /trainer.html                 301
@@ -16,5 +27,13 @@
 /book-wolfratshausen/* /buchen-wolfratshausen.html   301
 /privacy-policy        /datenschutz.html             301
 /privacy-policy/*      /datenschutz.html             301
-/wp-content/*          /404.html                     404
-/wp-admin/*            /404.html                     404
+
+# --- Tote WordPress-Pfade: auf 404-Seite umleiten ---------------------------
+# Cloudflare kennt keinen 404- oder 410-Statuscode in _redirects.
+# 301 auf /404.html ist die einzige Möglichkeit; Cloudflare liefert
+# die Seite mit HTTP 301, nicht 404 — für SEO-Zwecke akzeptabel,
+# da Google wp-content/wp-admin ohnehin nicht indexiert.
+/wp-content/*          /404.html                     301
+/wp-admin/*            /404.html                     301
+/wp-includes/*         /404.html                     301
+/xmlrpc.php            /404.html                     301

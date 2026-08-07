@@ -1,18 +1,51 @@
-/*
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: geolocation=(), microphone=(), camera=()
-  Strict-Transport-Security: max-age=31536000; includeSubDomains
+# =============================================================================
+#  Cloudflare Pages — _headers
+#
+#  Format:  <URL-Muster>
+#    <Header-Name>: <Wert>
+#
+#  WICHTIG: Einrückung mit Leerzeichen (nicht Tab). Leere Zeile vor jedem
+#  neuen URL-Muster. Cloudflare verarbeitet die Regeln von oben nach unten;
+#  spezifischere Muster zuerst.
+# =============================================================================
 
+# --- Versionierte Assets: 1 Jahr cachen, unveränderlich ---------------------
+# CSS und JS tragen ?v=HASH im Link. Ändert sich der Inhalt, ändert sich der
+# Hash → der Browser holt sie neu. Deshalb dürfen sie "immutable" sein.
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# --- Schriften: 1 Jahr, CORS für @font-face ----------------------------------
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
   Access-Control-Allow-Origin: *
 
+# --- Bilder: 1 Jahr ----------------------------------------------------------
 /assets/img/*
   Cache-Control: public, max-age=31536000, immutable
 
-/assets/css/*
-  Cache-Control: public, max-age=604800
+# --- Datendateien (JSON für Kalender, Quiz etc.): 1 Stunde ------------------
+/assets/data/*
+  Cache-Control: public, max-age=3600
 
-/assets/js/*
-  Cache-Control: public, max-age=604800
+# --- HTML-Seiten: nie cachen -------------------------------------------------
+# Neue Inhalte sollen sofort wirken. Cloudflare hat einen eigenen CDN-Cache;
+# "no-cache" erlaubt Browserrevalidierung, "no-store" verhindert jede lokale
+# Kopie. Für eine statische Website ist "no-cache" die bessere Wahl, weil
+# Cloudflare die Datei im Rechenzentrum vorhalten kann und nur validiert.
+/*.html
+  Cache-Control: no-cache
+
+/
+  Cache-Control: no-cache
+
+# --- Sicherheitsheader für alle Seiten ---------------------------------------
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
