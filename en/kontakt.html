@@ -85,7 +85,9 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
     </ul></div>
     </div>
     <div>
-      <form id="kontaktformular" action="[[ FORMULAR-ENDPUNKT ]]" method="post" class="rv">
+      <form id="kontaktformular" class="rv" data-formular="kontakt"
+        data-sb-url="https://vaoipovimujxaudefdyv.supabase.co"
+        data-sb-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZhb2lwb3ZpbXVqeGF1ZGVmZHl2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU5NTgyOTIsImV4cCI6MjEwMTUzNDI5Mn0.oVOq1EyCnFwx5Ht6eYVnjiSLY-c2Mx21cPmMh2sQJp0">
       <div class="field-row">
         <div class="field"><label for="f-name">Name</label>
           <input id="f-name" name="name" type="text" autocomplete="name" required></div>
@@ -97,9 +99,9 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
           <input id="f-tel" name="telefon" type="tel" autocomplete="tel"></div>
         <div class="field"><label for="f-thema">Subject</label>
           <select id="f-thema" name="thema">
-            <option>Court booking</option><option>Membership</option><option>Coaching</option>
-            <option>Tournament or league</option><option>Sports bar &amp; events</option>
-            <option>Jobs</option><option>Other</option>
+            <option value="Platzbuchung">Court booking</option><option value="Mitgliedschaft">Membership</option><option value="Training">Coaching</option>
+            <option value="Turnier oder Liga">Tournament or league</option><option value="Sportsbar &amp; Events">Sports bar &amp; events</option>
+            <option value="Karriere">Jobs</option><option value="Sonstiges">Other</option>
           </select></div>
       </div>
       <div class="field"><label for="f-text">Message</label>
@@ -111,6 +113,7 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
         <input id="f-consent" name="consent" type="checkbox" required>
         <span>I agree that my details may be stored in order to process this enquiry. Consent can be withdrawn at any time. Further information in the
         <a href="../datenschutz.html">privacy policy</a>.</span></label>
+      <p class="form-status" data-form-status hidden></p>
       <button class="btn btn--clay" type="submit">Send message</button>
       <p class="form-note">No newsletters, no sharing with third parties.</p>
     </form>
@@ -231,6 +234,7 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
   <a href="buchen.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Book a court</a>
   <a href="trainer.html#trainer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="11" cy="9" rx="6" ry="7"/><path d="M11 16v5.5"/><path d="M5.2 9h11.6M11 2.2v13.6"/></svg> Coaching</a>
 </div>
+<script src="../assets/js/forms.js?v=870158ab" defer></script>
 <script src="../assets/js/main.js?v=870158ab" defer></script>
 </body>
 </html>

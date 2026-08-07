@@ -170,7 +170,9 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
       <li class="fact"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.94.53 3.75 1.45 5.3L2 22l4.98-1.6a9.8 9.8 0 0 0 5.06 1.4c5.43 0 9.84-4.4 9.84-9.84S17.47 2 12.04 2Zm5.7 13.9c-.24.68-1.4 1.3-1.94 1.35-.5.05-.98.23-3.3-.7-2.78-1.1-4.55-3.95-4.69-4.13-.14-.19-1.13-1.5-1.13-2.87 0-1.36.71-2.03.97-2.31.25-.28.55-.35.73-.35l.53.01c.17 0 .4-.06.62.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.3-.28.47l-.42.48c-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.19-.28.37-.23.63-.14.25.09 1.65.78 1.93.92.28.14.47.21.54.33.07.11.07.66-.17 1.31Z"/></svg><div><b><a href="https://wa.me/4917630365102" rel="noopener">WhatsApp</a></b><span>Für kurze Fragen der schnellste Weg.</span></div></li>
     </ul>
     </div>
-    <form id="antragsformular" action="[[ FORMULAR-ENDPUNKT ]]" method="post" class="rv antrag" novalidate>
+    <form id="antragsformular" class="rv antrag" novalidate data-formular="mitglied"
+      data-sb-url="https://vaoipovimujxaudefdyv.supabase.co"
+      data-sb-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZhb2lwb3ZpbXVqeGF1ZGVmZHl2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU5NTgyOTIsImV4cCI6MjEwMTUzNDI5Mn0.oVOq1EyCnFwx5Ht6eYVnjiSLY-c2Mx21cPmMh2sQJp0">
 
       <fieldset>
         <legend>1 · Mitgliedschaft</legend>
@@ -198,7 +200,7 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
             <p class="field__hilfe">Leer lassen für den nächstmöglichen Termin.</p></div>
           <div class="field"><label for="m-standort">Hauptsächlich am Standort</label>
             <select id="m-standort" name="standort">
-              <option>Geretsried</option><option>Wolfratshausen</option><option>Beide</option>
+              <option value="Geretsried">Geretsried</option><option value="Wolfratshausen">Wolfratshausen</option><option value="Beide">Beide</option>
             </select></div>
         </div>
       </fieldset>
@@ -261,8 +263,9 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
         </div>
 
         <div class="mandat">
-          <p><b>Gläubiger:</b> <span class="ph">[[ EINZIEHENDE STELLE: Sportcenter Hahn GmbH ODER STC Oberland e. V. ]]</span><br>
-             <b>Gläubiger-Identifikationsnummer:</b> <span class="ph">[[ DE00ZZZ00000000000 ]]</span><br>
+          <p><b>Zahlungsempfänger:</b> STC Oberland e.V., c/o Daniel Hahn<br>
+             <b>Anschrift:</b> Königsdorfer Weg 7, 82538 Geretsried<br>
+             <b>Gläubiger-ID:</b> DE09ZZZ00001419305<br>
              <b>Mandatsreferenz:</b> wird dir mit der Bestätigung mitgeteilt</p>
           <p>Ich ermächtige den oben genannten Gläubiger, wiederkehrende Zahlungen von meinem Konto
              mittels Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die auf
@@ -303,6 +306,7 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
         <label for="m-web">Bitte leer lassen</label>
         <input id="m-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
 
+      <p class="form-status" data-form-status hidden></p>
       <button class="btn btn--clay" type="submit">Antrag verbindlich absenden</button>
       <p class="form-note">Felder mit <abbr title="Pflichtfeld">*</abbr> sind Pflicht. Die
         Mitgliedschaft entsteht erst mit unserer schriftlichen Bestätigung.</p>
@@ -385,6 +389,7 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
   <a href="buchen.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Platz buchen</a>
   <a href="trainer.html#trainer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="11" cy="9" rx="6" ry="7"/><path d="M11 16v5.5"/><path d="M5.2 9h11.6M11 2.2v13.6"/></svg> Trainieren</a>
 </div>
+<script src="assets/js/forms.js?v=870158ab" defer></script>
 <script src="assets/js/main.js?v=870158ab" defer></script>
 </body>
 </html>

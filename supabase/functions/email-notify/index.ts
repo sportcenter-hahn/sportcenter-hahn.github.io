@@ -10,7 +10,7 @@
  *   RESEND_API_KEY   — API-Key von resend.com
  *   NOTIFY_EMAIL     — Empfänger (z. B. mail@sportcenter-hahn.de)
  *   FROM_EMAIL       — Absender, muss bei Resend verifiziert sein
- *                      z. B. "Sportcenter Hahn <noreply@sportcenter-hahn.de>"
+ *                      z. B. "Sportcenter Hahn <mail@sportcenter-hahn.de>"
  *   WEBHOOK_SECRET   — Beliebiges Passwort, identisch mit x-webhook-secret Header
  *
  * Deploy:
@@ -147,7 +147,7 @@ Deno.serve(async (req: Request) => {
   const resendKey   = Deno.env.get('RESEND_API_KEY')  ?? '';
   const notifyEmail = Deno.env.get('NOTIFY_EMAIL')    ?? '';
   const fromEmail   = Deno.env.get('FROM_EMAIL')
-                      ?? 'Sportcenter Hahn <noreply@sportcenter-hahn.de>';
+                      ?? 'Sportcenter Hahn <mail@sportcenter-hahn.de>';
 
   if (!resendKey || !notifyEmail) {
     console.error('RESEND_API_KEY oder NOTIFY_EMAIL fehlt!');

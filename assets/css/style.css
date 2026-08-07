@@ -417,6 +417,10 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 .consent{display:flex;gap:.7rem;align-items:flex-start;font-size:.86rem;color:var(--muted);line-height:1.5}
 .consent input{width:20px;height:20px;flex:none;margin-top:.15rem;accent-color:var(--turf)}
 .form-note{font-size:.8rem;color:var(--muted);margin:0}
+.form-status{margin:0;padding:.85rem 1.1rem;border-radius:var(--r);
+  font-size:.9rem;background:var(--haze);color:var(--muted)}
+.form-status--ok{background:rgba(30,140,95,.12);color:var(--pine-text);font-weight:600}
+.form-status--fehler{background:rgba(192,86,47,.12);color:var(--clay-text);font-weight:600}
 
 .mapcard{display:block;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
   text-decoration:none;background:var(--white)}
@@ -967,6 +971,9 @@ form{display:flex;flex-direction:column;gap:1.05rem}
 [data-theme="dark"] .pf__status{background:var(--haze)}
 [data-theme="dark"] .pf__status--ok{background:rgba(69,196,141,.14)}
 [data-theme="dark"] .pf__status--fehler{background:rgba(230,138,95,.14)}
+[data-theme="dark"] .form-status{background:var(--haze)}
+[data-theme="dark"] .form-status--ok{background:rgba(69,196,141,.14)}
+[data-theme="dark"] .form-status--fehler{background:rgba(230,138,95,.14)}
 [data-theme="dark"] .pf__kontakt{background:rgba(69,196,141,.14)}
 [data-theme="dark"] .wx__day{background:rgba(231,237,233,.05)}
 [data-theme="dark"] .sect--white .wx__day{background:rgba(231,237,233,.07)}
