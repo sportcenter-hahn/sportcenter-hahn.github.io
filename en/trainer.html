@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tennis &amp; padel coaching in Geretsried | STC Oberland coaches</title>
 <meta name="description" content="Individual and group coaching for tennis and padel in Geretsried and Wolfratshausen. Six coaches with Bundesliga and national-team experience. Ask directly via WhatsApp.">
-<link rel="canonical" href="https://sportcenter-hahn.de/demo/en/trainer.html">
-<link rel="alternate" hreflang="de" href="https://sportcenter-hahn.de/demo/trainer.html">
-<link rel="alternate" hreflang="en" href="https://sportcenter-hahn.de/demo/en/trainer.html">
-<link rel="alternate" hreflang="es" href="https://sportcenter-hahn.de/demo/es/trainer.html">
-<link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/demo/trainer.html">
+<link rel="canonical" href="https://sportcenter-hahn.de/en/trainer.html">
+<link rel="alternate" hreflang="de" href="https://sportcenter-hahn.de/trainer.html">
+<link rel="alternate" hreflang="en" href="https://sportcenter-hahn.de/en/trainer.html">
+<link rel="alternate" hreflang="es" href="https://sportcenter-hahn.de/es/trainer.html">
+<link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/trainer.html">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#0C1310">
 <script>/* Setzt das Thema vor dem ersten Rendern — sonst blitzt kurz die falsche Fassung auf. */
@@ -21,8 +21,8 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 <meta property="og:site_name" content="STC Oberland &amp; Sportcenter Hahn">
 <meta property="og:title" content="Tennis &amp; padel coaching in Geretsried | STC Oberland coaches">
 <meta property="og:description" content="Individual and group coaching for tennis and padel in Geretsried and Wolfratshausen. Six coaches with Bundesliga and national-team experience. Ask directly via WhatsApp.">
-<meta property="og:url" content="https://sportcenter-hahn.de/demo/en/trainer.html">
-<meta property="og:image" content="https://sportcenter-hahn.de/demo/assets/img/coach-daniel.jpg">
+<meta property="og:url" content="https://sportcenter-hahn.de/en/trainer.html">
+<meta property="og:image" content="https://sportcenter-hahn.de/assets/img/coach-daniel.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../assets/img/logo.png">
@@ -80,7 +80,7 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
         <div><h3>Experienced coaches</h3><p>Bundesliga, national team, coach education — here you learn from people who play themselves.</p></div>
       </div>
       <div class="btnrow" style="margin-top:1.8rem">
-        <a class="btn btn--clay" href="https://www.sportision.de/club/stc-oberland-1" rel="noopener">Book courses on Sportision</a>
+        <a class="btn btn--clay" href="https://www.sportision.de/club/stc-oberland-1" data-sportision-modal>Book courses on Sportision</a>
         <a class="btn btn--line" href="#trainer">Meet the coaches</a>
       </div>
     </div>
@@ -177,10 +177,59 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
     <h2 class="rv">Come on court and find out</h2>
     <p class="lead rv center" style="margin:1rem auto 2rem">Courses, camps and group coaching are booked directly on Sportision. For private lessons, message the coach of your choice.</p>
     <div class="btnrow rv" style="justify-content:center">
-      <a class="btn btn--turf" href="https://www.sportision.de/club/stc-oberland-1" rel="noopener">Book courses on Sportision</a>
+      <a class="btn btn--turf" href="https://www.sportision.de/club/stc-oberland-1" data-sportision-modal>Book courses on Sportision</a>
       <a class="btn btn--line" href="#trainer">Ask about private lessons</a>
     </div>
   </div>
+
+<!-- ===== Sportision Modal ===== -->
+<div id="sportision-modal" class="sp-modal" role="dialog" aria-modal="true" aria-label="Book courses on Sportision" hidden>
+  <div class="sp-modal__overlay" data-sp-close></div>
+  <div class="sp-modal__box">
+    <button class="sp-modal__close" type="button" data-sp-close aria-label="Schließen">&#x2715;</button>
+    <iframe class="sp-modal__frame" src="" title="Book courses on Sportision" allow="payment" referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+  </div>
+</div>
+
+<style>
+.sp-modal{position:fixed;inset:0;z-index:900;display:flex;align-items:center;justify-content:center;padding:clamp(.75rem,3vw,1.5rem)}
+.sp-modal[hidden]{display:none}
+.sp-modal__overlay{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(3px)}
+.sp-modal__box{position:relative;z-index:1;width:100%;max-width:1020px;height:min(86vh,820px);background:#fff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 28px 56px -14px rgba(0,0,0,.55)}
+.sp-modal__close{position:absolute;top:.6rem;right:.6rem;z-index:2;width:38px;height:38px;border:0;border-radius:6px;background:rgba(0,0,0,.55);color:#fff;font-size:1.1rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.sp-modal__close:hover{background:rgba(0,0,0,.8)}
+.sp-modal__frame{flex:1;width:100%;border:0;display:block}
+</style>
+
+<script>
+(function(){
+  var URL = "https://www.sportision.de/club/stc-oberland-1";
+  var modal  = document.getElementById("sportision-modal");
+  var frame  = modal.querySelector(".sp-modal__frame");
+  var loaded = false;
+
+  function open(){
+    if(!loaded){ frame.src = URL; loaded = true; }
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+    modal.querySelector(".sp-modal__close").focus();
+  }
+  function close(){
+    modal.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll("[data-sportision-modal]").forEach(function(a){
+    a.addEventListener("click", function(e){ e.preventDefault(); open(); });
+  });
+  modal.querySelectorAll("[data-sp-close]").forEach(function(el){
+    el.addEventListener("click", close);
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && !modal.hidden) close();
+  });
+})();
+</script>
 </section>
 </main>
 <footer class="site-foot">

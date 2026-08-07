@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sportcenter-hahn.de/demo/sitemap.xml
+Sitemap: https://sportcenter-hahn.de/sitemap.xml
