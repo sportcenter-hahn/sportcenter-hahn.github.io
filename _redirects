@@ -1,20 +1,34 @@
-# Alte WordPress-URLs auf die neuen Dateien umleiten.
-# Ohne diese Zeilen verliert die Seite ihre bestehenden Google-Rankings.
-/about-us              /ueber-uns.html               301
-/about-us/*            /ueber-uns.html               301
-/trainer               /trainer.html                 301
-/trainer/*             /trainer.html                 301
-/mitglied              /mitglied.html                301
-/mitglied/*            /mitglied.html                301
-/bavaro-liga           /liga.html                    301
-/bavaro-liga/*         /liga.html                    301
-/kontakt               /kontakt.html                 301
-/kontakt/*             /kontakt.html                 301
-/booking-ger           /buchen-geretsried.html       301
-/booking-ger/*         /buchen-geretsried.html       301
-/book-wolfratshausen   /buchen-wolfratshausen.html   301
-/book-wolfratshausen/* /buchen-wolfratshausen.html   301
-/privacy-policy        /datenschutz.html             301
-/privacy-policy/*      /datenschutz.html             301
-/wp-content/*          /404.html                     404
-/wp-admin/*            /404.html                     404
+# =============================================================================
+#  Cloudflare Pages — _redirects
+#
+#  WICHTIG für CF Pages:
+#  1. Nur Statuscodes 301, 302, 307, 308, 200 sind gültig. Kein 404/410.
+#  2. CF Pages serviert .html-Dateien AUCH ohne Extension (/trainer → trainer.html).
+#     Redirect-Regeln auf Seiten, die bereits als .html-Datei existieren,
+#     würden Endlosschleifen erzeugen — deshalb fehlen /trainer, /kontakt,
+#     /mitglied absichtlich hier: CF Pages löst sie selbst auf.
+#  3. Ziele ohne .html angeben, damit CF Pages die Datei direkt serviert
+#     (ein Hop weniger, kein Loop-Risiko).
+# =============================================================================
+
+# --- Alte WordPress-URLs, die ANDERS heißen als die neuen Seiten -----------
+# (sicher, weil der Ziel-Slug kein gleichnamiges .html-File hat)
+/about-us              /ueber-uns                    301
+/about-us/*            /ueber-uns                    301
+/bavaro-liga           /liga                         301
+/bavaro-liga/*         /liga                         301
+/booking-ger           /buchen-geretsried            301
+/booking-ger/*         /buchen-geretsried            301
+/book-wolfratshausen   /buchen-wolfratshausen        301
+/book-wolfratshausen/* /buchen-wolfratshausen        301
+/privacy-policy        /datenschutz                  301
+/privacy-policy/*      /datenschutz                  301
+
+# --- /trainer, /kontakt, /mitglied brauchen KEINE Regel -------------------
+# CF Pages findet trainer.html, kontakt.html, mitglied.html automatisch.
+# Eine Regel /trainer → /trainer.html würde einen Loop erzeugen:
+#   /trainer → (Regel) → /trainer.html → (CF strips .html) → /trainer → …
+
+# --- Tote WordPress-Pfade --------------------------------------------------
+# 404 ist kein gültiger Status in _redirects — CF Pages serviert 404.html
+# automatisch für alle unbekannten Pfade, also brauchen wir hier keine Regel.
