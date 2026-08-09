@@ -67,6 +67,24 @@
   var y = document.getElementById('jahr');
   if (y) y.textContent = new Date().getFullYear();
 
+  /* ---- Saisonale Angebote (z. B. Senioren-Special nur Winter) ----
+     Wintermonate: Oktober–März. Außerhalb: Kachel als nicht verfügbar markieren. */
+  (function () {
+    var monat = new Date().getMonth() + 1;
+    var winter = monat >= 10 || monat <= 3;
+    var knoten = document.querySelectorAll('[data-season="winter"]');
+    for (var i = 0; i < knoten.length; i++) {
+      var el = knoten[i];
+      el.classList.add(winter ? 'is-in-season' : 'is-off-season');
+      if (winter) continue;
+      var meta = el.querySelector('[data-season-off]');
+      if (meta) {
+        var alt = meta.getAttribute('data-season-off');
+        if (alt) meta.textContent = alt;
+      }
+    }
+  })();
+
   /* ---- Support Board Chat (einmalig laden) ---- */
   if (!document.getElementById('chat-init')) {
     var sb = document.createElement('script');
