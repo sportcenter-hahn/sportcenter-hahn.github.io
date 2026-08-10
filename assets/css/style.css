@@ -203,6 +203,17 @@ h4{font-size:1.05rem}
 .pagehead__in{position:relative;z-index:2;padding-block:clamp(2.75rem,6.5vw,5rem)}
 .pagehead h1{max-width:18ch;font-size:clamp(2.4rem,1.6rem + 4vw,4.6rem)}
 .pagehead .lead{margin-top:1.1rem}
+.pagehead__photo{display:none;position:absolute;z-index:2;top:clamp(1.1rem,2.5vw,2rem);
+  right:clamp(1.1rem,4vw,2.75rem);width:min(38vw,420px);aspect-ratio:16/9;
+  object-fit:cover;border-radius:var(--r);pointer-events:none}
+@media(min-width:820px){
+  .pagehead--photo{min-height:clamp(280px,32vw,380px)}
+  .pagehead--photo .pagehead__photo{display:block}
+  .pagehead--photo .pagehead__in{padding-right:min(44vw,460px)}
+}
+@media(min-width:1100px){
+  .pagehead--photo .pagehead__photo{width:min(40vw,480px)}
+}
 .crumbs{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;font-size:.8rem;
   color:rgba(242,243,239,.66);margin-bottom:1.1rem}
 .crumbs a{text-decoration:none}
