@@ -1,0 +1,16 @@
+{
+  "name": "Sportcenter Hahn — static site",
+  "terminals": [
+    {
+      "name": "web",
+      "command": "python3 -m http.server 8000 --bind 0.0.0.0",
+      "description": "Static site dev server. Open http://localhost:8000 for the German site; /en/ and /es/ serve the English and Spanish versions. Serves the repository root, mirroring how Cloudflare Pages hosts these files in production."
+    }
+  ],
+  "ports": [
+    {
+      "name": "web server",
+      "port": 8000
+    }
+  ]
+}
