@@ -460,36 +460,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sportcenter-hahn.de/partner.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://sportcenter-hahn.de/partner.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sportcenter-hahn.de/en/partner.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sportcenter-hahn.de/es/partner.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/partner.html"/>
-    <lastmod>2026-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sportcenter-hahn.de/en/partner.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://sportcenter-hahn.de/partner.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sportcenter-hahn.de/en/partner.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sportcenter-hahn.de/es/partner.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/partner.html"/>
-    <lastmod>2026-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sportcenter-hahn.de/es/partner.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://sportcenter-hahn.de/partner.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sportcenter-hahn.de/en/partner.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sportcenter-hahn.de/es/partner.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/partner.html"/>
-    <lastmod>2026-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://sportcenter-hahn.de/termine.html</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://sportcenter-hahn.de/termine.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://sportcenter-hahn.de/en/termine.html"/>
@@ -575,36 +545,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sportcenter-hahn.de/en/wandtraining.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sportcenter-hahn.de/es/wandtraining.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/wandtraining.html"/>
-    <lastmod>2026-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sportcenter-hahn.de/padel-roulette.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://sportcenter-hahn.de/padel-roulette.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sportcenter-hahn.de/en/padel-roulette.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sportcenter-hahn.de/es/padel-roulette.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/padel-roulette.html"/>
-    <lastmod>2026-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sportcenter-hahn.de/en/padel-roulette.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://sportcenter-hahn.de/padel-roulette.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sportcenter-hahn.de/en/padel-roulette.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sportcenter-hahn.de/es/padel-roulette.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/padel-roulette.html"/>
-    <lastmod>2026-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sportcenter-hahn.de/es/padel-roulette.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://sportcenter-hahn.de/padel-roulette.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sportcenter-hahn.de/en/padel-roulette.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sportcenter-hahn.de/es/padel-roulette.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/padel-roulette.html"/>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
