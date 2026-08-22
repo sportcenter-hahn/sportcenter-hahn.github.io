@@ -16,3 +16,12 @@
 
 /assets/js/*
   Cache-Control: public, max-age=604800
+
+/sw.js
+  Cache-Control: no-cache
+
+/manifest.webmanifest
+  Cache-Control: public, max-age=86400
+
+/offline.html
+  Cache-Control: public, max-age=86400
