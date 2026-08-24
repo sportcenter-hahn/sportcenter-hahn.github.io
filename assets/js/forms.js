@@ -21,21 +21,24 @@
       okKontakt: 'Danke — deine Nachricht ist angekommen. Wir melden uns.',
       okAntrag: 'Danke — dein Antrag ist angekommen. Wir melden uns mit den nächsten Schritten.',
       fehler: 'Das hat nicht geklappt. Bitte später erneut versuchen oder anrufen: 08171 51 110.',
-      unkonfiguriert: 'Das Formular ist noch nicht eingerichtet. Bitte ruf uns an oder schreib eine Mail.'
+      unkonfiguriert: 'Das Formular ist noch nicht eingerichtet. Bitte ruf uns an oder schreib eine Mail.',
+      iban: 'Bitte eine gültige IBAN eingeben (z. B. DE89 3704 0044 0532 0130 00).'
     },
     en: {
       senden: 'Sending …',
       okKontakt: 'Thanks — your message has arrived. We will get back to you.',
       okAntrag: 'Thanks — your application has arrived. We will get back to you with the next steps.',
       fehler: 'That did not work. Please try again later or call us: 08171 51 110.',
-      unkonfiguriert: 'This form is not set up yet. Please call or send an email instead.'
+      unkonfiguriert: 'This form is not set up yet. Please call or send an email instead.',
+      iban: 'Please enter a valid IBAN (e.g. DE89 3704 0044 0532 0130 00).'
     },
     es: {
       senden: 'Enviando …',
       okKontakt: 'Gracias — tu mensaje ha llegado. Nos pondremos en contacto.',
       okAntrag: 'Gracias — tu solicitud ha llegado. Te contactaremos con los siguientes pasos.',
       fehler: 'Eso no ha funcionado. Inténtalo más tarde o llama al 08171 51 110.',
-      unkonfiguriert: 'Este formulario aún no está configurado. Llama o escribe un correo, por favor.'
+      unkonfiguriert: 'Este formulario aún no está configurado. Llama o escribe un correo, por favor.',
+      iban: 'Introduce un IBAN válido (p. ej. DE89 3704 0044 0532 0130 00).'
     }
   };
   var T = TEXTE[lang] || TEXTE.de;
@@ -50,6 +53,28 @@
 
   function boolWert(f, name) { return f.get(name) === 'on' || !!f.get(name); }
   function textWert(f, name) { var v = f.get(name); v = v == null ? '' : String(v).trim(); return v || null; }
+
+  /* IBAN: Leerzeichen/Bindestriche entfernen, Großschreibung, Format + Prüfziffer. */
+  function ibanSaeubern(roh) {
+    return String(roh || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase();
+  }
+
+  function ibanGueltig(iban) {
+    if (!/^[A-Z]{2}[0-9]{2}[A-Z0-9]{12,30}$/.test(iban)) return false;
+    if (iban.length < 15 || iban.length > 34) return false;
+    var umgestellt = iban.slice(4) + iban.slice(0, 4);
+    var ziffern = '';
+    for (var i = 0; i < umgestellt.length; i++) {
+      var c = umgestellt.charCodeAt(i);
+      if (c >= 65 && c <= 90) ziffern += String(c - 55);
+      else ziffern += umgestellt.charAt(i);
+    }
+    var rest = 0;
+    for (var j = 0; j < ziffern.length; j++) {
+      rest = (rest * 10 + (ziffern.charCodeAt(j) - 48)) % 97;
+    }
+    return rest === 1;
+  }
 
   function verdrahten(form, tabelle, payloadBauen, erfolgstext) {
     var URL_SB = form.getAttribute('data-sb-url') || '';
@@ -69,7 +94,14 @@
         return;
       }
 
-      var payload = payloadBauen(f);
+      var payload;
+      try {
+        payload = payloadBauen(f);
+      } catch (err) {
+        melden(form, (err && err.message) || T.fehler, 'fehler');
+        return;
+      }
+
       var knopf = form.querySelector('button[type="submit"]');
       if (knopf) knopf.disabled = true;
       melden(form, T.senden);
@@ -114,6 +146,12 @@
   var antrag = document.getElementById('antragsformular');
   if (antrag) {
     verdrahten(antrag, 'membership_applications', function (f) {
+      var iban = ibanSaeubern(textWert(f, 'iban'));
+      if (!ibanGueltig(iban)) {
+        var feld = antrag.querySelector('#m-iban');
+        if (feld) feld.focus();
+        throw new Error(T.iban);
+      }
       return {
         lang: lang,
         mitgliedschaft: textWert(f, 'mitgliedschaft'),
@@ -131,7 +169,7 @@
         vertretung_name: textWert(f, 'vertretung_name'),
         vertretung_telefon: textWert(f, 'vertretung_telefon'),
         kontoinhaber: textWert(f, 'kontoinhaber'),
-        iban: (textWert(f, 'iban') || '').replace(/\s+/g, '').toUpperCase(),
+        iban: iban,
         bank: textWert(f, 'bank'),
         sepa_mandat: boolWert(f, 'sepa_mandat'),
         satzung_akzeptiert: boolWert(f, 'satzung'),
