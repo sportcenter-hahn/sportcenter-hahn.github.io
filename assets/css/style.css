@@ -349,6 +349,9 @@ h4{font-size:1.05rem}
   color:var(--sport-text);margin:.4rem 0 .7rem}
 .person__body p{font-size:.92rem;color:var(--muted);margin-bottom:1rem}
 .sect--dark .person__body p{color:var(--muted-dark)}
+.person__highlights-title{font-size:.85rem;font-weight:700;color:var(--ink);margin-bottom:.45rem}
+.person__highlights{list-style:none;margin:0 0 1rem;padding:0;font-size:.88rem;color:var(--muted);line-height:1.45}
+.person__highlights li{margin-bottom:.35rem}
 .wa{display:inline-flex;align-items:center;gap:.5rem;font-size:.88rem;font-weight:700;
   text-decoration:none;color:var(--turf-text);min-height:44px}
 .sect--dark .wa{color:var(--turf-lt)}
