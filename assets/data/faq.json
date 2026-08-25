@@ -1,0 +1,925 @@
+{
+  "updated": "2026-07",
+  "categories": [
+    {
+      "id": "ueber-uns",
+      "name": "Über uns & Standorte"
+    },
+    {
+      "id": "buchung",
+      "name": "Buchung"
+    },
+    {
+      "id": "preise",
+      "name": "Preise"
+    },
+    {
+      "id": "verfuegbarkeit",
+      "name": "Verfügbarkeit"
+    },
+    {
+      "id": "oeffnungszeiten",
+      "name": "Öffnungszeiten"
+    },
+    {
+      "id": "tennis",
+      "name": "Tennis"
+    },
+    {
+      "id": "padel",
+      "name": "Padel"
+    },
+    {
+      "id": "soccer",
+      "name": "Soccer Five"
+    },
+    {
+      "id": "golf",
+      "name": "Golfsimulator"
+    },
+    {
+      "id": "pickleball",
+      "name": "Pickleball"
+    },
+    {
+      "id": "ausruestung",
+      "name": "Ausrüstung & Shop"
+    },
+    {
+      "id": "ballmaschine",
+      "name": "Ballmaschine"
+    },
+    {
+      "id": "trainer",
+      "name": "Trainer & Kurse"
+    },
+    {
+      "id": "kinder",
+      "name": "Kinder & Familien"
+    },
+    {
+      "id": "events",
+      "name": "Events & Geburtstage"
+    },
+    {
+      "id": "gastro",
+      "name": "Gastronomie"
+    },
+    {
+      "id": "parken",
+      "name": "Anfahrt & Parken"
+    },
+    {
+      "id": "umkleiden",
+      "name": "Umkleiden & Duschen"
+    },
+    {
+      "id": "wetter",
+      "name": "Wetter"
+    },
+    {
+      "id": "bezahlung",
+      "name": "Bezahlung"
+    },
+    {
+      "id": "mitgliedschaft",
+      "name": "Mitgliedschaft"
+    },
+    {
+      "id": "wellpass",
+      "name": "Wellpass"
+    },
+    {
+      "id": "vor-ort",
+      "name": "Vor Ort"
+    },
+    {
+      "id": "allgemein",
+      "name": "Allgemeines"
+    }
+  ],
+  "items": [
+    {
+      "id": "ueber-uns-1",
+      "category": "ueber-uns",
+      "question": "Was ist STC Oberland / Sportcenter Hahn?",
+      "answer": "<p>STC Oberland und Sportcenter Hahn sind die Heimat für Tennis, Padel, Pickleball und mehr im Oberland. Wir bieten Top-Anlagen in familiärer Atmosphäre – für Anfänger, Hobbyspieler und Turnierspieler gleichermaßen.</p>"
+    },
+    {
+      "id": "ueber-uns-2",
+      "category": "ueber-uns",
+      "question": "Welche Sportarten kann ich bei euch spielen?",
+      "answer": "<p>Tennis, Padel, Pickleball, Indoor Soccer Five und Golf am Golfsimulator – je nach Standort.</p>"
+    },
+    {
+      "id": "ueber-uns-3",
+      "category": "ueber-uns",
+      "question": "Wo befindet ihr euch?",
+      "answer": "<p>Wir haben zwei Standorte: Wolfratshausen (Tenniscenter, 9 Plätze) und Geretsried (Tennis, Padel, Pickleball, Indoor Soccer Five, Golfsimulator).</p>"
+    },
+    {
+      "id": "ueber-uns-4",
+      "category": "ueber-uns",
+      "question": "Wie sind eure genauen Adressen?",
+      "answer": "<ul><li>Wolfratshausen: Geltinger Str. 12, 82515 Wolfratshausen</li><li>Geretsried: Königsdorfer Weg 7, 82538 Geretsried</li></ul>"
+    },
+    {
+      "id": "ueber-uns-5",
+      "category": "ueber-uns",
+      "question": "Kann ich an beiden Standorten spielen?",
+      "answer": "<p>Ja, du kannst sowohl in Geretsried als auch in Wolfratshausen spielen.</p>"
+    },
+    {
+      "id": "buchung-1",
+      "category": "buchung",
+      "question": "Wie kann ich einen Platz buchen?",
+      "answer": "<p>Einen Platz kannst du über die Eversports App buchen oder direkt auf unserer Homepage unter „Buche Geretsried&quot; (<a href=\"buchen-geretsried.html\">sportcenter-hahn.de/booking-ger</a>) oder „Buche Wolfratshausen&quot; (<a href=\"buchen-wolfratshausen.html\">sportcenter-hahn.de/book-wolfratshausen</a>).</p>"
+    },
+    {
+      "id": "buchung-2",
+      "category": "buchung",
+      "question": "Kann ich online buchen?",
+      "answer": "<p>Ja, es sind ausschließlich Online-Buchungen möglich. Nur Geburtstagsfeiern oder Firmenevents, die weiter in der Zukunft liegen, können per E-Mail an <a href=\"mailto:mail@sportcenter-hahn.de\">mail@sportcenter-hahn.de</a> angefragt und gebucht werden.</p>"
+    },
+    {
+      "id": "buchung-3",
+      "category": "buchung",
+      "question": "Muss ich mich registrieren?",
+      "answer": "<p>Ja, zum Buchen benötigst du ein Eversports-Konto. Das geht schnell und einfach und dient auch zur Mitgliederkontrolle.</p>"
+    },
+    {
+      "id": "buchung-4",
+      "category": "buchung",
+      "question": "Kann ich telefonisch reservieren?",
+      "answer": "<p>Nein, das ist leider nicht mehr möglich. Bitte buche online. Firmenevents oder Geburtstage kannst du per E-Mail an <a href=\"mailto:mail@sportcenter-hahn.de\">mail@sportcenter-hahn.de</a> anfragen.</p>"
+    },
+    {
+      "id": "buchung-5",
+      "category": "buchung",
+      "question": "Wie buche ich einen Platz für einen bestimmten Termin?",
+      "answer": "<p>Die Buchung läuft ausschließlich über unsere Online-Buchungsseiten – über die Eversports App oder auf sportcenter-hahn.de unter „Buche Geretsried&quot; (<a href=\"buchen-geretsried.html\">sportcenter-hahn.de/booking-ger</a>) bzw. „Buche Wolfratshausen&quot; (<a href=\"buchen-wolfratshausen.html\">sportcenter-hahn.de/book-wolfratshausen</a>). Dort siehst du direkt die freien Zeiten und kannst deinen Wunschtermin selbst buchen.</p>"
+    },
+    {
+      "id": "buchung-6",
+      "category": "buchung",
+      "question": "Kann ich spontan vorbeikommen?",
+      "answer": "<p>Das kannst du gerne machen, allerdings ohne Garantie, dass Licht oder Leihschläger verfügbar sind. Ist Personal vor Ort, muss der Platz direkt bezahlt werden. Bitte buche den Platz in jedem Fall online oder melde dich beim Personal – unbezahlte Platznutzung wird nachberechnet.</p>"
+    },
+    {
+      "id": "buchung-7",
+      "category": "buchung",
+      "question": "Wie kurzfristig kann ich buchen?",
+      "answer": "<p>Du kannst immer bis zur vollen oder halben Stunde vor Spielbeginn buchen.</p>"
+    },
+    {
+      "id": "buchung-8",
+      "category": "buchung",
+      "question": "Wie weit im Voraus kann ich buchen?",
+      "answer": "<p>Im Allgemeinen gilt folgender Online-Buchungszeitraum ‼️<br>STC-Mitglieder: 21 Tage<br>Alle anderen Gäste: 10 Tage<br>🚨 WELLPASS: 5 Tage</p><p>Wenn ihr eine Dauerbuchung oder ein Abo haben wollt, können wir das manuell eintragen. Auch Veranstaltungen wie Geburtstage oder Firmenevents bearbeiten wir manuell – schreibt uns dazu an <a href=\"mailto:mail@sportcenter-hahn.de\">mail@sportcenter-hahn.de</a>.</p>"
+    },
+    {
+      "id": "buchung-9",
+      "category": "buchung",
+      "question": "Kann ich meine Buchung ändern?",
+      "answer": "<p>Änderungen sind kostenlos möglich, solange der Termin mehr als 72 Stunden entfernt liegt. Danach sind Änderungen nur nach Absprache und je nach Buchungssituation möglich.</p>"
+    },
+    {
+      "id": "buchung-10",
+      "category": "buchung",
+      "question": "Welche Stornierungsfristen und -bedingungen gelten?",
+      "answer": "<p>Kostenlose Stornierung ist online bis 72 Stunden vor dem Termin möglich. Zwischen 72 und 48 Stunden vor dem Termin fällt eine Gebühr von 6 € an – diese Stornierung ist nur per E-Mail an <a href=\"mailto:mail@sportcenter-hahn.de\">mail@sportcenter-hahn.de</a> möglich. Die Gebühr muss zuerst bezahlt werden, erst dann erfolgt die Rückerstattung des Platzes. Danach fallen die regulären Platzkosten an; alternativ kann der Platz weitervermittelt werden. Das gilt nicht bei Unbespielbarkeit der Plätze vor Ort – eine Vorab-Auskunft zur Bespielbarkeit ist nicht möglich.</p><p>Bei Dauerbuchung/Abo gibt es keine Stornierungsfrist: Der Platz kann nur eigenständig vermittelt oder freigegeben werden. Eine Gutschrift ist nur bei Wiedervergabe des Platzes im Nachgang möglich.</p>"
+    },
+    {
+      "id": "buchung-11",
+      "category": "buchung",
+      "question": "Kann ich einen Platz regelmäßig reservieren (Abo/Dauerbuchung)?",
+      "answer": "<p>Ja, vor allem im Winter gibt es Angebote mit einem festen Pflichtzeitraum. Schreib uns dazu eine E-Mail an <a href=\"mailto:mail@sportcenter-hahn.de\">mail@sportcenter-hahn.de</a>. Im Sommer bieten wir stattdessen unsere Mitgliedschaften an. Bei Dauerbuchungen gibt es keine Stornierungsfrist – der Platz kann nur eigenständig vermittelt oder freigegeben werden; eine Gutschrift ist nur bei Wiedervergabe möglich.</p>"
+    },
+    {
+      "id": "buchung-12",
+      "category": "buchung",
+      "question": "Kann ich spontan noch eine halbe Stunde/Stunde dranhängen?",
+      "answer": "<p>Falls der Platz frei bleibt, könnt ihr gerne verlängern. Bucht den Platz aber online, bevor die Verlängerung beginnt, oder gebt unserem Personal Bescheid – damit das Licht nicht ausgeht.</p>"
+    },
+    {
+      "id": "preise-1",
+      "category": "preise",
+      "question": "Was kostet Tennis?",
+      "answer": "<p>Tennis wird pro Platz und Stunde abgerechnet. Im Sommer liegt der Preis zwischen 22–28 €, im Winter zwischen 28–35 €. Die verbindlichen Preise findest du im Buchungssystem beim jeweiligen Platz im Kalender.</p>"
+    },
+    {
+      "id": "preise-2",
+      "category": "preise",
+      "question": "Was kostet Padel?",
+      "answer": "<p>Padel wird pro Platz und Stunde abgerechnet. Im Sommer liegt der Preis zwischen 28–32 €, im Winter zwischen 30–45 €. Die verbindlichen Preise findest du im Buchungssystem beim jeweiligen Platz im Kalender.</p>"
+    },
+    {
+      "id": "preise-3",
+      "category": "preise",
+      "question": "Was kostet Soccer Five?",
+      "answer": "<p>Soccer Five wird pro Platz und Stunde abgerechnet. Der Preis liegt bei 50–65 €. Die verbindlichen Preise findest du im Buchungssystem beim jeweiligen Platz im Kalender.</p>"
+    },
+    {
+      "id": "preise-4",
+      "category": "preise",
+      "question": "Was kostet der Golfsimulator?",
+      "answer": "<p>Der Golfsimulator wird pro Platz und Stunde abgerechnet. Im Sommer liegt der Preis zwischen 25–35 €, im Winter zwischen 35–48 €. Die verbindlichen Preise findest du im Buchungssystem beim jeweiligen Platz im Kalender.</p>"
+    },
+    {
+      "id": "preise-5",
+      "category": "preise",
+      "question": "Was kostet Pickleball?",
+      "answer": "<p>Pickleball wird pro Platz und Stunde abgerechnet. Der Preis liegt bei 30 €/Stunde. Die verbindlichen Preise findest du im Buchungssystem beim jeweiligen Platz im Kalender.</p>"
+    },
+    {
+      "id": "preise-6",
+      "category": "preise",
+      "question": "Gibt es unterschiedliche Preise werktags und am Wochenende?",
+      "answer": "<p>Ja, die Preise unterscheiden sich unter der Woche nach Vormittag, Nachmittag und Abend sowie am Wochenende.</p>"
+    },
+    {
+      "id": "preise-7",
+      "category": "preise",
+      "question": "Gibt es Happy Hour?",
+      "answer": "<p>Eine klassische Happy Hour gibt es nicht, aber auf unserer Buchungsplattform bzw. bei Eversports laufen regelmäßig Aktionen, die mit Code oder zu bestimmten Zeiten genutzt werden können.</p>"
+    },
+    {
+      "id": "preise-8",
+      "category": "preise",
+      "question": "Gibt es Studenten-, Schüler- oder Seniorenrabatte?",
+      "answer": "<p>Bei den Mitgliedschaften gibt es solche Angebote. Bei regulären Platzbuchungen gibt es nur saisonale Aktionen – vor allem Seniorenrabatte am Vormittag.</p>"
+    },
+    {
+      "id": "preise-9",
+      "category": "preise",
+      "question": "Gibt es Zehnerkarten?",
+      "answer": "<p>Teilweise gibt es solche Angebote. Du findest sie in der Eversports App oder auf unserer Buchungsplattform unter „Preise&quot; – meist als Wertkarten deklariert.</p>"
+    },
+    {
+      "id": "preise-10",
+      "category": "preise",
+      "question": "Kann ich Gutscheine kaufen?",
+      "answer": "<p>Unter dem Menüpunkt „Gutscheine&quot; auf unserer Buchungsplattform Eversports findest du die Optionen. Klicke dazu einfach auf unserer Homepage auf „Buchen&quot; – oder komm persönlich bei uns vorbei.</p>"
+    },
+    {
+      "id": "verfuegbarkeit-1",
+      "category": "verfuegbarkeit",
+      "question": "Sind heute noch Plätze frei?",
+      "answer": "<p>Die aktuelle Verfügbarkeit findest du in unserem Buchungskalender auf der Homepage oder in der Eversports App, wenn du unseren Standort suchst.</p>"
+    },
+    {
+      "id": "verfuegbarkeit-2",
+      "category": "verfuegbarkeit",
+      "question": "Wann sind die Stoßzeiten?",
+      "answer": "<p>Die Stoßzeiten sind klar zwischen 17–22 Uhr und am Wochenende.</p>"
+    },
+    {
+      "id": "verfuegbarkeit-3",
+      "category": "verfuegbarkeit",
+      "question": "Gibt es Wartelisten?",
+      "answer": "<p>Nicht direkt. Wir haben eine WhatsApp-Community mit verschiedenen Gruppen, in denen du Spielpartner finden oder frei gewordene Plätze übernehmen kannst.</p>"
+    },
+    {
+      "id": "oeffnungszeiten-1",
+      "category": "oeffnungszeiten",
+      "question": "Wann habt ihr geöffnet?",
+      "answer": "<p>Plätze kannst du ab 7 Uhr morgens bis maximal 23 Uhr buchen. Die genauen Zeiten siehst du im Buchungskalender. Ob Personal und Gastro vor Ort sind, hängt von der Buchungsfrequenz ab.</p>"
+    },
+    {
+      "id": "oeffnungszeiten-2",
+      "category": "oeffnungszeiten",
+      "question": "Ist an Feiertagen geöffnet?",
+      "answer": "<p>Ja, an den Hauptfeiertagen kann es aber abweichende Öffnungszeiten geben. Am 24.12. sind Buchungen z. B. oft nur bis 16 Uhr möglich, am 1.1. erst ab 13 Uhr. Die genauen Zeiten findest du im Buchungskalender.</p>"
+    },
+    {
+      "id": "oeffnungszeiten-3",
+      "category": "oeffnungszeiten",
+      "question": "Wann schließt die Anlage?",
+      "answer": "<p>Die Plätze sind bis 23 Uhr buchbar, die Gastronomie schließt je nach Buchungsfrequenz. Wenn keine Veranstaltung geplant ist, schließt die Anlage mit der letzten Platzbuchung.</p>"
+    },
+    {
+      "id": "oeffnungszeiten-4",
+      "category": "oeffnungszeiten",
+      "question": "Kann ich morgens schon spielen?",
+      "answer": "<p>Ja, klar! Ab 7 Uhr stehen dir die Plätze zur Verfügung. Die genauen Buchungszeiten findest du im Buchungskalender.</p>"
+    },
+    {
+      "id": "oeffnungszeiten-5",
+      "category": "oeffnungszeiten",
+      "question": "Kann ich spät abends spielen?",
+      "answer": "<p>Na klar – bis 23 Uhr kannst du buchen.</p>"
+    },
+    {
+      "id": "tennis-1",
+      "category": "tennis",
+      "question": "Muss ich Mitglied sein, um Tennis zu spielen?",
+      "answer": "<p>Nein, auch Nichtmitglieder können buchen und spielen – sie zahlen einfach ihren Anteil der Platzgebühr.</p>"
+    },
+    {
+      "id": "tennis-2",
+      "category": "tennis",
+      "question": "Welche Tennisplätze habt ihr?",
+      "answer": "<p>In Wolfratshausen haben wir 6 Outdoor-Sandplätze und 3 Indoor-Plätze der Marke Porsche Grand Prix. In Geretsried haben wir 5 Outdoor-Sandplätze und 1 Indoor-Platz mit reboundACE-Belag.</p>"
+    },
+    {
+      "id": "tennis-3",
+      "category": "tennis",
+      "question": "Habt ihr Indoor- und Outdoor-Plätze?",
+      "answer": "<p>Ja, wir haben beides – Outdoor-Sandplätze und Indoor-Plätze an beiden Standorten.</p>"
+    },
+    {
+      "id": "tennis-4",
+      "category": "tennis",
+      "question": "Gibt es Mannschaftstraining?",
+      "answer": "<p>Ja, aber nur in Kombination mit einem Haupttraining. Im Jugendbereich wird dann ein Mannschaftstraining zu Sonderkonditionen angeboten.</p>"
+    },
+    {
+      "id": "padel-1",
+      "category": "padel",
+      "question": "Gibt es Padel Courts bei euch?",
+      "answer": "<p>Ja! Padel kannst du an unserem Standort in Geretsried (Königsdorfer Weg 7) spielen. Insgesamt haben wir 6 Padel-Courts – 4 Indoor und 2 Outdoor. Buchen kannst du deinen Platz ganz einfach über die Eversports App oder auf unserer Homepage unter „Buche Geretsried&quot; (<a href=\"buchen-geretsried.html\">sportcenter-hahn.de/booking-ger</a>). Schläger kannst du bei der Buchung unter „Weitere Angaben&quot; dazubuchen – und wenn du Spielpartner suchst, hilft dir unsere WhatsApp-Community weiter.</p>"
+    },
+    {
+      "id": "padel-2",
+      "category": "padel",
+      "question": "Was ist Padel?",
+      "answer": "<p>Padel ist eine dynamische Rückschlagsportart, die Elemente aus Tennis und Squash kombiniert. Gespielt wird auf einem kleineren Feld mit Wänden, die aktiv ins Spiel einbezogen werden.</p>"
+    },
+    {
+      "id": "padel-3",
+      "category": "padel",
+      "question": "Kann ich Padel ohne Erfahrung spielen?",
+      "answer": "<p>Ja! Padel ist leicht zu erlernen und ideal für Anfänger. Schon nach kurzer Zeit sind spannende Ballwechsel möglich.</p>"
+    },
+    {
+      "id": "padel-4",
+      "category": "padel",
+      "question": "Wie viele Personen spielen Padel?",
+      "answer": "<p>Padel wird in der Regel als Doppel gespielt – also vier Personen, zwei gegen zwei.</p>"
+    },
+    {
+      "id": "padel-5",
+      "category": "padel",
+      "question": "Wie funktionieren die Padel-Regeln?",
+      "answer": "<p>Die Zählweise ist wie beim Tennis. Nach dem Aufspringen darf der Ball auch die Glaswände berühren, bevor er zurückgespielt wird. Punkte entstehen, wenn der Gegner den Ball nicht regelkonform zurückspielt.</p>"
+    },
+    {
+      "id": "padel-6",
+      "category": "padel",
+      "question": "Habt ihr auch Single Court Padel?",
+      "answer": "<p>Single Courts gibt es im Padel grundsätzlich – bei uns in Geretsried haben wir aber nur die regulären Doppel-Courts (Double Courts). 1 gegen 1 zu spielen ist trotzdem kein Problem, z. B. im Cross- oder Longline-Duell. Tennis und Pickleball kannst du bei uns sowohl im Einzel als auch im Doppel spielen.</p>"
+    },
+    {
+      "id": "padel-7",
+      "category": "padel",
+      "question": "Brauche ich einen eigenen Padel-Schläger?",
+      "answer": "<p>Nein, wir bieten Leihschläger an – einfach bei der Platzbuchung unter „Weitere Angaben&quot; hinzufügen. Günstige Einsteigerschläger kannst du auch direkt bei uns kaufen, damit du auf Dauer mehr Ballgefühl bekommst.</p>"
+    },
+    {
+      "id": "padel-8",
+      "category": "padel",
+      "question": "Kann ich alleine zum Padel kommen?",
+      "answer": "<p>Ja, du kannst alleine gewisse Dinge trainieren oder die Ballmaschine buchen – damit trainierst du richtig gut alleine. Am meisten Spaß macht Padel aber im Doppel (4 Spieler, 2 gegen 2). Über unsere WhatsApp-Community findest du schnell Spielpartner.</p>"
+    },
+    {
+      "id": "padel-9",
+      "category": "padel",
+      "question": "Wie finde ich Spielpartner?",
+      "answer": "<p>Dafür gibt es bei uns drei Möglichkeiten:</p><ol><li><strong>PadelIndex</strong> – Ranking aus echten Match-Ergebnissen, Matchmaking nach Level und eine Community drumherum, für Spieler und Vereine. <a href=\"https://padelindex.de/\" rel=\"noopener\" target=\"_blank\">Zu padelindex.de</a></li><li><strong>Offene Matches bei Eversports</strong> – Erstelle ein offenes Match, wenn du Mitspieler suchst. Das geht öffentlich für alle oder privat nur per Einladung, direkt in der App oder im Buchungssystem.</li><li><strong>WhatsApp-Community</strong> – dort gibt es verschiedene Gruppen, u. a. eine Spielerbörse und Gruppen nach Spielniveau.</li></ol>"
+    },
+    {
+      "id": "soccer-1",
+      "category": "soccer",
+      "question": "Wie viele Spieler können bei Soccer Five mitspielen?",
+      "answer": "<p>In der Regel wird 5 gegen 5 gespielt, auch 4 gegen 4 ist üblich. Am besten seid ihr 12–15 Spieler, damit ihr Auswechselspieler habt.</p>"
+    },
+    {
+      "id": "soccer-2",
+      "category": "soccer",
+      "question": "Wie groß ist das Soccer-Spielfeld?",
+      "answer": "<p>Das Spielfeld ist 30 × 15 m groß.</p>"
+    },
+    {
+      "id": "soccer-3",
+      "category": "soccer",
+      "question": "Gibt es Fußbälle vor Ort?",
+      "answer": "<p>Nein, bitte bringt eure eigenen Bälle mit.</p>"
+    },
+    {
+      "id": "soccer-4",
+      "category": "soccer",
+      "question": "Kann ich ein Soccer-Turnier veranstalten?",
+      "answer": "<p>Wenn ihr privat ein Event plant, schreibt uns gerne an <a href=\"mailto:mail@sportcenter-hahn.de\">mail@sportcenter-hahn.de</a> – es ist vieles möglich.</p>"
+    },
+    {
+      "id": "soccer-5",
+      "category": "soccer",
+      "question": "Kann man bei euch Bubble Soccer spielen?",
+      "answer": "<p>Leider bieten wir momentan kein Bubble Soccer an. Es sind aber normale Soccer Five (5er-Felder) buchbar – perfekt zum normalen Kicken!</p>"
+    },
+    {
+      "id": "golf-1",
+      "category": "golf",
+      "question": "Muss ich Golf spielen können, um den Simulator zu nutzen?",
+      "answer": "<p>Nein! Der Simulator ist anfängerfreundlich – eine Platzreife brauchst du nicht. Auf Wunsch bekommst du nach vorheriger Absprache auch eine Einweisung.</p>"
+    },
+    {
+      "id": "golf-2",
+      "category": "golf",
+      "question": "Wie kann ich den Golfsimulator buchen?",
+      "answer": "<p>Buchen kannst du über die Eversports App oder auf unserer Homepage unter „Buche Geretsried&quot; (<a href=\"buchen-geretsried.html\">sportcenter-hahn.de/booking-ger</a>). Es sind ausschließlich Online-Buchungen möglich.</p>"
+    },
+    {
+      "id": "golf-3",
+      "category": "golf",
+      "question": "Kann ich spontan zum Indoor Golf vorbeikommen?",
+      "answer": "<p>Ja, sofern noch ein Termin frei ist. Den Termin musst du aber online buchen – das geht auch kurzfristig bis zur vollen oder halben Stunde vor Beginn. Schau einfach in den Buchungskalender, ob noch etwas verfügbar ist.</p>"
+    },
+    {
+      "id": "golf-4",
+      "category": "golf",
+      "question": "Wie lange muss ich den Golfsimulator mindestens buchen?",
+      "answer": "<p>Die Mindestbuchungszeit beträgt 30 Minuten. Mehrere Stunden hintereinander sind kein Problem.</p>"
+    },
+    {
+      "id": "golf-5",
+      "category": "golf",
+      "question": "Kann ich einen Golf-Termin stornieren oder verschieben?",
+      "answer": "<p>Für den Golfsimulator gelten unsere allgemeinen Stornobedingungen: Kostenlose Stornierung ist online bis 72 Stunden vor dem Termin möglich. Zwischen 72 und 48 Stunden vor dem Termin fällt eine Gebühr von 6 € an – diese Stornierung ist nur per E-Mail an <a href=\"mailto:mail@sportcenter-hahn.de\">mail@sportcenter-hahn.de</a> möglich. Danach fallen die regulären Platzkosten an; alternativ kann der Termin weitervermittelt werden.</p>"
+    },
+    {
+      "id": "golf-6",
+      "category": "golf",
+      "question": "Muss ich eigene Golfschläger mitbringen?",
+      "answer": "<p>Nein, du brauchst keine eigene Ausrüstung. Es stehen Leihschläger bzw. Einsteigersets zur Verfügung – Leihbälle gibt es ebenfalls. Für Golfschläger fällt keine Leihgebühr an.</p>"
+    },
+    {
+      "id": "golf-7",
+      "category": "golf",
+      "question": "Welche Schuhe brauche ich für den Golfsimulator?",
+      "answer": "<p>Saubere Sportschuhe, Straßenschuhe oder Golfschuhe – alles ist geeignet.</p>"
+    },
+    {
+      "id": "golf-8",
+      "category": "golf",
+      "question": "Was ist TrackMan?",
+      "answer": "<p>TrackMan ist ein Radarsystem mit Simulationssoftware zur präzisen Ball- und Schwunganalyse.</p>"
+    },
+    {
+      "id": "golf-9",
+      "category": "golf",
+      "question": "Welche Werte werden gemessen?",
+      "answer": "<p>Über 40 Messwerte – zum Beispiel Ballflug, Ballgeschwindigkeit, Schlagweite, Angriffswinkel und Schwungbahn. Damit kannst du deine Schläge im Detail analysieren.</p>"
+    },
+    {
+      "id": "golf-10",
+      "category": "golf",
+      "question": "Welche Golfplätze sind im Simulator verfügbar?",
+      "answer": "<p>Über 500 virtuelle Golfplätze weltweit stehen dir zur Verfügung.</p>"
+    },
+    {
+      "id": "golf-11",
+      "category": "golf",
+      "question": "Kann ich am Simulator Turniere spielen?",
+      "answer": "<p>Ja, es gibt lokale Turniere und Online-Turniere.</p>"
+    },
+    {
+      "id": "golf-12",
+      "category": "golf",
+      "question": "Kann ich am Golfsimulator gezielt trainieren?",
+      "answer": "<p>Ja! TrackMan bietet umfangreiche Trainings- und KI-Trainingsfunktionen.</p>"
+    },
+    {
+      "id": "golf-13",
+      "category": "golf",
+      "question": "Kann ich meine Golf-Daten speichern?",
+      "answer": "<p>Ja, über ein persönliches TrackMan-Profil inklusive App-Anbindung.</p>"
+    },
+    {
+      "id": "golf-14",
+      "category": "golf",
+      "question": "Kann ich Golfunterricht buchen?",
+      "answer": "<p>Ja! Wir vermitteln Golftrainer und du kannst Unterricht bei uns buchen. Schreib uns dazu an <a href=\"mailto:mail@sportcenter-hahn.de\">mail@sportcenter-hahn.de</a>.</p>"
+    },
+    {
+      "id": "golf-15",
+      "category": "golf",
+      "question": "Mit wie vielen Personen kann man am Simulator spielen?",
+      "answer": "<p>Bis zu acht Personen können sich anmelden – ideal sind Flights mit vier Personen.</p>"
+    },
+    {
+      "id": "golf-16",
+      "category": "golf",
+      "question": "Sind Firmenevents, Geburtstage oder JGAs am Simulator möglich?",
+      "answer": "<p>Ja! Der Simulator wird exklusiv gebucht und eignet sich hervorragend für Events. Schreib uns einfach an <a href=\"mailto:mail@sportcenter-hahn.de\">mail@sportcenter-hahn.de</a>.</p>"
+    },
+    {
+      "id": "golf-17",
+      "category": "golf",
+      "question": "Dürfen Kinder am Golfsimulator spielen?",
+      "answer": "<p>Ja, in Begleitung eines Erwachsenen. Indoor Golf ist geeignet, sobald ein Kind sicher einen Golfschläger schwingen kann.</p>"
+    },
+    {
+      "id": "golf-18",
+      "category": "golf",
+      "question": "Gibt es Rabatte oder Mitgliedschaften für Indoor Golf?",
+      "answer": "<p>Ja – es gibt Mitgliedschaften, Zehnerkarten und Gutscheine. Infos zur Mitgliedschaft findest du unter <a href=\"mitglied.html\">sportcenter-hahn.de/mitglied</a>, Zehnerkarten und Gutscheine auf unserer Buchungsplattform.</p>"
+    },
+    {
+      "id": "pickleball-1",
+      "category": "pickleball",
+      "question": "Was ist Pickleball?",
+      "answer": "<p>Pickleball ist eine leicht zu erlernende Rückschlagsportart, die Elemente aus Tennis, Badminton und Tischtennis kombiniert.</p>"
+    },
+    {
+      "id": "pickleball-2",
+      "category": "pickleball",
+      "question": "Wie spielt man Pickleball?",
+      "answer": "<p>Gespielt wird mit einem Schläger und einem perforierten Kunststoffball auf einem kleinen Feld mit Netz. Ziel ist es, den Ball so ins gegnerische Feld zu spielen, dass er nicht regelkonform zurückgespielt werden kann.</p>"
+    },
+    {
+      "id": "pickleball-3",
+      "category": "pickleball",
+      "question": "Wie viele Personen spielen Pickleball?",
+      "answer": "<p>Pickleball kann als Einzel (1 gegen 1) oder als Doppel (2 gegen 2) gespielt werden.</p>"
+    },
+    {
+      "id": "pickleball-4",
+      "category": "pickleball",
+      "question": "Gibt es Pickleball-Kurse?",
+      "answer": "<p>Noch nicht offiziell, aber unsere Trainer können dich einweisen oder wir vermitteln dich an einen offiziellen Trainer.</p>"
+    },
+    {
+      "id": "pickleball-5",
+      "category": "pickleball",
+      "question": "Ist Pickleball für Anfänger geeignet?",
+      "answer": "<p>Ja! Pickleball ist einfach zu erlernen und eignet sich für jedes Alter und jedes Spielniveau.</p>"
+    },
+    {
+      "id": "ausruestung-1",
+      "category": "ausruestung",
+      "question": "Wo sind die Leihschläger?",
+      "answer": "<p>In Wolfratshausen findest du die Leihschläger auf dem Holzregal bei Platz 1 in der Halle.</p><p>In Geretsried bekommst du sie vor Ort am Empfang/Counter bzw. im Pro Shop – frag dort kurz das Team, sie geben dir die Schläger aus und zeigen dir ggf. die passenden. Ist niemand da, findest du die Tennisschläger hängend im Pro Shop dort, wo „Leihschläger&quot; draufsteht, und die Padelschläger im Ständer, ebenfalls mit der Beschriftung „Leihschläger&quot;.</p><p>Leihschläger kannst du bei der Platzbuchung unter „Weitere Angaben&quot; hinzufügen (in der Regel 4 €).</p>"
+    },
+    {
+      "id": "ausruestung-2",
+      "category": "ausruestung",
+      "question": "Kann ich Leihschläger haben?",
+      "answer": "<p>Ja! Leihschläger kannst du bei der Platzbuchung unter „Weitere Angaben&quot; hinzufügen (in der Regel 4 €).</p>"
+    },
+    {
+      "id": "ausruestung-3",
+      "category": "ausruestung",
+      "question": "Was kostet die Schlägerleihe?",
+      "answer": "<p>In der Regel 4 €. Der genaue Preis wird dir bei der Platzbuchung unter „Weitere Angaben&quot; angezeigt.</p>"
+    },
+    {
+      "id": "ausruestung-4",
+      "category": "ausruestung",
+      "question": "Kann man Leihschläger und Bälle ausleihen?",
+      "answer": "<p>Schläger können bei der Buchung hinzugefügt werden, Bälle werden jedoch nicht verliehen. Ihr dürft gebrauchte/alte Bälle nutzen, die an den Plätzen oder bei den Leihschlägern liegen. Gute neue Bälle können in einzelnen Dosen (3er oder 4er) zwischen 6,50–15 € gekauft werden.</p>"
+    },
+    {
+      "id": "ausruestung-5",
+      "category": "ausruestung",
+      "question": "Verkauft ihr Griffbänder?",
+      "answer": "<p>Ja, meistens im Shop. In Geretsried sind auch welche im Snackautomaten einsortiert.</p>"
+    },
+    {
+      "id": "ausruestung-6",
+      "category": "ausruestung",
+      "question": "Muss ich eigene Ausrüstung mitbringen?",
+      "answer": "<p>Passende Schuhe und Sportkleidung solltest du dabei haben. Schläger können geliehen oder gekauft werden, Getränke gibt es vor Ort.</p>"
+    },
+    {
+      "id": "ausruestung-7",
+      "category": "ausruestung",
+      "question": "Kann ich bei euch Schläger besaiten lassen?",
+      "answer": "<p>Ja! Du kannst deinen Tennisschläger gerne bei uns zum Besaiten abgeben. Gib uns dazu einfach die gewünschte Saitenspannung in kg an und sag uns, ob wir eine Saite aufziehen sollen oder du deine eigene mitbringst.</p>"
+    },
+    {
+      "id": "ausruestung-8",
+      "category": "ausruestung",
+      "question": "Wie kann ich im Shop Schläger oder Schuhe kaufen?",
+      "answer": "<p>Am besten vereinbarst du einen Termin mit uns oder sprichst unser Personal an und fragst, ob Chris vor Ort ist. Die Preise sind nicht ausgeschrieben, da wir uns stark am Onlinehandel orientieren und sich die Preise ständig ändern.</p>"
+    },
+    {
+      "id": "ausruestung-9",
+      "category": "ausruestung",
+      "question": "Welche Schuhe muss ich tragen, um spielen zu können?",
+      "answer": "<ul><li>Tennis/Padel Outdoor: Tennisschuhe mit Sandplatz-Profil sind am besten. Keine grobe Sohle/kein grobes Profil!</li><li>Tennishalle Geretsried (reboundACE indoor) und Pickleball: nur saubere Non-Marking-Schuhe erlaubt.</li><li>Fußball/Soccer: saubere Hallenschuhe oder Tausendfüßler/Kunstrasenschuhe. Keine Noppen oder Stollen!</li></ul>"
+    },
+    {
+      "id": "ballmaschine-1",
+      "category": "ballmaschine",
+      "question": "Wie geht das mit der Ballmaschine?",
+      "answer": "<p>🚨 NEU 🚨 Ballmaschine für Tennis-Indoor (reboundACE) und Padel – trainiere, wann du willst, auch ohne Spielpartner!</p><ul><li>Individuell einstellbar für Anfänger bis Pro (Geschwindigkeit, Höhe, Top- oder Backspin)</li><li>Einzelschläge oder Serien erstellen, z. B. Volley → Bandeja → Volley → Smash</li><li>Trainiere deine Verteidigung</li><li>Gespeicherte Abläufe nutzen oder eigene erstellen</li><li>Einfache Bedienung per App, startbereit in unter 5 Minuten</li></ul><p>So funktioniert es:</p><ol><li>Ballmaschine über die Eversports App buchen (bei den Sportarten zu finden).</li><li>Zeitgleich den Indoor-Platz buchen.</li><li>Vor Ort die Maschine unter der Treppe nehmen, mit der Maschinen-App verbinden – los geht&#x27;s!</li></ol>"
+    },
+    {
+      "id": "trainer-1",
+      "category": "trainer",
+      "question": "Gibt es Trainer?",
+      "answer": "<p>Ja! Unsere Trainer findest du unter <a href=\"trainer.html\">sportcenter-hahn.de/trainer</a> – einfach runterscrollen bis zur Trainervorstellung mit Telefonnummer. Alternativ schreib uns eine E-Mail mit Alter, Geschlecht, bevorzugten Trainingszeiten und ggf. Trainingsvorstellung.</p>"
+    },
+    {
+      "id": "trainer-2",
+      "category": "trainer",
+      "question": "Gibt es eine Padel-Trainerausbildung bei euch?",
+      "answer": "<p>Daniel Hahn bildet bei uns Trainer für Padel aus. Am besten sprichst du ihn direkt an – seinen Kontakt findest du unter <a href=\"https://sportcenter-hahn.de/trainer/#choaches.\" rel=\"noopener\" target=\"_blank\">https://sportcenter-hahn.de/trainer/#choaches.</a></p>"
+    },
+    {
+      "id": "trainer-3",
+      "category": "trainer",
+      "question": "Wie kann ich eine Trainerstunde vereinbaren?",
+      "answer": "<p>Gehe auf unsere Trainerseite (<a href=\"trainer.html\">sportcenter-hahn.de/trainer</a>) und klicke die jeweilige Nummer an, um den Trainer zu kontaktieren. Deinen Platz musst du immer separat buchen – der Trainer gibt dir einen Rabattcode für die Platzbuchung.</p>"
+    },
+    {
+      "id": "trainer-4",
+      "category": "trainer",
+      "question": "Welche Kurse gibt es?",
+      "answer": "<p>Wir bieten Sommer- und Winterkurse an – grob gesagt Sommer Mai–September und Winter Oktober–April. Alle Details, Infos und Camps findest du unter <a href=\"trainer.html\">sportcenter-hahn.de/trainer</a> auf der integrierten Sportision-Plattform.</p>"
+    },
+    {
+      "id": "trainer-5",
+      "category": "trainer",
+      "question": "Wie kann ich an einem regelmäßigen Training oder Gruppenkurs teilnehmen?",
+      "answer": "<p>Gehe auf die Plattform der STC Tennisschule / Padel Akademie (unter <a href=\"trainer.html\">sportcenter-hahn.de/trainer</a>) – dort findest du alle Informationen zum Saisontraining. Im Sommer sind es meistens 13 Einheiten (Mai–September), im Winter 23 Einheiten (Oktober–April). In der Regel kannst du dich 1 Monat vor Saisonstart anmelden, damit die Gruppen neu eingeteilt werden können.</p>"
+    },
+    {
+      "id": "trainer-6",
+      "category": "trainer",
+      "question": "Wann beginnen neue Kurse?",
+      "answer": "<p>Immer zum Saisonwechsel. Anmeldung ist in der Regel 1 Monat vor Saisonstart möglich, damit die Gruppen neu eingeteilt werden können.</p>"
+    },
+    {
+      "id": "trainer-7",
+      "category": "trainer",
+      "question": "Gibt es Schnupperstunden?",
+      "answer": "<p>Wir bieten ab und an Schnupper-Events an oder lassen dich bei Gelegenheit in einer bestehenden Gruppe mitmachen. Alternativ kannst du eine Einzelstunde zum Testen buchen.</p>"
+    },
+    {
+      "id": "trainer-8",
+      "category": "trainer",
+      "question": "Gibt es Kindertraining?",
+      "answer": "<p>Ja! Die Kurse findest du unter <a href=\"trainer.html\">sportcenter-hahn.de/trainer</a> auf der integrierten Sportision-Plattform mit allen Saisonkursen, Camps, Beschreibungen und Preisen.</p>"
+    },
+    {
+      "id": "trainer-9",
+      "category": "trainer",
+      "question": "Gibt es Feriencamps?",
+      "answer": "<p>Ja, die Camps findest du unter <a href=\"trainer.html\">sportcenter-hahn.de/trainer</a> auf der Sportision-Plattform. Unser beliebtestes Camp findet in der ersten und letzten Sommerferienwoche statt.</p>"
+    },
+    {
+      "id": "trainer-10",
+      "category": "trainer",
+      "question": "Wann gibt es ein Sommercamp und wo kann ich mich anmelden?",
+      "answer": "<p>🎾 TENNIS/PADEL Sommercamp 2026 in der ersten und letzten Ferienwoche 🚨</p><p>✍🏼 Jetzt anmelden und Platz sichern!<br>ℹ️ Alle Infos findest du in der Beschreibung und im Anmeldeformular.</p><p>AUGUST: <a href=\"https://www.sportision.de/club/stc-oberland-1/bookings/sommercamp-2026-1-erste-ferienwoche-0308-06082026-varianten-wahlbar-1\" rel=\"noopener\" target=\"_blank\">https://www.sportision.de/club/stc-oberland-1/bookings/sommercamp-2026-1-erste-ferienwoche-0308-06082026-varianten-wahlbar-1</a></p><p>SEPTEMBER: <a href=\"https://www.sportision.de/club/stc-oberland-1/bookings/sommercamp-2026-2-letzte-ferienwoche-0709-10092025-varianten-wahlbar-1\" rel=\"noopener\" target=\"_blank\">https://www.sportision.de/club/stc-oberland-1/bookings/sommercamp-2026-2-letzte-ferienwoche-0709-10092025-varianten-wahlbar-1</a></p>"
+    },
+    {
+      "id": "kinder-1",
+      "category": "kinder",
+      "question": "Ab welchem Alter können Kinder spielen?",
+      "answer": "<p>Das hängt vom Kind ab – meistens starten die Kids ab 7 Jahren, aber auch ein Start mit 4 oder erst mit 14 Jahren ist üblich.</p>"
+    },
+    {
+      "id": "kinder-2",
+      "category": "kinder",
+      "question": "Können Kinder mit 4 Jahren schon bei euch trainieren?",
+      "answer": "<p>Ja, wir haben ab und an Gruppen in diesem Alter. Hier müssen wir die Anmeldungen zur nächsten Saison abwarten und schauen, ob Gruppen gebildet werden können. Unter <a href=\"trainer.html\">sportcenter-hahn.de/trainer</a> findest du unsere Sportision-Plattform zur Anmeldung – dort stehen alle Kosten und Infos der letzten Saison.</p>"
+    },
+    {
+      "id": "kinder-3",
+      "category": "kinder",
+      "question": "Gibt es Familienangebote?",
+      "answer": "<p>Nur in Verbindung mit einer Mitgliedschaft für Tennis oder Padel. Infos unter <a href=\"mitglied.html.\">sportcenter-hahn.de/mitglied.</a></p>"
+    },
+    {
+      "id": "events-1",
+      "category": "events",
+      "question": "Veranstaltet ihr Turniere?",
+      "answer": "<p>Ja, die meisten Turniere finden im Padel statt. Diese werden auf der Verbandsseite des DPV, bei uns auf Instagram und in der WhatsApp-Community geteilt – genauso wie Gaudi-Turniere und andere Veranstaltungen.</p>"
+    },
+    {
+      "id": "events-2",
+      "category": "events",
+      "question": "Kann ich selbst ein Turnier ausrichten?",
+      "answer": "<p>Wenn ihr privat etwas veranstalten wollt, nehmt gerne Kontakt mit uns auf (<a href=\"mailto:mail@sportcenter-hahn.de\">mail@sportcenter-hahn.de</a>). Die Plätze müssen dafür regulär gebucht und bezahlt werden.</p>"
+    },
+    {
+      "id": "events-3",
+      "category": "events",
+      "question": "Kann ich Firmenevents buchen?",
+      "answer": "<p>Na klar! Schreib uns einfach eine E-Mail an <a href=\"mailto:mail@sportcenter-hahn.de\">mail@sportcenter-hahn.de</a>.</p>"
+    },
+    {
+      "id": "events-4",
+      "category": "events",
+      "question": "Kann ich die Anlage exklusiv mieten?",
+      "answer": "<p>Ja, das ist möglich. Schreib uns einfach eine E-Mail an <a href=\"mailto:mail@sportcenter-hahn.de\">mail@sportcenter-hahn.de</a>.</p>"
+    },
+    {
+      "id": "events-5",
+      "category": "events",
+      "question": "Bietet ihr Kindergeburtstage an?",
+      "answer": "<p>Wir bieten keine Pakete mit Aufenthalt und Verpflegung an, aber eine reguläre Platzbuchung ist selbstverständlich als Geburtstagsfeier erlaubt. Ihr dürft euch während der gebuchten Spielzeit am/um den Platz aufhalten. Es dürfen nur Kleinigkeiten wie z. B. Muffins oder Süßigkeiten mitgebracht werden, und der Platz muss eigenständig sauber hinterlassen werden.</p>"
+    },
+    {
+      "id": "gastro-1",
+      "category": "gastro",
+      "question": "Gibt es ein Restaurant?",
+      "answer": "<p>In Wolfratshausen haben wir ein kleines Bistro mit hauptsächlich Getränken, ab und an gibt es auch Kleinigkeiten zu essen. In Geretsried haben wir eine Sportsbar.</p>"
+    },
+    {
+      "id": "gastro-2",
+      "category": "gastro",
+      "question": "Gibt es Getränke?",
+      "answer": "<p>Ja – von Kaffee über alkoholfreie bis zu alkoholischen Erfrischungen.</p>"
+    },
+    {
+      "id": "gastro-3",
+      "category": "gastro",
+      "question": "Kann ich bei euch etwas essen?",
+      "answer": "<p>In Wolfratshausen gibt es ab und an eine kleine Auswahl oder mehr nach geplanter Absprache. In Geretsried kann zu den Stoßzeiten (meist 18–22 Uhr) Essen bestellt werden.</p>"
+    },
+    {
+      "id": "gastro-4",
+      "category": "gastro",
+      "question": "Kann ich draußen sitzen?",
+      "answer": "<p>Ja, wir haben an beiden Standorten einen schönen Biergarten.</p>"
+    },
+    {
+      "id": "gastro-5",
+      "category": "gastro",
+      "question": "Kann ich nur zum Essen kommen (ohne zu spielen)?",
+      "answer": "<p>Klar! Zu den Stoßzeiten in Geretsried (meist 18–22 Uhr) können wir etwas bestellen.</p>"
+    },
+    {
+      "id": "parken-1",
+      "category": "parken",
+      "question": "Wo kann ich parken?",
+      "answer": "<p>Wir haben direkt auf der Anlage Parkplätze. Als Kunde musst du dein Kennzeichen am Tablet/iPad im Gebäude freischalten – dann erhältst du 10 Stunden gratis Parken.</p>"
+    },
+    {
+      "id": "parken-2",
+      "category": "parken",
+      "question": "Wie und wo kann ich mein Auto freischalten?",
+      "answer": "<p>Die Freischaltung deines Autos mit dem Kennzeichen kannst du am Tablet/iPad eintragen – damit erhältst du 10 Stunden gratis Parken. Nur STC-Vereinsmitglieder können ihre dauerhafte Freischaltung direkt bei uns eintragen lassen.</p>"
+    },
+    {
+      "id": "parken-3",
+      "category": "parken",
+      "question": "Wo finde ich das Tablet oder den QR-Code, um den Parkplatz freizuschalten?",
+      "answer": "<p>In Geretsried und Wolfratshausen findest du das Tablet sowie die QR-Codes im Flur auf dem Weg zu den Umkleiden.</p>"
+    },
+    {
+      "id": "parken-4",
+      "category": "parken",
+      "question": "Was kann ich tun, wenn das Tablet zum Freischalten des Nummernschildes nicht funktioniert?",
+      "answer": "<p>Es hängen auch QR-Codes aus – scanne einfach einen mit deinem Handy und trage dein Kennzeichen eigenständig ein.</p>"
+    },
+    {
+      "id": "parken-5",
+      "category": "parken",
+      "question": "Ich habe keine E-Mail bei der Freischaltung des Kennzeichens erhalten?",
+      "answer": "<p>Dann hast du vermutlich einen Tippfehler in deiner Eingabe. Bitte wiederhole den Vorgang oder mach ein Foto/Screenshot der Freischaltung als Nachweis.</p>"
+    },
+    {
+      "id": "parken-6",
+      "category": "parken",
+      "question": "Ich habe einen Strafzettel vom Parken erhalten. Was nun?",
+      "answer": "<p>Wir helfen dir gerne weiter: Für Kunden können wir den Strafzettel gegen eine Bearbeitungsgebühr von 10 € stornieren lassen. Komm dazu einfach mit dem Strafzettel bei uns vorbei und hinterlege deine E-Mail-Adresse.</p>"
+    },
+    {
+      "id": "parken-7",
+      "category": "parken",
+      "question": "Ich habe einen Strafzettel erhalten, obwohl ich mein Kennzeichen freigeschaltet habe.",
+      "answer": "<p>Wir können den Strafzettel nur korrigieren oder kostenlos stornieren lassen, wenn du einen Screenshot der Freischaltung hast oder die E-Mail-Adresse für die Bestätigungsmail angegeben hattest – damit wir nachweisen können, dass kein Tippfehler vorliegt. Ansonsten sind uns die Hände gebunden und die Stornierung ist nur gegen die Bearbeitungsgebühr von 10 € möglich.</p>"
+    },
+    {
+      "id": "parken-8",
+      "category": "parken",
+      "question": "Ich habe einen Strafzettel auf eurem Parkplatz bekommen, obwohl ich Kunde bin und einen Platz gebucht habe. Wie kann das sein?",
+      "answer": "<p>Das tut uns leid! Wir haben uns bemüht, die notwendige Freischaltung sichtbar zu machen: sieben Schilder an den Parkplätzen, ein Hinweis bei der Buchung, das Tablet/iPad direkt vor der Umkleide und ein Vermerk in der Buchungsbestätigung.</p><p>Wir helfen dir aber gerne weiter: Für Kunden können wir den Strafzettel gegen eine Bearbeitungsgebühr von 10 € stornieren lassen. Komm einfach mit dem Strafzettel bei uns vorbei, zahle die Bearbeitungsgebühr und hinterlege deine E-Mail-Adresse – wir leiten dann alles ein.</p>"
+    },
+    {
+      "id": "parken-9",
+      "category": "parken",
+      "question": "Gibt es Fahrradstellplätze?",
+      "answer": "<p>Ja, du kannst dein Fahrrad bei uns abstellen.</p>"
+    },
+    {
+      "id": "parken-10",
+      "category": "parken",
+      "question": "Gibt es E-Ladestationen?",
+      "answer": "<p>Nein, die haben wir leider noch nicht.</p>"
+    },
+    {
+      "id": "umkleiden-1",
+      "category": "umkleiden",
+      "question": "Gibt es Umkleiden und Duschen?",
+      "answer": "<p>Ja, wir haben Umkleiden und Duschen. Schließfächer gibt es keine. Die Umkleiden sind barrierefrei.</p>"
+    },
+    {
+      "id": "wetter-1",
+      "category": "wetter",
+      "question": "Was passiert bei Regen?",
+      "answer": "<p>Solltest du einen Outdoor-Platz gebucht haben und ist dieser zum gebuchten Zeitpunkt vor Ort unbespielbar, werden die Kosten erstattet. Eine Vorab-Auskunft zur Wetterlage vor Ort ist nicht möglich.</p>"
+    },
+    {
+      "id": "wetter-2",
+      "category": "wetter",
+      "question": "Kann ich kostenlos stornieren, wenn es regnet?",
+      "answer": "<p>Wenn der Platz zum gebuchten Zeitpunkt unbespielbar ist, ja – dann werden die Kosten erstattet.</p>"
+    },
+    {
+      "id": "wetter-3",
+      "category": "wetter",
+      "question": "Sind die Plätze überdacht?",
+      "answer": "<p>Unsere Outdoor-Plätze nicht, aber in der Halle bleibst du garantiert trocken.</p>"
+    },
+    {
+      "id": "bezahlung-1",
+      "category": "bezahlung",
+      "question": "Wie kann ich bezahlen?",
+      "answer": "<p>Karte, Apple Pay und Google Pay werden akzeptiert. Barzahlung ist vor Ort möglich, bei Online-Buchungen kann aber nur eine Online-Zahlung ausgewählt werden. Eine Rechnung erhältst du selbstverständlich.</p>"
+    },
+    {
+      "id": "mitgliedschaft-1",
+      "category": "mitgliedschaft",
+      "question": "Gibt es eine Mitgliedschaft?",
+      "answer": "<p>Ja, über unseren Verein STC Oberland bieten wir eine Padel- und/oder Tennis-Mitgliedschaft an. Alle Infos unter <a href=\"mitglied.html.\">sportcenter-hahn.de/mitglied.</a></p>"
+    },
+    {
+      "id": "mitgliedschaft-2",
+      "category": "mitgliedschaft",
+      "question": "Welche Vorteile habe ich als Mitglied?",
+      "answer": "<p>Als Mitglied erhältst du für deinen Anteil bis zu 2 Stunden gratis Spielen auf den Outdoor-Plätzen. Dein Buchungszeitraum verlängert sich auf 21 Tage (Buchungsvorrecht). Indoor erhältst du 10 % Rabatt. Dein Autokennzeichen wird dauerhaft fürs Gratis-Parken gespeichert und du bekommst Zutritt zur STC-Community, um Spielpartner zu finden.</p>"
+    },
+    {
+      "id": "mitgliedschaft-3",
+      "category": "mitgliedschaft",
+      "question": "Muss ich Mitglied werden?",
+      "answer": "<p>Nein, es gibt keine Mitgliedschaftspflicht. Ohne Mitgliedschaft kannst du privat buchen mit einem Buchungszeitraum von 10 Tagen.</p>"
+    },
+    {
+      "id": "mitgliedschaft-4",
+      "category": "mitgliedschaft",
+      "question": "Was kostet eine Mitgliedschaft?",
+      "answer": "<p>Die Preise findest du unter <a href=\"mitglied.html.\">sportcenter-hahn.de/mitglied.</a> Dort gibt es die Tennis-, Padel- und Kombi-Mitgliedschaft.</p>"
+    },
+    {
+      "id": "mitgliedschaft-5",
+      "category": "mitgliedschaft",
+      "question": "Wie kann ich meine Mitgliedschaft kündigen?",
+      "answer": "<p>Die Mitgliedschaft kannst du schriftlich bis zum 31.12. zum Jahresende kündigen.</p>"
+    },
+    {
+      "id": "wellpass-1",
+      "category": "wellpass",
+      "question": "Wie funktioniert Wellpass bei euch?",
+      "answer": "<p>Liebe Wellpass-Mitglieder!</p><p>Für die Nutzung über Wellpass ist eine digitale Online-Freischaltung mit automatischem SEPA-Lastschrifteinzug erforderlich. Ohne aktive Freischaltung können keine Plätze über Wellpass gebucht und keine Rabatte berücksichtigt werden.</p><p>Deine Freischaltungsoptionen:<br>➡️ Bei der Bezahlung MUSS „SEPA-Online&quot; ausgewählt werden ‼️<br>🔗 <a href=\"https://www.eversports.de/widget/w/0bedks?list=shop\" rel=\"noopener\" target=\"_blank\">https://www.eversports.de/widget/w/0bedks?list=shop</a></p><p>🚨 Monatliche Freischaltung: 4,00 €/Monat, jederzeit kündbar, automatische Verlängerung und Abbuchung per SEPA-Lastschrift<br>🚨 Jahresfreischaltung: 1,50 €/Monat, jederzeit kündbar, automatische Verlängerung und Abbuchung per SEPA-Lastschrift</p><p>➡️ Der Buchungsablauf:</p><ol><li>Platz/Uhrzeit auswählen.</li><li>Wellpass-Teilnehmer, STC-Mitglieder oder Gäste hinzufügen.</li><li>Bei der Bezahloption „Später bezahlen&quot; oder „Auf Rechnung&quot; auswählen ‼️</li><li>Am Tag der Buchung vor Ort per QR-Code mit Wellpass einchecken (kein Personal notwendig, Aushang beachten).</li></ol><p>Wenige Tage nach deinem Check-in wird der Buchungsbetrag automatisch auf den Wellpass-Tarif angepasst und der korrekte Betrag eingezogen.</p><p>⚠️ Achtung: Nur wenn alle Schritte eingehalten werden, kann der Wellpass-Rabatt berücksichtigt werden. Nachträgliche Rabattierungen sind nicht möglich. Das Wellpass-Angebot gilt ausschließlich für unsere Indoor-Plätze ‼️</p>"
+    },
+    {
+      "id": "wellpass-2",
+      "category": "wellpass",
+      "question": "Was ist der Vorteil, wenn ich Wellpass bei euch nutze, bzw. wie viel Rabatt erhalte ich?",
+      "answer": "<p>Das erklären wir dir gerne! Bei der Buchung wird immer der reguläre Betrag angezeigt. Erst vor Ort nach dem Check-in – und wenige Tage später – wird der Check-in kontrolliert und mit deiner Buchung verrechnet. Du erhältst zuerst die Rechnung als Kontrolle, wenige Tage später wird der Betrag als Lastschrift eingezogen.</p><p>Als Wellpass-Nutzer erhältst du für deinen eigenen Anteil 1 Stunde gratis. Bei Padel und Golf sind das 25 % pro Person auf die 1-Stunden-Platzgebühr, bei Tennis und Pickleball 25–50 %, je nach Mitspieleranzahl (2–4 Spieler).</p>"
+    },
+    {
+      "id": "vor-ort-1",
+      "category": "vor-ort",
+      "question": "Wo geht das Licht an?",
+      "answer": "<ul><li>In Wolfratshausen geht das Licht in der Regel automatisch an. Sollte es nicht angehen und du hast den Platz offiziell gebucht, ruf uns an: 0176 30365102 oder +49 170 9936599. Sag uns bitte, ob deine Buchung in Wolfratshausen oder Geretsried ist.</li><li>In Geretsried genauso – dort kannst du die Lichter aber auch selbst steuern: im Shop hinter der Theke an der Wand. Bitte danach wieder eigenständig ausschalten.</li><li>Für die Outdoor-Plätze gibt es einen Münzautomaten bei den Fahrradständern.</li></ul>"
+    },
+    {
+      "id": "vor-ort-2",
+      "category": "vor-ort",
+      "question": "Ich habe etwas verloren oder vergessen.",
+      "answer": "<p>Verlorene Gegenstände werden in die Fundkiste gelegt. In Geretsried findest du diese in der Ecke beim Soccerplatz.</p>"
+    },
+    {
+      "id": "allgemein-1",
+      "category": "allgemein",
+      "question": "Darf ich meinen Hund mitbringen?",
+      "answer": "<p>Ja, er sollte aber angeleint sein – wir haben selbst Hunde auf der Anlage.</p>"
+    },
+    {
+      "id": "allgemein-2",
+      "category": "allgemein",
+      "question": "Ist die Anlage barrierefrei?",
+      "answer": "<p>Ja, beide Anlagen sind barrierefrei zugänglich.</p>"
+    },
+    {
+      "id": "allgemein-3",
+      "category": "allgemein",
+      "question": "Gibt es WLAN?",
+      "answer": "<p>Ja, WLAN ist vorhanden.</p>"
+    },
+    {
+      "id": "allgemein-4",
+      "category": "allgemein",
+      "question": "Darf ich Zuschauer mitbringen?",
+      "answer": "<p>Na klar, Zuschauer sind immer willkommen!</p><p>---</p>"
+    }
+  ]
+}

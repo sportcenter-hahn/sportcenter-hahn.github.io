@@ -520,6 +520,15 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://sportcenter-hahn.de/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sportcenter-hahn.de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sportcenter-hahn.de/faq.html"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://sportcenter-hahn.de/wandtraining.html</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://sportcenter-hahn.de/wandtraining.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://sportcenter-hahn.de/en/wandtraining.html"/>

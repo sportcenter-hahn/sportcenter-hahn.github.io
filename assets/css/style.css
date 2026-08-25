@@ -1233,3 +1233,32 @@ form{display:flex;flex-direction:column;gap:1.05rem}
   .rad__marke{font-size:15px}
 }
 @media (prefers-reduced-motion:reduce){.rad__seg{transition:none}}
+
+/* ---------- FAQ-Seite ---------- */
+.faqp{max-width:860px}
+.faqp__suche{margin-bottom:1.25rem}
+.faqp__suche input{font-size:1.05rem}
+.faqp__kats{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem}
+.faqp__chip{display:inline-flex;align-items:center;gap:.4rem;min-height:42px;
+  padding:.45rem .95rem;border:1.5px solid var(--line);border-radius:var(--r);
+  background:var(--white);color:var(--ink);font:inherit;font-size:.88rem;font-weight:600;
+  cursor:pointer;transition:background-color .16s ease,border-color .16s ease,color .16s ease}
+.faqp__chip span{font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.faqp__chip:hover{border-color:var(--sport)}
+.faqp__chip[aria-pressed="true"]{background:var(--sport);border-color:var(--sport);color:#fff}
+.faqp__chip[aria-pressed="true"] span{color:rgba(255,255,255,.8)}
+.faqp__chip:focus-visible{outline:3px solid var(--turf-lt);outline-offset:2px}
+.faqp__status{margin:0 0 1.5rem;font-size:.9rem;color:var(--muted)}
+.faqp__gruppe{margin-bottom:2.75rem;scroll-margin-top:6rem}
+.faqp__gruppe .faq{margin-top:.75rem}
+.faqp__titel{font-family:var(--display);font-weight:800;text-transform:uppercase;
+  font-size:clamp(1.35rem,1.1rem + 1vw,1.75rem);color:var(--sport-text);
+  padding-bottom:.45rem;border-bottom:2px solid var(--line)}
+.faqp__gruppe .faq summary{font-size:clamp(1.05rem,0.95rem + .4vw,1.2rem);text-transform:none;
+  font-family:var(--body);font-weight:700;letter-spacing:0}
+.faqp__gruppe .faq .ans ul,.faqp__gruppe .faq .ans ol{margin:.75rem 0;padding-left:1.25rem}
+.faqp__gruppe .faq .ans li{margin:.35rem 0}
+.faqp__gruppe .faq .ans a{color:var(--clay-text);text-underline-offset:3px}
+.faqp__leer{padding:2rem 1.25rem;text-align:center;color:var(--muted);
+  border:1px dashed var(--line);border-radius:var(--r)}
+[data-theme="dark"] .faqp__chip{background:var(--surface)}
