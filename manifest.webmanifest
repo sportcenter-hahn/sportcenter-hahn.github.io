@@ -39,13 +39,6 @@
       "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
     },
     {
-      "name": "Termine",
-      "short_name": "Termine",
-      "description": "Turniere, Ligen und Events",
-      "url": "/termine.html",
-      "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
-    },
-    {
       "name": "Kontakt",
       "short_name": "Kontakt",
       "description": "Telefon, E-Mail und Anfahrt",
